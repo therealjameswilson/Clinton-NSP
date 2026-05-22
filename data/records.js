@@ -1413,6 +1413,269 @@ const STROBE_FOIA_RECORDS = [
   }
 ];
 
+const COHEN_SECDEF_RECORDS = [
+  {
+    id: "cohen-secdef-1998-shape-respond-prepare",
+    chapterId: "national-security-strategy",
+    date: "1998-03-20",
+    dateLabel: "March 20, 1998",
+    type: "Cohen SecDef Speech",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Cohen speech on shape, respond, and prepare after the Cold War",
+    summary:
+      "Secretary Cohen's University of Maine lecture gives a printable statement of the Clinton defense strategy: remain engaged, shape the security environment, respond across the crisis spectrum, and prepare for new technological and transnational threats.",
+    sourceName: "Google Drive PDF 986",
+    sourceUrl: "https://drive.google.com/file/d/1vxVlXLZZCWPnffdukFqYa6CsQ8uLTJE5",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The remarks, prepared for delivery on March 20, 1998, explicitly organize the defense strategy around shape, respond, and prepare.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["Shape, respond, prepare", "Engagement", "RMA", "Technology", "Post-Cold War strategy"]
+  },
+  {
+    id: "cohen-secdef-1997-iran-tmd-options",
+    chapterId: "bmd-abm",
+    date: "1997-10-09",
+    dateLabel: "October 9, 1997",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Kyl-Weldon request for theater missile defense options after Russian-Iranian transfers",
+    summary:
+      "Congressional packet to Secretary Cohen linking Russian missile-technology transfers to Iran with near-term theater missile defense options for U.S. troops and allies, followed by BMDO acknowledgement letters.",
+    sourceName: "Google Drive PDF U17358",
+    sourceUrl: "https://drive.google.com/file/d/1GGG---UgOTBgCymoRjGPo3TtcUNIcQWj",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet includes the October 9, 1997 Kyl-Weldon letter and October 16 BMDO responses.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["Iran", "Russia", "Missile technology transfer", "Theater missile defense", "BMDO"]
+  },
+  {
+    id: "cohen-secdef-1998-sergeyev-sew-read-ahead",
+    chapterId: "bmd-abm",
+    date: "1998-10-27",
+    dateLabel: "October 27, 1998",
+    type: "Cohen SecDef Read-Ahead",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Read-ahead for Cohen-Sergeyev call on shared early warning",
+    summary:
+      "STR read-ahead for Secretary Cohen's call with Marshal Sergeyev on Kosovo, the Shared Early Warning Initiative, defense relations, and the proposed jointly manned missile-launch warning center in Russia.",
+    sourceName: "Google Drive PDF U17579",
+    sourceUrl: "https://drive.google.com/file/d/19aq8yUfzVuvAW2EYv05MpDCGny3O8I-4",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The October 1998 packet can stand alone as a compact record of defense-level shared early-warning diplomacy.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["Shared early warning", "Russia", "Sergeyev", "Kosovo", "Missile-launch warning"]
+  },
+  {
+    id: "cohen-secdef-1998-sergeyev-start-sew-read-ahead",
+    chapterId: "bmd-abm",
+    date: "1998-12-04",
+    dateLabel: "December 4, 1998",
+    type: "Cohen SecDef Read-Ahead",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Read-ahead for Cohen-Sergeyev call on START II and shared early warning",
+    summary:
+      "Read-ahead for the December 1998 Cohen-Sergeyev call covering NATO-Russia defense cooperation, Shared Early Warning, Kosovo, Iraq, START II ratification, and the broader strategic-stability relationship.",
+    sourceName: "Google Drive PDF U19572",
+    sourceUrl: "https://drive.google.com/file/d/1GioQ2tkN3nNkG4S9jfGujFKP51bYkJLN",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet is useful as a standalone bridge between shared early warning, START II, and defense-level Russia management.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["START II", "Shared early warning", "Russia", "Sergeyev", "Strategic stability"]
+  },
+  {
+    id: "cohen-secdef-1999-conrad-nmd-funding",
+    chapterId: "bmd-abm",
+    date: "1999-03-02",
+    dateLabel: "March 2, 1999",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Cohen response on NMD deployment funding, siting, and sea-launch concerns",
+    summary:
+      "Cohen's response to Senator Kent Conrad explains the funded NMD deployment option, the June 2000 deployment readiness review, North Dakota and Alaska siting analysis, Rumsfeld Commission findings, Taepo Dong concerns, and sea-launch scenarios.",
+    sourceName: "Google Drive PDF U02631",
+    sourceUrl: "https://drive.google.com/file/d/1mBjy3ntWstJVN5bVB3GTedyJ_JoaJj5J",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet includes the Secretary's signed correspondence and BMDO staff material suitable for printing as one document.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["NMD", "Deployment readiness review", "BMDO", "North Dakota", "Alaska", "Taepo Dong"]
+  },
+  {
+    id: "cohen-secdef-2000-ramos-funding-sensor-protection",
+    chapterId: "bmd-abm",
+    date: "2000-06-23",
+    dateLabel: "June 23, 2000",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Cohen RAMOS letters on missile-defense funds and sensor protection",
+    summary:
+      "Cohen responses to Senators Smith, Kyl, and Hutchinson defend RAMOS funding, address concerns that Russian cooperation might receive advanced infrared sensor technology, and state that the joint program would not draw resources from core missile-defense programs.",
+    sourceName: "Google Drive PDF U07172",
+    sourceUrl: "https://drive.google.com/file/d/187pFsWv7J8YSA1wEXpGRIW0OWodFEtAs",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet includes the congressional letters, Cohen's responses, and DoD reprogramming/action material.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["RAMOS", "Missile defense", "Infrared sensors", "Russia", "Technology protection"]
+  },
+  {
+    id: "cohen-secdef-2000-cleland-nmd-consensus",
+    chapterId: "bmd-abm",
+    date: "2000-10-16",
+    dateLabel: "October 16, 2000",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Cohen-Cleland correspondence on bipartisan NMD consensus",
+    summary:
+      "Secretary Cohen's response to Senator Max Cleland addresses the politics of National Missile Defense after the 2000 deployment decision, including bipartisan commission ideas, strategic consensus, and links to arms-control concerns.",
+    sourceName: "Google Drive PDF U14027",
+    sourceUrl: "https://drive.google.com/file/d/1We7kCi3_npsIaweYVQQUo-VyeSVy0-wU",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet includes Cleland's August 30 letter, DoD action material, and Cohen's October 16 response.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["NMD", "Bipartisan consensus", "Cleland", "CTBT", "Strategic stability"]
+  },
+  {
+    id: "cohen-secdef-1997-feeding-dragon-tech-transfer",
+    chapterId: "tech-transfer",
+    date: "1997-07-08",
+    dateLabel: "July 8, 1997",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Saxton packet on Chinese technology acquisition and dual-use export controls",
+    summary:
+      "Representative Jim Saxton forwarded Dr. Peter Leitner's 'Feeding the Dragon' testimony to Secretary Cohen, arguing that U.S. decontrol, commercial dual-use technology, supercomputers, and Wassenaar-era controls were strengthening Chinese military capabilities.",
+    sourceName: "Google Drive PDF U12237",
+    sourceUrl: "https://drive.google.com/file/d/1_p6E92qQW8UksY8nkD2VMysPevEg3saR",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The July 1997 packet is printable as a standalone congressional correspondence and testimony file.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["China", "Dual-use technology", "Supercomputers", "Wassenaar", "Defense industrial base"]
+  },
+  {
+    id: "cohen-secdef-1998-satellite-export-china-oversight",
+    chapterId: "tech-transfer",
+    date: "1998-05-22",
+    dateLabel: "May 22, 1998",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Lott request for DoD records on commercial satellite exports to China",
+    summary:
+      "Senator Trent Lott asked Secretary Cohen for DoD materials on commercial U.S. satellite exports to China, Chinese MTCR participation, proliferation activity, and the Department's assessment that technology transfers after the 1996 failed launch harmed national security.",
+    sourceName: "Google Drive PDF U09205",
+    sourceUrl: "https://drive.google.com/file/d/1-YFL0Ds4Cnkx3AcOnPAaJCgg0thkTnzt",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The letter is a concise standalone oversight record for the satellite export-control controversy.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["China", "Satellite exports", "MTCR", "Launch failures", "Congressional oversight"]
+  },
+  {
+    id: "cohen-secdef-1998-hpc-export-controls",
+    chapterId: "tech-transfer",
+    date: "1998-10-14",
+    dateLabel: "October 14, 1998",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Levin packet on GAO review of high-performance computer export controls",
+    summary:
+      "Senator Carl Levin sent Cohen GAO testimony on the 1996 high-performance computer export-control revision, focusing on whether DoD assessed military applications in China, Russia, and other countries of concern before controls were relaxed.",
+    sourceName: "Google Drive PDF U16998",
+    sourceUrl: "https://drive.google.com/file/d/1XV0UH0hnR_FDzpXf99euyjd68FcCX6fd",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet combines congressional correspondence with GAO testimony and is suitable as a print-ready technology-transfer source.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["High-performance computers", "GAO", "Export controls", "China", "Russia"]
+  },
+  {
+    id: "cohen-secdef-2000-rd180-eelv-license",
+    chapterId: "tech-transfer",
+    date: "2000-04-27",
+    dateLabel: "April 27, 2000",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Cohen support for RD-180 manufacturing license in the EELV program",
+    summary:
+      "Secretary Cohen letters to congressional committees supported a five-year manufacturing license for the Russian Energomash RD-180 engine in the Air Force Evolved Expendable Launch Vehicle program, tying export licensing to assured launch, Russian conversion, and technology-security management.",
+    sourceName: "Google Drive PDF U05249",
+    sourceUrl: "https://drive.google.com/file/d/169MEDwE__jvkXzC2Ta9-6kodJ3ALbefo",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet includes Cohen's letters, action memoranda, and State Department correspondence on the license dispute.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["RD-180", "EELV", "Russia", "Export licensing", "Space launch"]
+  },
+  {
+    id: "cohen-secdef-1999-usacom-homeland-y2k",
+    chapterId: "y2k-planning",
+    date: "1999-01-20",
+    dateLabel: "January 20, 1999",
+    type: "Cohen SecDef Report",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Gehman report to Cohen on USACOM homeland defense and Y2K readiness",
+    summary:
+      "Admiral Harold Gehman's personal report to Secretary Cohen covers joint training, joint experimentation, homeland defense, JTF-Civil Support, FBI support, and USACOM's Y2K compliance and contingency posture.",
+    sourceName: "Google Drive PDF U00910",
+    sourceUrl: "https://drive.google.com/file/d/1eAvPLNDxn2tA6moLHQIsPww8E-6IHGOm",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The report is printable as a standalone preparedness record linking Y2K remediation to homeland defense planning.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["USACOM", "Homeland defense", "Y2K", "JTF-Civil Support", "Joint experimentation"]
+  },
+  {
+    id: "cohen-secdef-1999-nstac-y2k-critical-infrastructure",
+    chapterId: "y2k-planning",
+    date: "1999-04-21",
+    dateLabel: "April 21, 1999",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Cohen to Berger on NSTAC, Y2K, and critical infrastructure protection",
+    summary:
+      "As National Communications System Executive Agent, Cohen forwarded NCS comments on the NSTAC XXI Executive Report to Sandy Berger, connecting national security telecommunications, PDD-63 critical infrastructure protection, industry-government information sharing, and Y2K contingency planning.",
+    sourceName: "Google Drive PDF W00322",
+    sourceUrl: "https://drive.google.com/file/d/1L8H-WTZTihoo1d388JK8zM4m_tw8jNm-",
+    sourceNote:
+      "Drive search result for William Cohen SecDef files. The packet is a standalone bridge between the Y2K chapter and the critical-infrastructure preparedness lane.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["NSTAC", "PDD-63", "Critical infrastructure", "National Communications System", "Y2K"]
+  }
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -1622,6 +1885,71 @@ window.NSP_SOURCES = [
     label: "Google Drive JDEC implementation letter",
     url: "https://drive.google.com/file/d/1QhATAqpgYxjXWXEuNcnFSu7NiIMmZe_w",
     note: "Drive-held declassified Secretary of Defense letter on Joint Data Exchange Center implementation."
+  },
+  {
+    label: "Google Drive Cohen SecDef speech on shape, respond, prepare",
+    url: "https://drive.google.com/file/d/1vxVlXLZZCWPnffdukFqYa6CsQ8uLTJE5",
+    note: "Drive-held Cohen lecture laying out the post-Cold War defense strategy around shape, respond, and prepare."
+  },
+  {
+    label: "Google Drive Cohen SecDef Iran missile-defense options packet",
+    url: "https://drive.google.com/file/d/1GGG---UgOTBgCymoRjGPo3TtcUNIcQWj",
+    note: "Drive-held Kyl-Weldon correspondence packet linking Russian-Iranian missile technology transfer to theater missile defense options."
+  },
+  {
+    label: "Google Drive Cohen-Sergeyev shared early warning read-ahead",
+    url: "https://drive.google.com/file/d/19aq8yUfzVuvAW2EYv05MpDCGny3O8I-4",
+    note: "Drive-held Secretary of Defense read-ahead on Shared Early Warning and the proposed jointly manned warning center."
+  },
+  {
+    label: "Google Drive Cohen-Sergeyev START II and shared early warning read-ahead",
+    url: "https://drive.google.com/file/d/1GioQ2tkN3nNkG4S9jfGujFKP51bYkJLN",
+    note: "Drive-held Secretary of Defense read-ahead on START II, Shared Early Warning, NATO-Russia defense cooperation, Kosovo, and Iraq."
+  },
+  {
+    label: "Google Drive Cohen NMD funding and siting packet",
+    url: "https://drive.google.com/file/d/1mBjy3ntWstJVN5bVB3GTedyJ_JoaJj5J",
+    note: "Drive-held Cohen response and BMDO materials on NMD funding, deployment readiness, and site analysis."
+  },
+  {
+    label: "Google Drive Cohen RAMOS funding and sensor protection packet",
+    url: "https://drive.google.com/file/d/187pFsWv7J8YSA1wEXpGRIW0OWodFEtAs",
+    note: "Drive-held Cohen correspondence on RAMOS, missile-defense funding, and protection of advanced infrared sensor technology."
+  },
+  {
+    label: "Google Drive Cohen-Cleland NMD consensus correspondence",
+    url: "https://drive.google.com/file/d/1We7kCi3_npsIaweYVQQUo-VyeSVy0-wU",
+    note: "Drive-held Cohen response to Senator Cleland on National Missile Defense and bipartisan strategic consensus."
+  },
+  {
+    label: "Google Drive Cohen technology-transfer testimony packet",
+    url: "https://drive.google.com/file/d/1_p6E92qQW8UksY8nkD2VMysPevEg3saR",
+    note: "Drive-held Saxton packet forwarding Peter Leitner testimony on Chinese technology acquisition and dual-use export controls."
+  },
+  {
+    label: "Google Drive Cohen satellite-export oversight letter",
+    url: "https://drive.google.com/file/d/1-YFL0Ds4Cnkx3AcOnPAaJCgg0thkTnzt",
+    note: "Drive-held Trent Lott request for DoD records on commercial satellite exports to China and proliferation concerns."
+  },
+  {
+    label: "Google Drive Cohen high-performance computer export-control packet",
+    url: "https://drive.google.com/file/d/1XV0UH0hnR_FDzpXf99euyjd68FcCX6fd",
+    note: "Drive-held Levin packet with GAO testimony on high-performance computer export-control revisions."
+  },
+  {
+    label: "Google Drive Cohen RD-180/EELV manufacturing-license packet",
+    url: "https://drive.google.com/file/d/169MEDwE__jvkXzC2Ta9-6kodJ3ALbefo",
+    note: "Drive-held Cohen correspondence supporting an RD-180 manufacturing license for the Air Force EELV program."
+  },
+  {
+    label: "Google Drive Cohen USACOM homeland defense and Y2K report",
+    url: "https://drive.google.com/file/d/1eAvPLNDxn2tA6moLHQIsPww8E-6IHGOm",
+    note: "Drive-held Gehman report to Cohen on USACOM homeland defense, JTF-Civil Support, and Y2K readiness."
+  },
+  {
+    label: "Google Drive Cohen NSTAC Y2K and critical-infrastructure packet",
+    url: "https://drive.google.com/file/d/1L8H-WTZTihoo1d388JK8zM4m_tw8jNm-",
+    note: "Drive-held Cohen-Berger packet connecting NSTAC, PDD-63 critical infrastructure protection, NCS, and Y2K planning."
   },
   {
     label: "Google Drive Gore-Chernomyrdin S&T working group cable",
@@ -2002,7 +2330,8 @@ window.NSP_RECORDS.push(
   ...BMD_ABM_RECORDS,
   ...TECH_TRANSFER_RECORDS,
   ...Y2K_PLANNING_RECORDS,
-  ...STROBE_FOIA_RECORDS
+  ...STROBE_FOIA_RECORDS,
+  ...COHEN_SECDEF_RECORDS
 );
 
 for (const record of window.NSP_RECORDS) {
