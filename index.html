@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRUS 1993-2000 Volume VI National Security Policy Workspace</title>
+    <meta
+      name="description"
+      content="A working FRUS compiler workspace for the planned Foreign Relations of the United States, 1993-2000, Volume VI, National Security Policy."
+    />
+    <link rel="stylesheet" href="styles.css?v=20260521-nsp" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Clinton national security policy workspace home">
+        <span class="brand-mark">VI</span>
+        <span>Clinton NSP</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#audit">Audit</a>
+        <a href="#method">Method</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#workbench">Workbench</a>
+        <a href="#records">Records</a>
+        <a href="#sources">Sources</a>
+        <a href="#ingest">Ingest</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker">FRUS 1993-2000, Volume VI</p>
+          <h1 id="hero-title">Clinton National Security Policy Workspace</h1>
+          <p class="lede">
+            A working compiler page for the planned <em>Foreign Relations of the United
+            States, 1993-2000, Volume VI, National Security Policy</em>. It uses the Reagan
+            NSP preface as a model, then translates that framework for a post-Cold War
+            setting: strategy, risk reduction, strategic technology, and preparedness.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#workbench">Open Workbench</a>
+            <a class="button secondary" href="#records" data-quick-filter="high">High Priority Leads</a>
+          </div>
+        </div>
+
+        <aside class="brief" aria-label="Volume scope">
+          <img src="assets/nsp-framework-map.svg" alt="" class="framework-map" />
+          <p class="brief-label">Volume Scope</p>
+          <dl>
+            <div>
+              <dt>FRUS Volume</dt>
+              <dd>1993-2000, VI</dd>
+            </div>
+            <div>
+              <dt>Subject</dt>
+              <dd>National Security Policy</dd>
+            </div>
+            <div>
+              <dt>Current FRUS Status</dt>
+              <dd>Planned; not yet compiled</dd>
+            </div>
+            <div>
+              <dt>Arrangement</dt>
+              <dd>NSS reports plus a BMD/ABM issue chapter</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="stats" aria-label="Workspace summary">
+        <div>
+          <span id="total-records">0</span>
+          <p>workspace leads</p>
+        </div>
+        <div>
+          <span id="theme-count">0</span>
+          <p>volume chapters</p>
+        </div>
+        <div>
+          <span id="source-count">0</span>
+          <p>public source anchors</p>
+        </div>
+        <div>
+          <span id="directive-count">0</span>
+          <p>PRD/PDD handles</p>
+        </div>
+        <div>
+          <span id="page-count">0</span>
+          <p>cataloged source pages</p>
+        </div>
+      </section>
+
+      <section class="section audit-section" id="audit" aria-labelledby="audit-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Evidence Control</p>
+            <h2 id="audit-title">Compiler Audit Board</h2>
+          </div>
+          <p class="section-note">
+            A quick-read panel for the planned volume status, public finding aids, directive
+            coverage, and theme balance before any final FRUS selection work begins.
+          </p>
+        </div>
+        <div id="audit-root" class="audit-grid" aria-live="polite"></div>
+        <div class="evidence-layout">
+          <div id="coverage-root" class="coverage-panel" aria-live="polite"></div>
+          <div id="source-ledger-root" class="source-ledger-panel" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section method-section" id="method" aria-labelledby="method-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Framework Translation</p>
+            <h2 id="method-title">Reagan NSP Frame, Clinton NSP Setting</h2>
+          </div>
+          <a
+            class="section-link"
+            href="https://history.state.gov/historicaldocuments/frus1981-88v44p1/preface"
+            rel="noreferrer"
+          >
+            Reagan NSP preface
+          </a>
+        </div>
+        <div class="method-panel">
+          <p>
+            The Reagan preface identifies four thematic lanes for National Security Policy:
+            defense policy and strategic planning; Soviet analysis and risk reduction; the
+            strategic stockpile, machine tools, and export control; and national security
+            and defense preparedness. This page keeps that skeleton but removes the Cold War
+            center of gravity. For Clinton, Soviet analysis becomes post-Soviet and
+            transnational risk reduction; stockpile and machine-tool issues become the
+            broader technology, nonproliferation, space, and export-control lane.
+          </p>
+        </div>
+        <div id="method-root" class="method-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="chapters" aria-labelledby="chapters-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Chapter Plan</p>
+            <h2 id="chapters-title">Volume Chapters</h2>
+          </div>
+          <p class="section-note">
+            The volume now has one chapter for each Clinton National Security Strategy
+            report plus a special issue chapter on Ballistic Missile Defense and the
+            ABM Treaty. Each chapter keeps the four NSP framework themes visible as
+            cross-cutting tags rather than as the chapter sequence.
+          </p>
+        </div>
+        <div id="chapters-root" class="chapter-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section workbench-section" id="workbench" aria-labelledby="workbench-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Compiler Workbench</p>
+            <h2 id="workbench-title">FRUS Production View</h2>
+          </div>
+          <a
+            class="section-link"
+            href="https://history.state.gov/historicaldocuments/frus1993-00v06"
+            rel="noreferrer"
+          >
+            Volume VI status
+          </a>
+        </div>
+        <div class="workbench-grid">
+          <article class="workbench-card workbench-card-wide">
+            <h3>Theme Readiness</h3>
+            <dl class="metric-list">
+              <div>
+                <dt>Source leads</dt>
+                <dd id="source-lead-count">0</dd>
+              </div>
+              <div>
+                <dt>High priority</dt>
+                <dd id="high-priority-count">0</dd>
+              </div>
+              <div>
+                <dt>Public finding aids</dt>
+                <dd id="finding-aid-count">0</dd>
+              </div>
+              <div>
+                <dt>Open harvest tasks</dt>
+                <dd id="open-task-count">0</dd>
+              </div>
+            </dl>
+            <p>
+              This is an intake board, not a proposed document selection. It keeps source
+              leads visible until the Clinton Library, FRUS office, and catalog-level record
+              evidence can be reconciled.
+            </p>
+            <div class="workbench-actions">
+              <a href="#records" data-quick-filter="public">Show public anchors</a>
+              <a href="#records" data-quick-filter="directive">Show directive clusters</a>
+              <a href="#records" data-quick-filter="crafting">Show NSS crafting docs</a>
+              <a href="#records" data-quick-filter="harvest">Show harvest tasks</a>
+            </div>
+          </article>
+
+          <article class="workbench-card">
+            <h3>Immediate Review Queue</h3>
+            <p id="priority-summary">Loading high-priority leads.</p>
+            <ul id="priority-list" class="compact-list"></ul>
+            <div class="workbench-actions">
+              <a href="#records" data-quick-filter="high">Show queue</a>
+            </div>
+          </article>
+
+          <article class="workbench-card">
+            <h3>Selection Checks</h3>
+            <ul class="check-list">
+              <li>Preserve the official planned-volume status until FRUS publication changes.</li>
+              <li>Separate directive titles from actual documentary candidates.</li>
+              <li>Treat collection page extents as source coverage, not document page counts.</li>
+              <li>Make the post-Cold War logic explicit when mapping Reagan-era labels.</li>
+            </ul>
+          </article>
+
+          <article class="workbench-card">
+            <h3>Browse Paths</h3>
+            <div class="source-copy-grid">
+              <button type="button" data-quick-filter="defense-strategy">Strategy</button>
+              <button type="button" data-quick-filter="risk-reduction">Risk</button>
+              <button type="button" data-quick-filter="technology-control">Technology</button>
+              <button type="button" data-quick-filter="preparedness">Preparedness</button>
+              <button type="button" data-quick-filter="high">High priority</button>
+              <button type="button" data-quick-filter="public">Public sources</button>
+              <button type="button" data-quick-filter="crafting">NSS crafting</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section records-section" id="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Compiler Files</p>
+            <h2 id="records-title">Chapter Records</h2>
+          </div>
+          <p class="section-note">
+            Search every field, including directive numbers, source notes, topics, finding
+            aid names, NSS chapter titles, and adapted framework labels.
+          </p>
+        </div>
+        <div class="record-tools" aria-label="Record filters">
+          <div class="record-search">
+            <label for="record-search">
+              Search records
+              <input id="record-search" type="search" placeholder="PDD-25, CTBT, space, infrastructure" />
+            </label>
+          </div>
+          <div class="compiler-filters" aria-label="Compiler filters">
+            <label for="chapter-filter">
+              Chapter
+              <select id="chapter-filter">
+                <option value="all">All chapters</option>
+              </select>
+            </label>
+            <label for="theme-filter">
+              Theme
+              <select id="theme-filter">
+                <option value="all">All themes</option>
+              </select>
+            </label>
+            <label for="status-filter">
+              Status
+              <select id="status-filter">
+                <option value="all">All statuses</option>
+              </select>
+            </label>
+            <label for="type-filter">
+              Type
+              <select id="type-filter">
+                <option value="all">All types</option>
+              </select>
+            </label>
+            <button id="clear-filters" type="button">Clear</button>
+            <button id="export-records" type="button">Export CSV</button>
+          </div>
+          <div class="filter-buttons" aria-label="Quick filters">
+            <button type="button" data-record-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-record-filter="high" aria-pressed="false">High Priority</button>
+            <button type="button" data-record-filter="public" aria-pressed="false">Public Anchors</button>
+            <button type="button" data-record-filter="crafting" aria-pressed="false">NSS Crafting</button>
+            <button type="button" data-record-filter="directive" aria-pressed="false">Directives</button>
+            <button type="button" data-record-filter="harvest" aria-pressed="false">Harvest</button>
+          </div>
+        </div>
+        <p id="records-summary" class="records-summary" aria-live="polite"></p>
+        <div id="records-root" class="records-root" aria-live="polite">
+          <p class="loading">Loading theme records...</p>
+        </div>
+      </section>
+
+      <section class="section source-section" id="sources" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Official Anchors</p>
+            <h2 id="sources-title">Primary Sources</h2>
+          </div>
+        </div>
+        <div id="sources-root" class="source-list" aria-live="polite"></div>
+      </section>
+
+      <section class="section ingest-section" id="ingest" aria-labelledby="ingest-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Build Plan</p>
+            <h2 id="ingest-title">Ingest Checklist</h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="step-number">01</span>
+            <span>Keep the official Volume VI status page and FRUS status table as the authority for publication state.</span>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <span>Harvest the Clinton Library PRD/PDD list and normalize directive dates, titles, and source links.</span>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <span>Attach released MDR and FOIA finding aids to the four adapted NSP theme lanes.</span>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <span>Search Clinton NSC staff, office, cable, email, and records-management systems for source file leads.</span>
+          </li>
+          <li>
+            <span class="step-number">05</span>
+            <span>Separate source collection extents from actual document page counts before FRUS-style review.</span>
+          </li>
+          <li>
+            <span class="step-number">06</span>
+            <span>Track declassification status, closed material, folder-level processing, and incidental records explicitly.</span>
+          </li>
+          <li>
+            <span class="step-number">07</span>
+            <span>Update the framework as new releases clarify the Clinton-era national security policy record.</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>Published with GitHub Pages as a working companion archive.</p>
+      <a href="https://github.com/therealjameswilson/Clinton-NSP">Repository</a>
+    </footer>
+    <script src="data/records.js?v=20260521-bmd-abm"></script>
+    <script src="app.js?v=20260521-bmd-abm"></script>
+  </body>
+</html>
