@@ -61,6 +61,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Google Drive search results for Y2K planning sources, including the DoD six-month readiness update, Personnel and Readiness and C3ISR briefings, the Naval War College international-security report, and Joint Y2K Center for Strategic Stability correspondence and situation reporting
 - Google Drive search results for William S. Cohen Secretary of Defense collection files, including standalone printable packets on NMD, ABM Treaty/START diplomacy, RAMOS, high-performance computer export controls, satellite export oversight, RD-180/EELV licensing, homeland defense, and Y2K/critical infrastructure
 - Clinton Public Papers public-statement pass for NSP-relevant entries on National Security Strategy transmittals, ABM/NMD and strategic stability, export controls and technology transfer, and Y2K/critical infrastructure readiness
+- Public-statement companion pass across Google Drive, Strobe/State FOIA, Clinton Digital Library, and GovInfo-derived anchors, adding source packets behind NSS, NMD/ABM, technology transfer, and Y2K statements
 - Clinton Digital Library National Security Council collection overview
 - Clinton Digital Library Office of Records Management - Presidential Decision Directives collection overview
 - Clinton Digital Library Declassified Documents collection

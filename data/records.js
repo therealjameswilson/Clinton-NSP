@@ -2317,6 +2317,272 @@ const CLINTON_PUBLIC_STATEMENT_RECORDS = [
   })
 ];
 
+const PUBLIC_STATEMENT_COMPANION_RECORDS = [
+  {
+    id: "nss-clinton-library-1998-northern-ireland-nss-drafts",
+    chapterId: "national-security-strategy",
+    date: "1998-01-01",
+    dateLabel: "1998",
+    type: "Clinton Library Finding Aid",
+    status: "Public Finding Aid",
+    priority: "Medium",
+    themeId: "defense-strategy",
+    title: "Northern Ireland Peace Process collection lead for 1998 NSS drafts",
+    summary:
+      "The Clinton Digital Library finding aid notes that NSC email records in the Northern Ireland Peace Process collection include press guidance and drafts of the 1998 National Security Strategy Report.",
+    sourceName: "Clinton Digital Library item 48944",
+    sourceUrl: "https://clinton.presidentiallibraries.us/items/show/48944",
+    sourceNote:
+      "Online check for NSS companion material. This is a collection-level lead rather than a single scanned document, useful for locating drafting and communications records behind the 1998 NSS transmittal.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: ["clinton-ppp-1998-nss-transmittal"],
+    topics: ["1998 NSS", "NSC emails", "Drafting", "Press guidance", "Northern Ireland"]
+  },
+  {
+    id: "bmd-abm-foia-2000-locking-violation-time",
+    chapterId: "bmd-abm",
+    date: "2000-05-19",
+    dateLabel: "May 19, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Means of locking in the latest possible ABM Treaty violation time",
+    summary:
+      "State FOIA legal-policy paper on how to define the latest possible point at which Shemya-related radar construction would become an ABM Treaty violation, aimed at managing both Russian and domestic treaty challenges.",
+    sourceName: "State FOIA C09000002",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000002/C09000002.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000002/C09000002.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit from the NMD/ABM search pass. The document belongs behind the 2000 ABM Treaty and NMD public statements as a treaty-compliance companion.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-2000-abm-mou-letter",
+      "clinton-ppp-2000-strategic-stability-principles",
+      "clinton-ppp-2000-strategic-stability-cooperation"
+    ],
+    topics: ["NMD", "ABM Treaty", "Shemya", "Treaty compliance", "Radar"]
+  },
+  {
+    id: "bmd-abm-foia-2000-shemya-radar-violation-analysis",
+    chapterId: "bmd-abm",
+    date: "2000-05-25",
+    dateLabel: "May 25, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "When Shemya ABM radar construction would violate the ABM Treaty",
+    summary:
+      "State FOIA analysis of when activity associated with construction of an ABM radar at Shemya would cross the ABM Treaty line, useful for the legal clock behind the 2000 deployment and treaty-modification debate.",
+    sourceName: "State FOIA C09000044",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000044/C09000044.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000044/C09000044.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit from the NMD/ABM search pass. Adds a precise legal companion to the public Strategic Stability and ABM Treaty statements.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-2000-abm-mou-letter",
+      "clinton-ppp-2000-strategic-stability-principles",
+      "clinton-ppp-1999-nmd-act-signing"
+    ],
+    topics: ["NMD", "ABM Treaty", "Shemya", "Construction", "Treaty law"]
+  },
+  {
+    id: "bmd-abm-foia-2000-start-iii-basic-elements",
+    chapterId: "bmd-abm",
+    date: "2000-05-27",
+    dateLabel: "May 27, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Basic elements of a START III agreement",
+    summary:
+      "State FOIA paper setting out core START III elements, including lower aggregate warhead levels and verification provisions, as part of the same strategic-stability package that framed NMD and ABM Treaty adaptation.",
+    sourceName: "State FOIA C09000005",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000005/C09000005.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000005/C09000005.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit from the NMD/ABM search pass. This adds the offensive-reductions side of the NMD/ABM/START package.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-2000-start-ii-duma",
+      "clinton-ppp-2000-strategic-stability-principles",
+      "clinton-ppp-2000-strategic-stability-cooperation"
+    ],
+    topics: ["START III", "Strategic stability", "ABM Treaty", "Verification", "Warhead reductions"]
+  },
+  {
+    id: "bmd-abm-drive-2000-cohen-moscow-visit-book",
+    chapterId: "bmd-abm",
+    date: "2000-06-12",
+    dateLabel: "June 12-13, 2000",
+    type: "Cohen SecDef Visit Book",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Cohen Moscow visit book on NMD, ABM Treaty, START, and Shared Early Warning",
+    summary:
+      "SecDef Moscow visit scope note and talking points following the Clinton-Putin summit, with meeting themes for National Missile Defense, ABM Treaty modification, START, defense cooperation, Shared Early Warning, and TMD exercises.",
+    sourceName: "Google Drive PDF belgium0",
+    sourceUrl: "https://drive.google.com/file/d/150N7w2N6C9TkDRIAckTwl_qPyEyAeG9-",
+    sourceNote:
+      "Drive search result from the Y2K and strategic-stability companion pass. It links the public summit statements to Cohen-Sergeyev defense follow-through in Moscow.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-2000-strategic-stability-principles",
+      "clinton-ppp-2000-jdec-moa",
+      "clinton-ppp-2000-strategic-stability-cooperation-initiative"
+    ],
+    topics: ["NMD", "ABM Treaty", "START", "Shared Early Warning", "Sergeyev", "Moscow"]
+  },
+  {
+    id: "tech-transfer-drive-1998-china-materials-menu",
+    chapterId: "tech-transfer",
+    date: "1998-05-22",
+    dateLabel: "1998",
+    type: "Cohen SecDef Source Menu",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "Cohen 1998 China materials menu for satellite technology-transfer inquiries",
+    summary:
+      "Cohen collection menu pointing to multiple 1998 packets on commercial satellite exports to China, Cox-Dicks inquiries, the LM-3B/Intelsat 708 launch failure, DTSA interviews, and congressional document requests.",
+    sourceName: "Google Drive China Related Materials menu",
+    sourceUrl: "https://drive.google.com/file/d/1WjE_EkEekxYxkcFyxGNlwJPoKzvLQ3sP",
+    sourceNote:
+      "Drive search result for satellite exports to China. The menu is a useful routing record for print-ready source packets already scattered across the Cohen SecDef files.",
+    cohenSecDef: true,
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-1996-satellite-exports-china-1",
+      "clinton-ppp-1996-satellite-exports-china-2",
+      "clinton-ppp-1996-satellite-exports-china-3"
+    ],
+    topics: ["China", "Satellite exports", "Cox Committee", "DTSA", "Launch failure"]
+  },
+  {
+    id: "tech-transfer-drive-1998-hpc-gao-response",
+    chapterId: "tech-transfer",
+    date: "1998-12-06",
+    dateLabel: "December 6, 1998",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Cohen response to Levin on GAO review of high-performance computer controls",
+    summary:
+      "Cohen reply and action package responding to Senator Levin's questions about GAO's high-performance-computer export-control report, including DoD's position that national-security threat and proliferation impacts were considered in the 1995 interagency review.",
+    sourceName: "Google Drive PDF U18994",
+    sourceUrl: "https://drive.google.com/file/d/1N-FXvQ7J5PRniPxduVWjIoR2A6XWvq_J",
+    sourceNote:
+      "Drive search result for SecDef computer letters. Completes the Levin-GAO chain already represented by the October 1998 Cohen SecDef packet.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-1995-computer-export-controls",
+      "clinton-ppp-1999-hpc-semiconductor-export-controls"
+    ],
+    topics: ["High-performance computers", "GAO", "Export controls", "Levin", "MTOPS"]
+  },
+  {
+    id: "tech-transfer-drive-1999-china-materials-menu",
+    chapterId: "tech-transfer",
+    date: "1999-09-17",
+    dateLabel: "1999",
+    type: "Cohen SecDef Source Menu",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "Cohen 1999 China materials menu for satellite licenses and machine-tool exports",
+    summary:
+      "Cohen collection menu pointing to a September 1999 satellite-export license update for launches in China and Russia and late-1999 materials on McDonnell-Douglas machine-tool exports to China.",
+    sourceName: "Google Drive China menu",
+    sourceUrl: "https://drive.google.com/file/d/1GnY6bq_8l1IJS3SSQKQS9zmBJuBTXwxZ",
+    sourceNote:
+      "Drive search result for satellite exports to China. The 1999 menu helps locate follow-on technology-transfer records after the Cox Committee controversy.",
+    cohenSecDef: true,
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-1999-hpc-semiconductor-export-controls",
+      "clinton-ppp-2000-export-administration-reauthorization"
+    ],
+    topics: ["China", "Satellite licenses", "Machine tools", "Export controls", "Russia"]
+  },
+  {
+    id: "tech-transfer-drive-2001-hpc-export-control-letters",
+    chapterId: "tech-transfer",
+    date: "2001-01-16",
+    dateLabel: "January 16-17, 2001",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "SecDef letters to HASC and SASC on revised high-performance computer controls",
+    summary:
+      "Cohen letters and staff package supporting President Clinton's final high-performance-computer export-control revision, explaining the move away from MTOPS-centered hardware controls toward software application controls and protection of critical codes.",
+    sourceName: "Google Drive PDF U00862",
+    sourceUrl: "https://drive.google.com/file/d/1Jp3NNS_rtwP2nsDr3nQwJ232imldbAqr",
+    sourceNote:
+      "Drive search result for 85,000 MTOPS and SecDef computer letters. The packet includes the January 10, 2001 White House fact sheet and email coordination among Bodner, Tarbell, Oliver, Etter, and OGC.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-1999-hpc-semiconductor-export-controls",
+      "clinton-ppp-2000-hpc-semiconductor-export-controls"
+    ],
+    topics: ["High-performance computers", "Export controls", "MTOPS", "Software controls", "Congress"]
+  },
+  {
+    id: "y2k-clinton-library-1998-presidents-council-source",
+    chapterId: "y2k-planning",
+    date: "1998-02-04",
+    dateLabel: "1998",
+    type: "Clinton Library Digitized Source",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "preparedness",
+    title: "Speechwriting source file on the President's Council on Year 2000 Conversion",
+    summary:
+      "Michael Waldman speechwriting file for the President's Council on Year 2000 Conversion, a useful White House-side companion to EO 13073 and Clinton's public Y2K mobilization remarks.",
+    sourceName: "Clinton Digital Library item 45211",
+    sourceUrl: "https://clinton.presidentiallibraries.us/items/show/45211",
+    sourceNote:
+      "Online Clinton Digital Library check for Y2K companion material. The item is listed as an Adobe Acrobat document in the Michael Waldman speechwriting collection.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: [
+      "clinton-ppp-1998-y2k-conversion-remarks",
+      "clinton-ppp-1998-financial-y2k-readiness"
+    ],
+    topics: ["Y2K", "President's Council", "Speechwriting", "Koskinen", "Public mobilization"]
+  },
+  {
+    id: "y2k-clinton-library-2000-national-plan-cyberspace",
+    chapterId: "y2k-planning",
+    date: "2000-01-07",
+    dateLabel: "January 7, 2000",
+    type: "Clinton Library Digitized Source",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Defending America's Cyberspace - National Plan for Information Systems Protection",
+    summary:
+      "Digitized Clinton Library source copy of the January 2000 national plan for information-systems protection, bridging Y2K preparedness, PDD-63 critical-infrastructure protection, cyber defense, and the public rollout after the rollover.",
+    sourceName: "Clinton Digital Library item 96290",
+    sourceUrl: "https://clinton.presidentiallibraries.us/items/show/96290",
+    sourceNote:
+      "Online Clinton Digital Library check for companion documents behind Clinton's January 7, 2000 public statement on the National Plan for Information Systems Protection.",
+    publicStatementCompanion: true,
+    relatedPublicStatementIds: ["clinton-ppp-2000-information-systems-protection"],
+    topics: ["Cyberspace", "Information systems protection", "PDD-63", "Critical infrastructure", "Y2K"]
+  }
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -2407,6 +2673,21 @@ window.NSP_SOURCES = [
     note: "Manifest metadata and extracted descriptions used to identify NSP-relevant public FOIA records."
   },
   {
+    label: "State FOIA C09000002 ABM Treaty violation timing paper",
+    url: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000002/C09000002.pdf",
+    note: "Public FOIA companion paper on the latest possible treaty-violation timing for Shemya-related ABM radar construction."
+  },
+  {
+    label: "State FOIA C09000044 Shemya ABM radar violation analysis",
+    url: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000044/C09000044.pdf",
+    note: "Public FOIA companion paper on when Shemya ABM radar construction would violate the ABM Treaty."
+  },
+  {
+    label: "State FOIA C09000005 START III basic elements",
+    url: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000005/C09000005.pdf",
+    note: "Public FOIA companion paper on START III elements tied to the NMD, ABM Treaty, and strategic-stability package."
+  },
+  {
     label: "2013-0185-M NSC folder-title list",
     url:
       "https://www.clintonlibrary.gov/research/archives/finding-aids/declassified-folder-title-list-national-security-council",
@@ -2486,6 +2767,11 @@ window.NSP_SOURCES = [
     label: "Clinton Digital Library NSS report search",
     url: "https://clinton.presidentiallibraries.us/solr-search?q=%22National%20Security%20Strategy%20Report%22",
     note: "Search trail used to identify public source copies and drafting-process leads."
+  },
+  {
+    label: "Clinton Digital Library Northern Ireland Peace Process finding aid",
+    url: "https://clinton.presidentiallibraries.us/items/show/48944",
+    note: "Finding aid lead for NSC emails that include press guidance and drafts of the 1998 National Security Strategy Report."
   },
   {
     label: "PRD-31 ballistic missile defense review",
@@ -2569,6 +2855,11 @@ window.NSP_SOURCES = [
     note: "Drive-held Cohen response to Senator Cleland on National Missile Defense and bipartisan strategic consensus."
   },
   {
+    label: "Google Drive Cohen Moscow visit book",
+    url: "https://drive.google.com/file/d/150N7w2N6C9TkDRIAckTwl_qPyEyAeG9-",
+    note: "Drive-held June 2000 SecDef Moscow visit book on NMD, ABM Treaty modification, START, defense cooperation, and Shared Early Warning."
+  },
+  {
     label: "Google Drive Cohen technology-transfer testimony packet",
     url: "https://drive.google.com/file/d/1_p6E92qQW8UksY8nkD2VMysPevEg3saR",
     note: "Drive-held Saxton packet forwarding Peter Leitner testimony on Chinese technology acquisition and dual-use export controls."
@@ -2582,6 +2873,26 @@ window.NSP_SOURCES = [
     label: "Google Drive Cohen high-performance computer export-control packet",
     url: "https://drive.google.com/file/d/1XV0UH0hnR_FDzpXf99euyjd68FcCX6fd",
     note: "Drive-held Levin packet with GAO testimony on high-performance computer export-control revisions."
+  },
+  {
+    label: "Google Drive Cohen 1998 China materials menu",
+    url: "https://drive.google.com/file/d/1WjE_EkEekxYxkcFyxGNlwJPoKzvLQ3sP",
+    note: "Drive-held Cohen collection menu for 1998 China-related satellite export and technology-transfer oversight packets."
+  },
+  {
+    label: "Google Drive Cohen HPC GAO response packet",
+    url: "https://drive.google.com/file/d/1N-FXvQ7J5PRniPxduVWjIoR2A6XWvq_J",
+    note: "Drive-held Cohen reply and action package responding to Senator Levin on GAO's high-performance computer export-control review."
+  },
+  {
+    label: "Google Drive Cohen 1999 China materials menu",
+    url: "https://drive.google.com/file/d/1GnY6bq_8l1IJS3SSQKQS9zmBJuBTXwxZ",
+    note: "Drive-held Cohen collection menu for 1999 satellite license and machine-tool export materials relating to China."
+  },
+  {
+    label: "Google Drive Cohen 2001 HPC export-control letters",
+    url: "https://drive.google.com/file/d/1Jp3NNS_rtwP2nsDr3nQwJ232imldbAqr",
+    note: "Drive-held Cohen letters and staff package on the final Clinton high-performance computer export-control revision."
   },
   {
     label: "Google Drive Cohen RD-180/EELV manufacturing-license packet",
@@ -2648,6 +2959,16 @@ window.NSP_SOURCES = [
     label: "PDD-63 critical infrastructure protection",
     url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-63.pdf",
     note: "Released decision directive source for critical infrastructure protection and continuity."
+  },
+  {
+    label: "Clinton Digital Library President's Council on Year 2000 Conversion",
+    url: "https://clinton.presidentiallibraries.us/items/show/45211",
+    note: "Digitized Michael Waldman speechwriting source file for the White House Y2K public-mobilization effort."
+  },
+  {
+    label: "Clinton Digital Library Defending America's Cyberspace",
+    url: "https://clinton.presidentiallibraries.us/items/show/96290",
+    note: "Digitized source copy of the January 2000 National Plan for Information Systems Protection."
   },
   {
     label: "Google Drive DoD Year 2000 six-month update",
@@ -2979,7 +3300,8 @@ window.NSP_RECORDS.push(
   ...Y2K_PLANNING_RECORDS,
   ...STROBE_FOIA_RECORDS,
   ...COHEN_SECDEF_RECORDS,
-  ...CLINTON_PUBLIC_STATEMENT_RECORDS
+  ...CLINTON_PUBLIC_STATEMENT_RECORDS,
+  ...PUBLIC_STATEMENT_COMPANION_RECORDS
 );
 
 for (const record of window.NSP_RECORDS) {
