@@ -6,20 +6,14 @@ Working compiler page for the planned Office of the Historian volume:
 - Planned destination: https://history.state.gov/historicaldocuments/frus1993-00v06
 - Public workspace: https://therealjameswilson.github.io/Clinton-NSP/
 
-The page now arranges the volume as one chapter per Clinton National Security Strategy report,
-plus special issue chapters on ballistic missile defense/ABM Treaty, technology transfer, and
-Y2K planning:
+The page now arranges the volume with one chronological National Security Strategy chapter
+for the full Clinton period, plus special issue chapters on ballistic missile defense/ABM
+Treaty, technology transfer, and Y2K planning:
 
-1. July 1994, `A National Security Strategy of Engagement and Enlargement`
-2. February 1995, `A National Security Strategy of Engagement and Enlargement`
-3. February 1996, `A National Security Strategy of Engagement and Enlargement`
-4. May 1997, `A National Security Strategy for a New Century`
-5. October 1998, `A National Security Strategy for a New Century`
-6. December 1999, `A National Security Strategy for a New Century`
-7. December 2000, `A National Security Strategy for a Global Age`
-8. 1993-2000, `Ballistic Missile Defense and the ABM Treaty`
-9. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
-10. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
+1. 1993-2000, `National Security Strategy`
+2. 1993-2000, `Ballistic Missile Defense and the ABM Treaty`
+3. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
+4. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
 
 The site also includes a `Collections and Ranked Folders` section generated from the
 research plan's 200 ranked folder targets from Clinton Library MDR case `2013-0185-M`.

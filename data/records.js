@@ -1,84 +1,18 @@
 window.NSP_CHAPTERS = [
   {
-    id: "nss-1994",
+    id: "national-security-strategy",
     number: 1,
-    year: "1994",
-    dateLabel: "July 1994",
-    title: "A National Security Strategy of Engagement and Enlargement",
-    shortTitle: "1994 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1994.pdf",
+    year: "1993-2000",
+    dateLabel: "1993-2000",
+    title: "National Security Strategy",
+    shortTitle: "NSS",
+    reportUrl: "https://history.defense.gov/Historical-Sources/National-Security-Strategy/lang/en/",
     note:
-      "First Clinton NSS report; the intake pass has not yet located a public Clinton Library drafting packet for the 1994 report."
-  },
-  {
-    id: "nss-1995",
-    number: 2,
-    year: "1995",
-    dateLabel: "February 1995",
-    title: "A National Security Strategy of Engagement and Enlargement",
-    shortTitle: "1995 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1995.pdf",
-    note:
-      "Second engagement-and-enlargement report; public source leads include a digitized speechwriting copy and a Samore MTCR finding aid reference."
-  },
-  {
-    id: "nss-1996",
-    number: 3,
-    year: "1996",
-    dateLabel: "February 1996",
-    title: "A National Security Strategy of Engagement and Enlargement",
-    shortTitle: "1996 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1996.pdf",
-    note:
-      "Third engagement-and-enlargement report; current public search shows contextual references but no confirmed drafting packet."
-  },
-  {
-    id: "nss-1997",
-    number: 4,
-    year: "1997",
-    dateLabel: "May 1997",
-    title: "A National Security Strategy for a New Century",
-    shortTitle: "1997 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1997.pdf",
-    note:
-      "The best public crafting trail so far: Kerrick briefing/background files plus communications-planning copies that call the NSS an annual NSC exercise."
-  },
-  {
-    id: "nss-1998",
-    number: 5,
-    year: "1998",
-    dateLabel: "October 1998",
-    title: "A National Security Strategy for a New Century",
-    shortTitle: "1998 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1998.pdf",
-    note:
-      "A Northern Ireland Peace Process finding aid explicitly identifies drafts of the 1998 National Security Strategy Report in NSC email accounts."
-  },
-  {
-    id: "nss-1999",
-    number: 6,
-    year: "1999",
-    dateLabel: "December 1999",
-    title: "A National Security Strategy for a New Century",
-    shortTitle: "1999 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1999.pdf",
-    note:
-      "Public leads include a press-statement copy announcing transmittal and a Berger speechwriting file naming Joe Bouchard's role preparing the annual report."
-  },
-  {
-    id: "nss-2000",
-    number: 7,
-    year: "2000",
-    dateLabel: "December 2000",
-    title: "A National Security Strategy for a Global Age",
-    shortTitle: "2000 NSS",
-    reportUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss2000.pdf",
-    note:
-      "Final Clinton NSS report; the public pass has located thematic context files but not a confirmed report-drafting packet."
+      "Chronological chapter for the Clinton administration's National Security Strategy record across 1993-2000, keeping the published NSS reports, drafting traces, directive-system leads, and strategy-review records in one eight-year sequence."
   },
   {
     id: "bmd-abm",
-    number: 8,
+    number: 2,
     year: "1993-2000",
     dateLabel: "1993-2000",
     title: "Ballistic Missile Defense and the ABM Treaty",
@@ -89,7 +23,7 @@ window.NSP_CHAPTERS = [
   },
   {
     id: "tech-transfer",
-    number: 9,
+    number: 3,
     year: "1993-2000",
     dateLabel: "1993-2000",
     title: "Technology Transfer, Export Controls, and Strategic Industry",
@@ -100,7 +34,7 @@ window.NSP_CHAPTERS = [
   },
   {
     id: "y2k-planning",
-    number: 10,
+    number: 4,
     year: "1998-2000",
     dateLabel: "1998-2000",
     title: "Y2K Planning and Critical Infrastructure Readiness",
@@ -114,7 +48,7 @@ window.NSP_CHAPTERS = [
 const NSS_RECORDS = [
   {
     id: "published-nss-1994",
-    chapterId: "nss-1994",
+    chapterId: "national-security-strategy",
     date: "1994-07-01",
     dateLabel: "July 1994",
     type: "NSS Report",
@@ -123,17 +57,17 @@ const NSS_RECORDS = [
     themeId: "defense-strategy",
     title: "Published 1994 National Security Strategy",
     summary:
-      "First Clinton National Security Strategy report and the baseline chapter anchor for engagement and enlargement.",
+      "First Clinton National Security Strategy report and the baseline chronology anchor for engagement and enlargement.",
     sourceName: "Defense Historical Office NSS index",
     sourceUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1994.pdf",
     sourceNote:
-      "Official published report anchor. No public Clinton Digital Library drafting packet was confirmed for this chapter in the initial search pass.",
+      "Official published report anchor. No public Clinton Digital Library drafting packet was confirmed for the 1994 report in the initial search pass.",
     directives: [],
     topics: ["National Security Strategy", "Engagement and enlargement", "Published report"]
   },
   {
     id: "published-nss-1995",
-    chapterId: "nss-1995",
+    chapterId: "national-security-strategy",
     date: "1995-02-01",
     dateLabel: "February 1995",
     type: "NSS Report",
@@ -152,7 +86,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1995-speechwriting-copy",
-    chapterId: "nss-1995",
+    chapterId: "national-security-strategy",
     date: "1995-02-01",
     dateLabel: "February 1995",
     type: "Digitized Source",
@@ -161,7 +95,7 @@ const NSS_RECORDS = [
     themeId: "defense-strategy",
     title: "NSC - 1995 Congressional Report",
     summary:
-      "Digitized speechwriting-file copy of the 1995 National Security Strategy report, useful as a page-level source control copy for the 1995 chapter.",
+      "Digitized speechwriting-file copy of the 1995 National Security Strategy report, useful as a page-level source control copy for the 1995 chronology entry.",
     sourceName: "Clinton Digital Library item 11086",
     sourceUrl: "https://clinton.presidentiallibraries.us/items/show/11086",
     pdfUrl: "https://clinton.presidentiallibraries.us/files/original/d608418938dde2f8864fcb1f0990857d.pdf",
@@ -173,7 +107,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1995-samore-finding-aid",
-    chapterId: "nss-1995",
+    chapterId: "national-security-strategy",
     date: "1995-02-01",
     dateLabel: "1995",
     type: "Finding Aid Lead",
@@ -194,7 +128,7 @@ const NSS_RECORDS = [
   },
   {
     id: "published-nss-1996",
-    chapterId: "nss-1996",
+    chapterId: "national-security-strategy",
     date: "1996-02-01",
     dateLabel: "February 1996",
     type: "NSS Report",
@@ -213,7 +147,7 @@ const NSS_RECORDS = [
   },
   {
     id: "published-nss-1997",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-05-01",
     dateLabel: "May 1997",
     type: "NSS Report",
@@ -222,7 +156,7 @@ const NSS_RECORDS = [
     themeId: "defense-strategy",
     title: "Published 1997 National Security Strategy",
     summary:
-      "First Clinton NSS titled for a new century, and the chapter with the strongest public drafting-process trail in the current workspace.",
+      "First Clinton NSS titled for a new century, and the report with the strongest public drafting-process trail in the current workspace.",
     sourceName: "Defense Historical Office NSS index",
     sourceUrl: "https://history.defense.gov/Portals/70/Documents/nss/nss1997.pdf",
     sourceNote:
@@ -232,7 +166,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1997-kerrick-background-1",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-05-01",
     dateLabel: "1997",
     type: "Crafting Document",
@@ -253,7 +187,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1997-kerrick-background-2",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-05-01",
     dateLabel: "1997",
     type: "Crafting Document",
@@ -274,7 +208,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1997-communications-meeting",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-04-01",
     dateLabel: "April 1997",
     type: "Crafting Document",
@@ -295,7 +229,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1997-foreign-policy-communications-copy",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-04-01",
     dateLabel: "April 1997",
     type: "Crafting Document",
@@ -316,7 +250,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1997-ideas-copy",
-    chapterId: "nss-1997",
+    chapterId: "national-security-strategy",
     date: "1997-04-01",
     dateLabel: "April 1997",
     type: "Crafting Document",
@@ -337,7 +271,7 @@ const NSS_RECORDS = [
   },
   {
     id: "published-nss-1998",
-    chapterId: "nss-1998",
+    chapterId: "national-security-strategy",
     date: "1998-10-01",
     dateLabel: "October 1998",
     type: "NSS Report",
@@ -355,7 +289,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1998-northern-ireland-drafts",
-    chapterId: "nss-1998",
+    chapterId: "national-security-strategy",
     date: "1998-10-01",
     dateLabel: "1998",
     type: "Finding Aid Lead",
@@ -376,7 +310,7 @@ const NSS_RECORDS = [
   },
   {
     id: "published-nss-1999",
-    chapterId: "nss-1999",
+    chapterId: "national-security-strategy",
     date: "1999-12-01",
     dateLabel: "December 1999",
     type: "NSS Report",
@@ -394,7 +328,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1999-china-press-statement",
-    chapterId: "nss-1999",
+    chapterId: "national-security-strategy",
     date: "1999-12-01",
     dateLabel: "December 1999",
     type: "Release Context",
@@ -415,7 +349,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-1999-bouchard-preparation",
-    chapterId: "nss-1999",
+    chapterId: "national-security-strategy",
     date: "2000-01-13",
     dateLabel: "January 13, 2000",
     type: "Crafting Document",
@@ -436,7 +370,7 @@ const NSS_RECORDS = [
   },
   {
     id: "published-nss-2000",
-    chapterId: "nss-2000",
+    chapterId: "national-security-strategy",
     date: "2000-12-01",
     dateLabel: "December 2000",
     type: "NSS Report",
@@ -454,7 +388,7 @@ const NSS_RECORDS = [
   },
   {
     id: "nss-2000-military-reform-context",
-    chapterId: "nss-2000",
+    chapterId: "national-security-strategy",
     date: "2000-09-27",
     dateLabel: "September 27, 2000",
     type: "Context Lead",
@@ -1788,22 +1722,5 @@ window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS, ...TECH_TRANSFER_REC
 
 for (const record of window.NSP_RECORDS) {
   if (record.chapterId) continue;
-  const year = Number((record.date || "").slice(0, 4));
-  if (!Number.isFinite(year)) {
-    record.chapterId = "nss-1994";
-  } else if (year <= 1994) {
-    record.chapterId = "nss-1994";
-  } else if (year === 1995) {
-    record.chapterId = "nss-1995";
-  } else if (year === 1996) {
-    record.chapterId = "nss-1996";
-  } else if (year === 1997) {
-    record.chapterId = "nss-1997";
-  } else if (year === 1998) {
-    record.chapterId = "nss-1998";
-  } else if (year === 1999) {
-    record.chapterId = "nss-1999";
-  } else {
-    record.chapterId = "nss-2000";
-  }
+  record.chapterId = "national-security-strategy";
 }

@@ -1459,9 +1459,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "NSS report workspace chapters",
+        "label": "NSS report workspace chapter",
         "url": "#chapters",
-        "note": "Related National Security Strategy report copies and drafting leads are normalized in the NSS chapters."
+        "note": "Related National Security Strategy report copies and drafting leads are normalized in the single NSS chronology chapter."
       }
     ]
   },
@@ -1759,9 +1759,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "NSS report workspace chapters",
+        "label": "NSS report workspace chapter",
         "url": "#chapters",
-        "note": "Related National Security Strategy report copies and drafting leads are normalized in the NSS chapters."
+        "note": "Related National Security Strategy report copies and drafting leads are normalized in the single NSS chronology chapter."
       }
     ]
   },
@@ -2868,9 +2868,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "NSS report workspace chapters",
+        "label": "NSS report workspace chapter",
         "url": "#chapters",
-        "note": "Related National Security Strategy report copies and drafting leads are normalized in the NSS chapters."
+        "note": "Related National Security Strategy report copies and drafting leads are normalized in the single NSS chronology chapter."
       }
     ]
   },
