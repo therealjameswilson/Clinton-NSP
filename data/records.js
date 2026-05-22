@@ -97,6 +97,17 @@ window.NSP_CHAPTERS = [
     reportUrl: "https://www.clintonlibrary.gov/research/presidential-directives",
     note:
       "Special issue chapter on post-Cold War technology transfer: nonproliferation export controls, encryption, remote sensing, commercial satellites, jet-engine hot-section technology, conventional arms transfers, space policy, and allied defense-industrial reform."
+  },
+  {
+    id: "y2k-planning",
+    number: 10,
+    year: "1998-2000",
+    dateLabel: "1998-2000",
+    title: "Y2K Planning and Critical Infrastructure Readiness",
+    shortTitle: "Y2K Planning",
+    reportUrl: "https://www.govinfo.gov/content/pkg/CFR-1999-title3-vol1/pdf/CFR-1999-title3-vol1-eo13073.pdf",
+    note:
+      "Special issue chapter on Year 2000 planning as a post-Cold War preparedness problem: federal conversion, critical infrastructure protection, DoD operational readiness, nuclear command and control, consequence management, international risk, and U.S.-Russian strategic warning cooperation."
   }
 ];
 
@@ -1001,6 +1012,204 @@ const TECH_TRANSFER_RECORDS = [
   }
 ];
 
+const Y2K_PLANNING_RECORDS = [
+  {
+    id: "y2k-eo13073-year-2000-conversion",
+    chapterId: "y2k-planning",
+    date: "1998-02-04",
+    dateLabel: "February 4, 1998",
+    type: "Executive Order",
+    status: "Public Anchor",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Executive Order 13073, Year 2000 Conversion",
+    summary:
+      "Created the President's Council on Year 2000 Conversion and framed Y2K as a government-wide continuity, private-sector, state-local, tribal, and international coordination problem.",
+    sourceName: "GovInfo EO 13073",
+    sourceUrl:
+      "https://www.govinfo.gov/content/pkg/CFR-1999-title3-vol1/pdf/CFR-1999-title3-vol1-eo13073.pdf",
+    pdfUrl:
+      "https://www.govinfo.gov/content/pkg/CFR-1999-title3-vol1/pdf/CFR-1999-title3-vol1-eo13073.pdf",
+    sourceNote:
+      "Official compiled executive order text. The National Archives disposition table lists EO 13073 as signed February 4, 1998 and published at 63 FR 6067 on February 6, 1998.",
+    directives: ["EO 13073"],
+    topics: ["Year 2000 conversion", "President's Council", "Federal continuity", "Critical systems", "International coordination"]
+  },
+  {
+    id: "y2k-pdd63-critical-infrastructure",
+    chapterId: "y2k-planning",
+    date: "1998-05-22",
+    dateLabel: "May 22, 1998",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "preparedness",
+    title: "PDD-63, Critical Infrastructure Protection",
+    summary:
+      "Decision directive establishing critical-infrastructure protection as a national-security mission, giving the Y2K chapter its broader resilience frame for telecommunications, energy, finance, transportation, emergency services, and government continuity.",
+    sourceName: "Clinton Library PDD-63",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-63.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-63.pdf",
+    sourceNote:
+      "Released PDD source. The Clinton Library administrative marker lists PDD-63 as May 20, 1998; the directive memorandum itself is dated May 22, 1998.",
+    directives: ["PDD-63"],
+    topics: ["Critical infrastructure", "Continuity", "Public-private coordination", "Information systems", "Preparedness"]
+  },
+  {
+    id: "y2k-eo13127-information-coordination-center",
+    chapterId: "y2k-planning",
+    date: "1999-06-14",
+    dateLabel: "June 14, 1999",
+    type: "Executive Order",
+    status: "Public Anchor",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Executive Order 13127 and the Y2K Information Coordination Center",
+    summary:
+      "Amended EO 13073 to create the Information Coordination Center in GSA, giving the President's Council a rollover-era mechanism for information sharing, emergency assessment, and reconstitution coordination.",
+    sourceName: "GovInfo Federal Register PDF 99-15623",
+    sourceUrl: "https://www.govinfo.gov/content/pkg/FR-1999-06-17/pdf/99-15623.pdf",
+    pdfUrl: "https://www.govinfo.gov/content/pkg/FR-1999-06-17/pdf/99-15623.pdf",
+    sourceNote:
+      "Official Federal Register PDF for EO 13127, published June 17, 1999 at 64 FR 32793.",
+    directives: ["EO 13127"],
+    topics: ["Information Coordination Center", "GSA", "Emergency assessment", "Reconstitution", "Public-private coordination"]
+  },
+  {
+    id: "y2k-drive-dod-six-month-update",
+    chapterId: "y2k-planning",
+    date: "1999-06-25",
+    dateLabel: "June 25, 1999",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "preparedness",
+    title: "DoD Year 2000 six-month readiness update",
+    summary:
+      "Secretary of Defense memorandum convening a July 1999 review of DoD Y2K preparedness, with operational readiness, nuclear command and control, OSD functional areas, host-nation support, the Center for Strategic Stability, consequence management, and tabletop exercises on the agenda.",
+    sourceName: "Google Drive PDF U09918",
+    sourceUrl: "https://drive.google.com/file/d/1fL5j2m3myXOgK_oK-Hp_1dRfusc4QHcr",
+    sourceNote:
+      "Drive search result for Y2K. The memo identifies John Koskinen, Chair of the President's Council on Year 2000 Conversion, among the July 21 attendees and treats operational readiness as the principal DoD focus.",
+    directives: [],
+    topics: ["DoD readiness", "Operational preparedness", "Nuclear command and control", "Consequence management", "Tabletop exercises"]
+  },
+  {
+    id: "y2k-drive-personnel-health-systems",
+    chapterId: "y2k-planning",
+    date: "1999-07-21",
+    dateLabel: "July 21, 1999",
+    type: "Drive Briefing",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "preparedness",
+    title: "Personnel, TRICARE, and host-nation support Y2K readiness briefing",
+    summary:
+      "Under Secretary Rudy de Leon briefing on personnel and readiness systems, including mission-critical personnel functions, health systems, biomedical equipment, and host-nation support for possible noncombatant evacuation operations.",
+    sourceName: "Google Drive PDF usdpr",
+    sourceUrl: "https://drive.google.com/file/d/1A1SMy225U2UC4Oj6D8rwObSKIZW1XCAC",
+    sourceNote:
+      "Drive search result for Y2K. The briefing is titled Secretary's Briefing, 6 Months to Y2K, Mr. Rudy de Leon, Under Secretary (Personnel and Readiness), 21 July 1999.",
+    directives: [],
+    topics: ["Personnel readiness", "TRICARE", "Biomedical systems", "Host-nation support", "Noncombatant evacuation"]
+  },
+  {
+    id: "y2k-drive-c3isr-space-nuclear-contingency",
+    chapterId: "y2k-planning",
+    date: "1999-07-27",
+    dateLabel: "July 27, 1999",
+    type: "Drive Briefing",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "C3ISR, space, and nuclear deterrence Y2K contingency planning",
+    summary:
+      "C3ISR and space briefing tracking 527 mission-critical systems and contingency planning for nuclear deterrence resources, DISA services, intelligence, space, weather, and GPS transition risks.",
+    sourceName: "Google Drive PDF asdc3",
+    sourceUrl: "https://drive.google.com/file/d/1mz2pRPwYoXnB3FxP2Kpo4Fn3HocfgBoy",
+    sourceNote:
+      "Drive search result for Y2K. The briefing references a June 16, 1999 draft DoD Y2K Operational Contingency Strategy for U.S. Nuclear Deterrence Resources and a Nuclear Operational Contingency Strategy Working Group.",
+    directives: [],
+    topics: ["C3ISR", "Space", "Nuclear deterrence", "GPS", "Mission-critical systems"]
+  },
+  {
+    id: "y2k-drive-international-security-dimension",
+    chapterId: "y2k-planning",
+    date: "1999-09-20",
+    dateLabel: "September 20, 1999",
+    type: "Drive Report",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Year 2000 International Security Dimension project report",
+    summary:
+      "Naval War College project summary for Secretary Cohen on global Y2K scenarios, treating social, political, religious, technological, and economic disruption as an international-security problem rather than a narrow federal IT repair task.",
+    sourceName: "Google Drive PDF U15565",
+    sourceUrl: "https://drive.google.com/file/d/1uHJj5fw1LhLVw_nFU5h4QVeFHEp7Jc-t",
+    sourceNote:
+      "Drive search result for Y2K. The packet includes a September 20, 1999 report summary transmitted under an October 6, 1999 letter to Jerry Hultin.",
+    directives: [],
+    topics: ["International security", "Global scenarios", "Risk assessment", "Transparency", "Consequence management"]
+  },
+  {
+    id: "y2k-drive-cohen-sergeyev-center-arrangements",
+    chapterId: "y2k-planning",
+    date: "1999-12-01",
+    dateLabel: "December 1999",
+    type: "Drive Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Cohen-Sergeyev arrangements for the Joint Y2K Center for Strategic Stability",
+    summary:
+      "Secretary Cohen response to Russian Defense Minister Sergeyev on Russian participation in the Joint Y2K Center for Strategic Stability, including the legal limits on privileges and immunities and the plan for Russian personnel to begin work on December 22, 1999.",
+    sourceName: "Google Drive PDF U18569",
+    sourceUrl: "https://drive.google.com/file/d/1HZ3ta9Hu8ILFqqJ6eM4Uko_azLA_FI8U",
+    sourceNote:
+      "Drive search result for Joint Y2K Center. The correspondence followed an October 21, 1999 Russian letter and framed the center as a way to ensure a peaceful entry into the new millennium.",
+    directives: [],
+    topics: ["Joint Y2K Center", "Russia", "Strategic stability", "Missile warning", "Defense diplomacy"]
+  },
+  {
+    id: "y2k-drive-center-strategic-stability-sitrep",
+    chapterId: "y2k-planning",
+    date: "2000-01-19",
+    dateLabel: "January 19, 2000",
+    type: "Drive Situation Report",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Situation report on the Center for Year 2000 Strategic Stability",
+    summary:
+      "Post-rollover situation report on the jointly manned U.S.-Russian Y2K center at Peterson Air Force Base, covering Russian officer arrival, training, real-world launch observations, 24-hour operations beginning December 30, 1999, media attention, and the January 15 closeout.",
+    sourceName: "Google Drive PDF U00975",
+    sourceUrl: "https://drive.google.com/file/d/1TlAtguDOf7MHQYQFyMGv4jVMXo3SuAhM",
+    sourceNote:
+      "Drive search result for Joint Y2K Center Strategic Stability. The report says the rollover was a non-event for missile early warning and that the experience had value for the permanent Joint Warning Center in Moscow.",
+    directives: [],
+    topics: ["Peterson Air Force Base", "Joint Y2K Center", "Missile launch warning", "Russia", "Shared early warning"]
+  },
+  {
+    id: "y2k-drive-shared-early-warning-lessons",
+    chapterId: "y2k-planning",
+    date: "2000-02-28",
+    dateLabel: "February 28, 2000",
+    type: "Drive Correspondence",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Y2K strategic-stability lessons for shared early warning",
+    summary:
+      "Secretary Cohen transmittal to Sergeyev using the success of jointly manning the Center for Year 2000 Strategic Stability to push forward permanent Shared Early Warning and pre-launch notification arrangements.",
+    sourceName: "Google Drive PDF U02212",
+    sourceUrl: "https://drive.google.com/file/d/1N2iVz76pA_2ZMeqPFM91vJKHcTT1Z0yO",
+    sourceNote:
+      "Drive search result for Joint Y2K Center Strategic Stability. The packet links Y2K cooperation to the presidential initiative for sharing early-warning information on ballistic missile and space launches.",
+    directives: [],
+    topics: ["Shared Early Warning", "Pre-launch notification", "Joint Warning Center", "Russia", "Strategic stability"]
+  }
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -1209,6 +1418,57 @@ window.NSP_SOURCES = [
     label: "Google Drive Defense Trade Security Initiative packet",
     url: "https://drive.google.com/file/d/1LYtIBzIDHfDY9U5lUrCQswf5dNajHo50",
     note: "Drive-held Secretary of Defense correspondence on allied technology-security agreements and ITAR exemptions."
+  },
+  {
+    label: "GovInfo EO 13073 Year 2000 Conversion",
+    url:
+      "https://www.govinfo.gov/content/pkg/CFR-1999-title3-vol1/pdf/CFR-1999-title3-vol1-eo13073.pdf",
+    note: "Official compiled text of the executive order establishing the President's Council on Year 2000 Conversion."
+  },
+  {
+    label: "GovInfo EO 13127 Y2K Information Coordination Center",
+    url: "https://www.govinfo.gov/content/pkg/FR-1999-06-17/pdf/99-15623.pdf",
+    note: "Official Federal Register PDF creating the Y2K Information Coordination Center by amending EO 13073."
+  },
+  {
+    label: "PDD-63 critical infrastructure protection",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-63.pdf",
+    note: "Released decision directive source for critical infrastructure protection and continuity."
+  },
+  {
+    label: "Google Drive DoD Year 2000 six-month update",
+    url: "https://drive.google.com/file/d/1fL5j2m3myXOgK_oK-Hp_1dRfusc4QHcr",
+    note: "Drive-held Secretary of Defense memorandum and agenda for the July 1999 Y2K readiness review."
+  },
+  {
+    label: "Google Drive Personnel and Readiness six-month Y2K briefing",
+    url: "https://drive.google.com/file/d/1A1SMy225U2UC4Oj6D8rwObSKIZW1XCAC",
+    note: "Drive-held briefing on personnel systems, TRICARE, biomedical equipment, and host-nation support."
+  },
+  {
+    label: "Google Drive C3ISR and Space Y2K briefing",
+    url: "https://drive.google.com/file/d/1mz2pRPwYoXnB3FxP2Kpo4Fn3HocfgBoy",
+    note: "Drive-held briefing on mission-critical C3ISR, space, GPS, and nuclear deterrence contingency planning."
+  },
+  {
+    label: "Google Drive Year 2000 International Security Dimension report",
+    url: "https://drive.google.com/file/d/1uHJj5fw1LhLVw_nFU5h4QVeFHEp7Jc-t",
+    note: "Drive-held Naval War College project report summary on international Y2K security risks."
+  },
+  {
+    label: "Google Drive Joint Y2K Center arrangements correspondence",
+    url: "https://drive.google.com/file/d/1HZ3ta9Hu8ILFqqJ6eM4Uko_azLA_FI8U",
+    note: "Drive-held Cohen-Sergeyev correspondence on Russian personnel arrangements for the Joint Y2K Center."
+  },
+  {
+    label: "Google Drive Center for Year 2000 Strategic Stability situation report",
+    url: "https://drive.google.com/file/d/1TlAtguDOf7MHQYQFyMGv4jVMXo3SuAhM",
+    note: "Drive-held post-rollover situation report on the jointly manned U.S.-Russian Y2K strategic-stability center."
+  },
+  {
+    label: "Google Drive Y2K strategic-stability lessons for shared early warning",
+    url: "https://drive.google.com/file/d/1N2iVz76pA_2ZMeqPFM91vJKHcTT1Z0yO",
+    note: "Drive-held Cohen-Sergeyev correspondence linking the Y2K center to Shared Early Warning and pre-launch notification."
   }
 ];
 
@@ -1498,7 +1758,7 @@ window.NSP_RECORDS = [
   }
 ];
 
-window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS, ...TECH_TRANSFER_RECORDS);
+window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS, ...TECH_TRANSFER_RECORDS, ...Y2K_PLANNING_RECORDS);
 
 for (const record of window.NSP_RECORDS) {
   if (record.chapterId) continue;
