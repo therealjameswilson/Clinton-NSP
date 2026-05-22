@@ -15,11 +15,11 @@ window.NSP_CHAPTERS = [
     number: 2,
     year: "1993-2000",
     dateLabel: "1993-2000",
-    title: "Ballistic Missile Defense and the ABM Treaty",
-    shortTitle: "BMD/ABM",
+    title: "National Missile Defense and the ABM Treaty",
+    shortTitle: "NMD/ABM",
     reportUrl: "https://www.clintonlibrary.gov/research/presidential-directives",
     note:
-      "Special issue chapter on the Clinton administration's review of ballistic missile defenses, the future of the ABM Treaty, nuclear posture, START III, and U.S.-Russian missile-launch warning cooperation."
+      "Special issue chapter on the Clinton administration's review of national missile defense, the future of the ABM Treaty, nuclear posture, START III, and U.S.-Russian missile-launch warning cooperation."
   },
   {
     id: "tech-transfer",

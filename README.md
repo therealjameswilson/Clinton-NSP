@@ -7,11 +7,11 @@ Working compiler page for the planned Office of the Historian volume:
 - Public workspace: https://therealjameswilson.github.io/Clinton-NSP/
 
 The page now arranges the volume with one chronological National Security Strategy chapter
-for the full Clinton period, plus special issue chapters on ballistic missile defense/ABM
+for the full Clinton period, plus special issue chapters on national missile defense/ABM
 Treaty, technology transfer, and Y2K planning:
 
 1. 1993-2000, `National Security Strategy`
-2. 1993-2000, `Ballistic Missile Defense and the ABM Treaty`
+2. 1993-2000, `National Missile Defense and the ABM Treaty`
 3. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
 4. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
 
@@ -53,7 +53,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Clinton Library PDD-30, `U.S. Nuclear Posture and Policy on Nuclear Arms Control Beyond the START I and START II Treaties`
 - Clinton Library PDD-66, `U.S. Nuclear Posture and Policy on Further Reductions in Nuclear Force in START III`
 - Clinton Library Joint Data Exchange Center and Shared Early Warnings finding aid
-- Google Drive search results for BMD/ABM chapter sources, including NSC NMD-ABM-START packets, ABM demarcation compliance records, sea-based NMD reporting, the Talbott-Primakov strategic-defense linkage letter, and JDEC implementation correspondence
+- Google Drive search results for NMD/ABM chapter sources, including NSC NMD-ABM-START packets, ABM demarcation compliance records, sea-based NMD reporting, the Talbott-Primakov strategic-defense linkage letter, and JDEC implementation correspondence
 - Google Drive search results for technology-transfer chapter sources, including the Gore-Chernomyrdin S&T working group cable, PDD-23 remote-sensing implementation records, commercial satellite export-control packets, the dual-use/munitions licensing Inspector General review, and Defense Trade Security Initiative correspondence
 - Google Drive search results for Y2K planning sources, including the DoD six-month readiness update, Personnel and Readiness and C3ISR briefings, the Naval War College international-security report, and Joint Y2K Center for Strategic Stability correspondence and situation reporting
 - Clinton Digital Library National Security Council collection overview

@@ -159,7 +159,7 @@ window.NSP_COLLECTIONS = [
     "oaBox": "2905",
     "title": "PRD-31, U.S. Policy on BMD and ABM Treaty, May-Nov. 1993",
     "officeStaff": "Defense Policy-Andreasen",
-    "rationale": "PRD-31 led to PDD-17 on BMD/ABM",
+    "rationale": "PRD-31 led to PDD-17 on NMD/ABM",
     "onlineStatus": "folder-title-list",
     "directPostedFile": false,
     "exactSearchUrl": "https://clinton.presidentiallibraries.us/solr-search?q=%22PRD-31%2C%20U.S.%20Policy%20on%20BMD%20and%20ABM%20Treaty%2C%20May-Nov.%201993%22",
@@ -1031,9 +1031,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -1051,9 +1051,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -1071,9 +1071,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -1091,9 +1091,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -1111,9 +1111,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -1131,9 +1131,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2017,9 +2017,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2037,9 +2037,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2099,9 +2099,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2133,9 +2133,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2181,9 +2181,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2201,9 +2201,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2916,9 +2916,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -2978,9 +2978,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -3012,9 +3012,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 0,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -3046,9 +3046,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 1,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
@@ -3150,9 +3150,9 @@ window.NSP_COLLECTIONS = [
     "exactSearchHits": 2,
     "relatedOnline": [
       {
-        "label": "BMD/ABM workspace chapter",
+        "label": "NMD/ABM workspace chapter",
         "url": "#chapter-bmd-abm",
-        "note": "Related declassified Drive and official-source leads already normalized in the BMD/ABM chapter."
+        "note": "Related declassified Drive and official-source leads already normalized in the NMD/ABM chapter."
       }
     ]
   },
