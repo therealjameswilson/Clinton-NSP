@@ -37,6 +37,8 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Clinton Library Declassified Records portal
 - Clinton Library `(2013-0185-M) Declassified Folder Title List for the National Security Council`
 - Clinton Library `2013-0185-M.pdf` declassified NSC folder-title list
+- Strobe Talbott FOIA Case `F-2017-13804` manifest and enriched manifest CSV
+- Selected State Department FOIA PDFs from the Strobe Talbott release on Russia strategy, NMD/ABM/START, and Russia-Iran missile/nuclear technology transfer
 - Clinton Library PDD-25 finding aid
 - Clinton Library Nuclear Testing and Comprehensive Test Ban finding aid
 - Clinton Library National Space Policy PDD-49 finding aid

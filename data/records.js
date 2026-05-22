@@ -1144,6 +1144,275 @@ const Y2K_PLANNING_RECORDS = [
   }
 ];
 
+const STROBE_FOIA_RECORDS = [
+  {
+    id: "strobe-1994-benign-respect-russia",
+    chapterId: "national-security-strategy",
+    date: "1994-03-28",
+    dateLabel: "March 28, 1994",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Whose Russia Is It Anyway? Toward a Policy of Benign Respect",
+    summary:
+      "Long Moscow cable on the conceptual problem of U.S. Russia policy early in the Clinton administration, useful for the NSS chronology's post-Soviet risk-reduction frame.",
+    sourceName: "State FOIA C09000022",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Oct2024/FL-2017-13804/DOC_0C09000022/C09000022.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Oct2024/FL-2017-13804/DOC_0C09000022/C09000022.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The 15-section Moscow cable is titled around a policy of benign respect and should be reviewed as an early Russia-strategy candidate.",
+    topics: ["Russia policy", "Post-Soviet strategy", "Moscow Embassy", "Risk reduction"]
+  },
+  {
+    id: "strobe-1994-cnn-foreign-policy-strategy",
+    chapterId: "national-security-strategy",
+    date: "1994-05-02",
+    dateLabel: "May 2, 1994",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Talbott memo for Clinton's CNN foreign-policy appearance",
+    summary:
+      "Acting Secretary Talbott urged the President to use a CNN appearance to assert objectives, explain strategy, review accomplishments, and place U.S. policy in the post-Cold War transition.",
+    sourceName: "State FOIA C09000058",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_May2022/FL-2017-13804/DOC_0C09000058/C09000058.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_May2022/FL-2017-13804/DOC_0C09000058/C09000058.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The memo is a public-facing strategy articulation lead rather than a formal NSS drafting record.",
+    topics: ["Foreign policy strategy", "Public explanation", "Post-Cold War transition", "Presidential messaging"]
+  },
+  {
+    id: "strobe-1995-russia-what-next",
+    chapterId: "national-security-strategy",
+    date: "1995-02-02",
+    dateLabel: "February 2, 1995",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Russia -- What Next?",
+    summary:
+      "Talbott eyes-only memorandum to Jim Collins on the next phase of Russia policy, including the need to rearticulate the administration's basic strategy after difficult first-term experience.",
+    sourceName: "State FOIA C09000090",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Apr2023/FL-2017-13804/DOC_0C09000090/C09000090.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Apr2023/FL-2017-13804/DOC_0C09000090/C09000090.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The record should be compared against the February 1995 NSS and the broader Russia-policy files.",
+    topics: ["Russia policy", "Strategy articulation", "Talbott", "Jim Collins", "1995 NSS context"]
+  },
+  {
+    id: "strobe-1998-russia-policy-dialogue",
+    chapterId: "national-security-strategy",
+    date: "1998-01-07",
+    dateLabel: "January 7, 1998",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Continuing Our Dialogue on Russia Policy",
+    summary:
+      "Policy Planning memorandum to Talbott on how to frame first-tier priorities and the centrality of the U.S.-Russian relationship in Secretary Albright's agenda.",
+    sourceName: "State FOIA C09000034",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000034/C09000034.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000034/C09000034.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The memo is a late-1990s Russia-policy framing lead, not a formal NSS drafting record.",
+    topics: ["Russia policy", "Policy Planning", "Albright", "Strategic priorities"]
+  },
+  {
+    id: "strobe-1998-moscow-summit-high-concept",
+    chapterId: "national-security-strategy",
+    date: "1998-08-19",
+    dateLabel: "August 19, 1998",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "High-concept paper for Clinton's Moscow summit strategy",
+    summary:
+      "Talbott note calling for a paper that put the Moscow summit objectives in the context of long-term U.S. strategy toward Russia while balancing the financial crisis agenda against broader strategic goals.",
+    sourceName: "State FOIA C09000008",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_July2023/FL-2017-13804/DOC_0C09000008/C09000008.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_July2023/FL-2017-13804/DOC_0C09000008/C09000008.pdf",
+    sourceNote:
+      "The manifest title/date says August 19, 1988, but the extracted source text dates the note Wednesday, August 19, 1998 and ties it to the Clinton-Yeltsin Moscow summit.",
+    topics: ["Moscow summit", "Russia strategy", "Financial crisis", "Clinton-Yeltsin"]
+  },
+  {
+    id: "strobe-1997-russia-iran-missile-proliferation-talks",
+    chapterId: "tech-transfer",
+    date: "1997-08-07",
+    dateLabel: "August 7, 1997",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "First day of U.S.-Russian missile proliferation talks",
+    summary:
+      "Moscow reporting on talks with Koptev and Mamedov over Russian assistance to Iran's missile program, placing technology transfer and nonproliferation inside the U.S.-Russia diplomatic channel.",
+    sourceName: "State FOIA C09000036",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Apr2024/FL-2017-13804/DOC_0C09000036/C09000036.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Apr2024/FL-2017-13804/DOC_0C09000036/C09000036.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit for Russia-Iran missile proliferation and sensitive technology transfer.",
+    topics: ["Russia-Iran", "Missile proliferation", "Technology transfer", "Mamedov", "Nonproliferation"]
+  },
+  {
+    id: "strobe-1997-fsb-director-iran-missile-cooperation",
+    chapterId: "tech-transfer",
+    date: "1997-12-08",
+    dateLabel: "December 8, 1997",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "Ambassador Collins meeting with FSB director on Iran",
+    summary:
+      "Embassy Moscow cable on Russian-Iranian missile cooperation, with distribution to senior State, NSC, nonproliferation, and Russia-policy officials.",
+    sourceName: "State FOIA C09000054",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000054/C09000054.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000054/C09000054.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. Use as a supporting source for Russian entity controls and Iran missile-cooperation diplomacy.",
+    topics: ["Russia-Iran", "Missile technology", "FSB", "Embassy Moscow", "Export controls"]
+  },
+  {
+    id: "strobe-1998-russia-iran-action-plan",
+    chapterId: "tech-transfer",
+    date: "1998-11-04",
+    dateLabel: "November 4, 1998",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Interagency Russia-Iran action plan on missile and nuclear cooperation",
+    summary:
+      "Policy Steering Group materials tied commercial satellite launch quotas, space-project licenses, trade actions, and nuclear-cooperation programs to Russian steps against missile and nuclear cooperation with Iran.",
+    sourceName: "State FOIA C09000019",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000019/C09000019.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000019/C09000019.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. Strong technology-transfer candidate because it links space launch access, export licensing, and nonproliferation sanctions leverage.",
+    topics: ["Russia-Iran", "Commercial satellites", "Export licensing", "Missile technology", "Nuclear cooperation"]
+  },
+  {
+    id: "strobe-2000-berger-putin-nmd-abm-start-script",
+    chapterId: "bmd-abm",
+    date: "2000-05-15",
+    dateLabel: "May 15, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Berger NMD/ABM/START script for meeting with President Putin",
+    summary:
+      "Talking script for Sandy Berger to press Putin on limited national missile defense, ABM Treaty adaptation, and START III as one linked strategic-stability package before the Moscow summit.",
+    sourceName: "State FOIA C09000043",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000043/C09000043.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000043/C09000043.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The script links NMD deployment timing, new missile threats, Russian START II ratification, START III, and an adapted ABM Treaty.",
+    topics: ["NMD", "ABM Treaty", "START III", "Putin", "Strategic stability"]
+  },
+  {
+    id: "strobe-2000-talbott-berger-path-forward",
+    chapterId: "bmd-abm",
+    date: "2000-05-25",
+    dateLabel: "May 25, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Talbott to Berger on the NMD-ABM-START path forward",
+    summary:
+      "Urgent Talbott letter after talks with Mamedov, asking that a Clinton letter go to Putin and describing the legal and diplomatic path to preserve strategic stability, strengthen the ABM Treaty, and move START III forward.",
+    sourceName: "State FOIA C09000004",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000004/C09000004.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000004/C09000004.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The record captures the confidential Talbott-Mamedov channel immediately before the June 2000 Moscow summit.",
+    topics: ["NMD", "ABM Treaty", "START III", "Mamedov", "Putin"]
+  },
+  {
+    id: "strobe-2000-shemya-abm-radar-legal",
+    chapterId: "bmd-abm",
+    date: "2000-05-25",
+    dateLabel: "May 25, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Legal analysis of Shemya ABM radar construction and treaty violation",
+    summary:
+      "Deliberative legal paper asking when activity associated with constructing an ABM radar at Shemya would put the United States in violation of the ABM Treaty.",
+    sourceName: "State FOIA C09000044",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000044/C09000044.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000044/C09000044.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. The paper focuses on the treaty meaning of an ABM radar being under construction and the 1974/1976 dismantling procedures by analogy.",
+    topics: ["Shemya", "ABM Treaty", "Legal analysis", "NMD", "Treaty compliance"]
+  },
+  {
+    id: "strobe-2000-start-iii-basic-elements",
+    chapterId: "bmd-abm",
+    date: "2000-05-27",
+    dateLabel: "May 27, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Basic Elements of a START III Agreement",
+    summary:
+      "Compact START III elements paper with proposed 2,000-2,500 strategic nuclear warhead levels, verification, transparency, Presidential Nuclear Initiatives, and warhead-facility conversion measures.",
+    sourceName: "State FOIA C09000005",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000005/C09000005.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Mar2025/FL-2017-13804/DOC_0C09000005/C09000005.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. Use as a bridge record between NMD/ABM diplomacy and the strategic nuclear reductions track.",
+    topics: ["START III", "Nuclear reductions", "Verification", "Warhead transparency", "Strategic stability"]
+  },
+  {
+    id: "strobe-2000-strategic-stability-joint-statement",
+    chapterId: "bmd-abm",
+    date: "2000-06-04",
+    dateLabel: "June 4, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Clinton-Putin joint statement on principles of strategic stability",
+    summary:
+      "Summit statement reaffirming strategic nuclear stability, the ABM Treaty as a cornerstone of strategic stability, intensified START III and ABM discussions, and mutual attention to new WMD and missile threats.",
+    sourceName: "State FOIA C09000055",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Oct2024/FL-2017-13804/DOC_0C09000055/C09000055.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_Oct2024/FL-2017-13804/DOC_0C09000055/C09000055.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. This is the public summit output against which the preparatory NMD/ABM/START records should be sequenced.",
+    topics: ["Clinton-Putin", "Strategic stability", "ABM Treaty", "START III", "Missile threats"]
+  },
+  {
+    id: "strobe-2000-nac-moscow-summit-briefing",
+    chapterId: "bmd-abm",
+    date: "2000-06-08",
+    dateLabel: "June 8, 2000",
+    type: "State FOIA Source",
+    status: "Public FOIA Source",
+    priority: "Medium",
+    themeId: "risk-reduction",
+    title: "Talbott briefing to the North Atlantic Council on the Moscow summit",
+    summary:
+      "Talbott briefed NATO allies on the Moscow summit, focusing on National Missile Defense and the ABM Treaty, the strategic-stability statement, allied questions, and the remaining difficulty of concrete ABM Treaty amendments.",
+    sourceName: "State FOIA C09000063",
+    sourceUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_July2022/FL-2017-13804/DOC_0C09000063/C09000063.pdf",
+    pdfUrl: "https://foia.state.gov/DOCUMENTS/FOIA_L_July2022/FL-2017-13804/DOC_0C09000063/C09000063.pdf",
+    sourceNote:
+      "Strobe Talbott FOIA manifest hit. This record adds the allied consultation layer after the Clinton-Putin Moscow summit.",
+    topics: ["NATO", "NMD", "ABM Treaty", "Moscow summit", "Allied consultations"]
+  }
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -1216,6 +1485,16 @@ window.NSP_SOURCES = [
     label: "Clinton Library Digital Records search",
     url: "https://www.clintonlibrary.gov/research/search-digitized-records",
     note: "Search entry point for digitized finding aids and released records."
+  },
+  {
+    label: "Strobe Talbott FOIA Case F-2017-13804 manifest",
+    url: "https://therealjameswilson.github.io/strobe-talbott-foia/manifest.html",
+    note: "Research portal listing 1,474 State Department FOIA records with direct links to the source PDFs."
+  },
+  {
+    label: "Strobe Talbott FOIA enriched manifest CSV",
+    url: "https://therealjameswilson.github.io/strobe-talbott-foia/data/manifest_enriched.csv",
+    note: "Manifest metadata and extracted descriptions used to identify NSP-relevant public FOIA records."
   },
   {
     label: "2013-0185-M NSC folder-title list",
@@ -1718,7 +1997,13 @@ window.NSP_RECORDS = [
   }
 ];
 
-window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS, ...TECH_TRANSFER_RECORDS, ...Y2K_PLANNING_RECORDS);
+window.NSP_RECORDS.push(
+  ...NSS_RECORDS,
+  ...BMD_ABM_RECORDS,
+  ...TECH_TRANSFER_RECORDS,
+  ...Y2K_PLANNING_RECORDS,
+  ...STROBE_FOIA_RECORDS
+);
 
 for (const record of window.NSP_RECORDS) {
   if (record.chapterId) continue;

@@ -139,7 +139,7 @@ function allCollectionOnlineLabels() {
 }
 
 function isPublicRecord(record) {
-  return /Finding Aid|Public Anchor|Foundation Lead|Published NSS|Public Source Copy|Released PRD|Released PDD|Declassified Drive Source/.test(
+  return /Finding Aid|Public Anchor|Foundation Lead|Published NSS|Public Source Copy|Released PRD|Released PDD|Declassified Drive Source|Public FOIA Source/.test(
     record.status
   );
 }
