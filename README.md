@@ -21,6 +21,11 @@ Y2K planning:
 9. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
 10. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
 
+The site also includes a `Collections and Ranked Folders` section generated from the
+research plan's 200 ranked folder targets from Clinton Library MDR case `2013-0185-M`.
+Each row includes OA box, NSC office/staff, tier, rationale, exact-title Digital Library
+search link, and a public-online status note.
+
 Inside those chapters, the page uses the National Security Policy framework described in the preface to `Foreign Relations, 1981-1988, Volume XLIV, Part 1` as a model, then adapts it to the Clinton administration after the Cold War:
 
 1. Defense Policy and Strategic Planning
@@ -36,6 +41,8 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Office of the Historian, FRUS 1981-1988, Volume XLIV, Part 1 preface
 - Clinton Library Presidential Directives
 - Clinton Library Declassified Records portal
+- Clinton Library `(2013-0185-M) Declassified Folder Title List for the National Security Council`
+- Clinton Library `2013-0185-M.pdf` declassified NSC folder-title list
 - Clinton Library PDD-25 finding aid
 - Clinton Library Nuclear Testing and Comprehensive Test Ban finding aid
 - Clinton Library National Space Policy PDD-49 finding aid
@@ -55,6 +62,9 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Google Drive search results for BMD/ABM chapter sources, including NSC NMD-ABM-START packets, ABM demarcation compliance records, sea-based NMD reporting, the Talbott-Primakov strategic-defense linkage letter, and JDEC implementation correspondence
 - Google Drive search results for technology-transfer chapter sources, including the Gore-Chernomyrdin S&T working group cable, PDD-23 remote-sensing implementation records, commercial satellite export-control packets, the dual-use/munitions licensing Inspector General review, and Defense Trade Security Initiative correspondence
 - Google Drive search results for Y2K planning sources, including the DoD six-month readiness update, Personnel and Readiness and C3ISR briefings, the Naval War College international-security report, and Joint Y2K Center for Strategic Stability correspondence and situation reporting
+- Clinton Digital Library National Security Council collection overview
+- Clinton Digital Library Office of Records Management - Presidential Decision Directives collection overview
+- Clinton Digital Library Declassified Documents collection
 - Archived Clinton White House PDD-56 white paper
 - Defense Historical Office National Security Strategy index
 - Clinton Digital Library search results for `"National Security Strategy Report"`

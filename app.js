@@ -2,6 +2,9 @@ const chapters = window.NSP_CHAPTERS || [];
 const themes = window.NSP_THEMES || [];
 const records = window.NSP_RECORDS || [];
 const sources = window.NSP_SOURCES || [];
+const collectionMeta = window.NSP_COLLECTION_META || {};
+const relatedCollections = window.NSP_RELATED_COLLECTIONS || [];
+const collections = window.NSP_COLLECTIONS || [];
 
 const byId = (id) => document.getElementById(id);
 const chapterById = new Map(chapters.map((chapter) => [chapter.id, chapter]));
@@ -16,6 +19,7 @@ const nodes = {
   sourceCount: byId("source-count"),
   directiveCount: byId("directive-count"),
   pageCount: byId("page-count"),
+  collectionCount: byId("collection-count"),
   auditRoot: byId("audit-root"),
   coverageRoot: byId("coverage-root"),
   sourceLedgerRoot: byId("source-ledger-root"),
@@ -36,6 +40,15 @@ const nodes = {
   exportRecords: byId("export-records"),
   recordsSummary: byId("records-summary"),
   recordsRoot: byId("records-root"),
+  collectionMetadataRoot: byId("collection-metadata-root"),
+  relatedCollectionsRoot: byId("related-collections-root"),
+  collectionSearch: byId("collection-search"),
+  collectionTierFilter: byId("collection-tier-filter"),
+  collectionOfficeFilter: byId("collection-office-filter"),
+  collectionOnlineFilter: byId("collection-online-filter"),
+  clearCollectionFilters: byId("clear-collection-filters"),
+  collectionsSummary: byId("collections-summary"),
+  collectionsRoot: byId("collections-root"),
   sourcesRoot: byId("sources-root")
 };
 
@@ -106,6 +119,25 @@ function allTypes() {
   return [...new Set(records.map((record) => record.type).filter(Boolean))].sort();
 }
 
+function collectionOnlineLabel(item) {
+  if (item.directPostedFile) return "Direct file posted";
+  if ((item.relatedOnline || []).length) return "Related online sources";
+  if (item.exactSearchHits > 0) return "Title-search hits";
+  return "Folder title list only";
+}
+
+function allCollectionTiers() {
+  return [...new Set(collections.map((item) => `Tier ${item.tier}: ${item.tierTitle}`))];
+}
+
+function allCollectionOffices() {
+  return [...new Set(collections.map((item) => item.officeStaff).filter(Boolean))].sort();
+}
+
+function allCollectionOnlineLabels() {
+  return [...new Set(collections.map(collectionOnlineLabel))].sort();
+}
+
 function isPublicRecord(record) {
   return /Finding Aid|Public Anchor|Foundation Lead|Published NSS|Public Source Copy|Released PRD|Released PDD|Declassified Drive Source/.test(
     record.status
@@ -124,6 +156,7 @@ function renderStats() {
   setText(nodes.sourceCount, number(sources.length));
   setText(nodes.directiveCount, number(uniqueDirectives(records).size));
   setText(nodes.pageCount, number(collectionPageTotal(records)));
+  setText(nodes.collectionCount, number(collections.length));
   setText(nodes.sourceLeadCount, number(records.length));
   setText(nodes.highPriorityCount, number(records.filter((record) => record.priority === "High").length));
   setText(nodes.findingAidCount, number(records.filter(isPublicRecord).length));
@@ -352,6 +385,159 @@ function renderSources() {
       return link;
     })
   );
+}
+
+function renderCollectionMetadata() {
+  if (!nodes.collectionMetadataRoot) return;
+  const relatedRows = collections.filter((item) => (item.relatedOnline || []).length);
+  const titleHits = collections.filter((item) => item.exactSearchHits > 0);
+  const directPosted = collections.filter((item) => item.directPostedFile);
+  const cards = [
+    ["Ranked folders", number(collections.length), collectionMeta.sourcePlan || "Research plan import"],
+    ["Master online file", "2013-0185-M", "Posted Clinton Library folder-title list PDF"],
+    ["Direct folder scans", number(directPosted.length), "Confirmed from public checks"],
+    ["Related online leads", number(relatedRows.length), "Directive PDFs, finding aids, and linked workspace records"],
+    ["Title-search hits", number(titleHits.length), `Exact-title Digital Library checks run ${collectionMeta.checkedOn || ""}`]
+  ].map(([title, value, detail]) => {
+    const card = document.createElement("article");
+    card.className = "collection-metric";
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+    const stat = document.createElement("p");
+    stat.className = "audit-stat";
+    stat.textContent = value;
+    const body = document.createElement("p");
+    body.textContent = detail;
+    card.append(heading, stat, body);
+    return card;
+  });
+
+  const note = document.createElement("p");
+  note.className = "collection-method-note";
+  note.textContent = collectionMeta.method || "";
+  nodes.collectionMetadataRoot.replaceChildren(...cards, note);
+}
+
+function renderRelatedCollections() {
+  if (!nodes.relatedCollectionsRoot) return;
+  nodes.relatedCollectionsRoot.replaceChildren(
+    ...relatedCollections.map((source) => {
+      const link = document.createElement("a");
+      link.href = source.url;
+      link.rel = "noreferrer";
+      const status = document.createElement("span");
+      status.className = "readiness-status set";
+      status.textContent = source.status;
+      const title = document.createElement("strong");
+      title.textContent = source.label;
+      const note = document.createElement("span");
+      note.textContent = source.note;
+      link.append(status, title, note);
+      return link;
+    })
+  );
+}
+
+function renderCollectionFilters() {
+  populateSelect(nodes.collectionTierFilter, allCollectionTiers(), "All tiers");
+  populateSelect(nodes.collectionOfficeFilter, allCollectionOffices(), "All offices");
+  populateSelect(nodes.collectionOnlineFilter, allCollectionOnlineLabels(), "All online statuses");
+}
+
+function currentCollections() {
+  const query = nodes.collectionSearch?.value.trim().toLowerCase() || "";
+  const tier = nodes.collectionTierFilter?.value || "all";
+  const office = nodes.collectionOfficeFilter?.value || "all";
+  const online = nodes.collectionOnlineFilter?.value || "all";
+
+  return collections.filter((item) => {
+    const tierLabel = `Tier ${item.tier}: ${item.tierTitle}`;
+    const onlineLabel = collectionOnlineLabel(item);
+    const oaLabel = `OA Box ${item.oaBox}`;
+    const haystack = JSON.stringify({ ...item, tierLabel, onlineLabel, oaLabel }).toLowerCase();
+    return (
+      (tier === "all" || tier === tierLabel) &&
+      (office === "all" || office === item.officeStaff) &&
+      (online === "all" || online === onlineLabel) &&
+      (!query || haystack.includes(query))
+    );
+  });
+}
+
+function collectionRow(item) {
+  const row = document.createElement("article");
+  row.className = "collection-row";
+
+  const rank = document.createElement("div");
+  rank.className = "collection-rank";
+  rank.textContent = number(item.rank);
+
+  const body = document.createElement("div");
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "collection-eyebrow";
+  eyebrow.textContent = `Tier ${item.tier} / OA Box ${item.oaBox} / ${item.officeStaff}`;
+  const title = document.createElement("h3");
+  title.textContent = item.title;
+  const rationale = document.createElement("p");
+  rationale.textContent = item.rationale;
+
+  const meta = document.createElement("div");
+  meta.className = "record-meta";
+  meta.append(badge(collectionOnlineLabel(item)));
+  if (item.exactSearchHits > 0) meta.append(badge(`${number(item.exactSearchHits)} title-search hits`, "source-badge"));
+  if ((item.relatedOnline || []).length) meta.append(badge(`${number(item.relatedOnline.length)} related links`, "source-badge"));
+
+  const onlineNote = document.createElement("p");
+  onlineNote.className = "record-source-note";
+  onlineNote.textContent = item.directPostedFile
+    ? "A direct public scan for this folder target is identified."
+    : "The folder title is present in the posted 2013-0185-M folder-title list; no direct public scan of this folder's contents was confirmed in the online check.";
+
+  body.append(eyebrow, title, rationale, meta, onlineNote);
+
+  if ((item.relatedOnline || []).length) {
+    const related = document.createElement("div");
+    related.className = "collection-related-links";
+    for (const linkData of item.relatedOnline) {
+      const link = document.createElement("a");
+      link.href = linkData.url;
+      if (!linkData.url.startsWith("#")) link.rel = "noreferrer";
+      link.textContent = linkData.label;
+      link.title = linkData.note;
+      related.append(link);
+    }
+    body.append(related);
+  }
+
+  const links = document.createElement("div");
+  links.className = "record-links";
+  const search = document.createElement("a");
+  search.href = item.exactSearchUrl;
+  search.rel = "noreferrer";
+  search.textContent = "Title Search";
+  links.append(search);
+
+  row.append(rank, body, links);
+  return row;
+}
+
+function renderCollections(items = currentCollections()) {
+  const sorted = [...items].sort((a, b) => a.rank - b.rank);
+  if (nodes.collectionsSummary) {
+    const relatedRows = sorted.filter((item) => (item.relatedOnline || []).length).length;
+    const hitRows = sorted.filter((item) => item.exactSearchHits > 0).length;
+    nodes.collectionsSummary.textContent = `Showing ${number(sorted.length)} of ${number(collections.length)} ranked folders; ${number(relatedRows)} have related online leads; ${number(hitRows)} have title-search hits.`;
+  }
+  if (!nodes.collectionsRoot) return;
+  nodes.collectionsRoot.replaceChildren();
+  if (!sorted.length) {
+    const empty = document.createElement("p");
+    empty.className = "loading";
+    empty.textContent = "No collections match this filter.";
+    nodes.collectionsRoot.append(empty);
+    return;
+  }
+  nodes.collectionsRoot.replaceChildren(...sorted.map(collectionRow));
 }
 
 function renderFilters() {
@@ -644,6 +830,17 @@ function bindEvents() {
     filterRecords();
   });
   nodes.exportRecords?.addEventListener("click", exportCsv);
+  nodes.collectionSearch?.addEventListener("input", () => renderCollections());
+  nodes.collectionTierFilter?.addEventListener("change", () => renderCollections());
+  nodes.collectionOfficeFilter?.addEventListener("change", () => renderCollections());
+  nodes.collectionOnlineFilter?.addEventListener("change", () => renderCollections());
+  nodes.clearCollectionFilters?.addEventListener("click", () => {
+    if (nodes.collectionSearch) nodes.collectionSearch.value = "";
+    if (nodes.collectionTierFilter) nodes.collectionTierFilter.value = "all";
+    if (nodes.collectionOfficeFilter) nodes.collectionOfficeFilter.value = "all";
+    if (nodes.collectionOnlineFilter) nodes.collectionOnlineFilter.value = "all";
+    renderCollections();
+  });
 
   for (const control of document.querySelectorAll("[data-quick-filter]")) {
     control.addEventListener("click", (event) => {
@@ -671,6 +868,10 @@ function init() {
   renderPriorityQueue();
   renderSources();
   renderFilters();
+  renderCollectionMetadata();
+  renderRelatedCollections();
+  renderCollectionFilters();
+  renderCollections();
   renderRecords();
   bindEvents();
 }

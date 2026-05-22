@@ -1284,6 +1284,32 @@ window.NSP_SOURCES = [
     note: "Search entry point for digitized finding aids and released records."
   },
   {
+    label: "2013-0185-M NSC folder-title list",
+    url:
+      "https://www.clintonlibrary.gov/research/archives/finding-aids/declassified-folder-title-list-national-security-council",
+    note: "Current Clinton Library page for the declassified National Security Council folder-title list used by the collection inventory."
+  },
+  {
+    label: "2013-0185-M PDF",
+    url: "https://www.clintonlibrary.gov/sites/default/files/finding_aids_a_z/2026-04/2013-0185-M.pdf",
+    note: "Direct 1,290-page PDF for the declassified NSC folder-title list."
+  },
+  {
+    label: "Clinton Digital Library National Security Council collection",
+    url: "https://clinton.presidentiallibraries.us/collections/show/27",
+    note: "Collection overview for Clinton NSC office collections in the Digital Library."
+  },
+  {
+    label: "Clinton Digital Library PDD collection overview",
+    url: "https://clinton.presidentiallibraries.us/collections/show/40",
+    note: "Collection overview for Office of Records Management - Presidential Decision Directives."
+  },
+  {
+    label: "Clinton Digital Library Declassified Documents collection",
+    url: "https://clinton.presidentiallibraries.us/collections/show/36",
+    note: "Digital Library collection of declassified records, primarily foreign-affairs records released through MDR requests."
+  },
+  {
     label: "PDD-25 finding aid",
     url: "https://www.clintonlibrary.gov/research/archives/finding-aids/presidential-decision-directive-25",
     note: "Public finding aid for peace operations records."

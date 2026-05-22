@@ -8,7 +8,7 @@
       name="description"
       content="A working FRUS compiler workspace for the planned Foreign Relations of the United States, 1993-2000, Volume VI, National Security Policy."
     />
-    <link rel="stylesheet" href="styles.css?v=20260521-nsp" />
+    <link rel="stylesheet" href="styles.css?v=20260522-collections" />
   </head>
   <body>
     <header class="site-header">
@@ -21,6 +21,7 @@
         <a href="#method">Method</a>
         <a href="#chapters">Chapters</a>
         <a href="#workbench">Workbench</a>
+        <a href="#collections">Collections</a>
         <a href="#records">Records</a>
         <a href="#sources">Sources</a>
         <a href="#ingest">Ingest</a>
@@ -88,6 +89,10 @@
         <div>
           <span id="page-count">0</span>
           <p>cataloged source pages</p>
+        </div>
+        <div>
+          <span id="collection-count">0</span>
+          <p>ranked folders</p>
         </div>
       </section>
 
@@ -236,6 +241,52 @@
         </div>
       </section>
 
+      <section class="section collections-section" id="collections" aria-labelledby="collections-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Research Plan Inventory</p>
+            <h2 id="collections-title">Collections and Ranked Folders</h2>
+          </div>
+          <p class="section-note">
+            The 200 folder targets from the research plan are listed here with OA box,
+            NSC staff office, tier, and public-online checks. The online status separates
+            the posted 2013-0185-M folder-title list from confirmed public scans of folder
+            contents.
+          </p>
+        </div>
+        <div id="collection-metadata-root" class="collection-metadata" aria-live="polite"></div>
+        <div id="related-collections-root" class="related-collections-grid" aria-live="polite"></div>
+        <div class="collection-tools" aria-label="Collection filters">
+          <label for="collection-search">
+            Search collections
+            <input id="collection-search" type="search" placeholder="START, QDR, NMD, CTB, OA box" />
+          </label>
+          <label for="collection-tier-filter">
+            Tier
+            <select id="collection-tier-filter">
+              <option value="all">All tiers</option>
+            </select>
+          </label>
+          <label for="collection-office-filter">
+            Office / staff
+            <select id="collection-office-filter">
+              <option value="all">All offices</option>
+            </select>
+          </label>
+          <label for="collection-online-filter">
+            Online check
+            <select id="collection-online-filter">
+              <option value="all">All online statuses</option>
+            </select>
+          </label>
+          <button id="clear-collection-filters" type="button">Clear</button>
+        </div>
+        <p id="collections-summary" class="records-summary" aria-live="polite"></p>
+        <div id="collections-root" class="collections-root" aria-live="polite">
+          <p class="loading">Loading collection inventory...</p>
+        </div>
+      </section>
+
       <section class="section records-section" id="records" aria-labelledby="records-title">
         <div class="section-heading">
           <div>
@@ -352,6 +403,7 @@
       <a href="https://github.com/therealjameswilson/Clinton-NSP">Repository</a>
     </footer>
     <script src="data/records.js?v=20260521-y2k-planning"></script>
-    <script src="app.js?v=20260521-y2k-planning"></script>
+    <script src="data/collections.js?v=20260522-collections"></script>
+    <script src="app.js?v=20260522-collections"></script>
   </body>
 </html>
