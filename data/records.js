@@ -86,6 +86,17 @@ window.NSP_CHAPTERS = [
     reportUrl: "https://www.clintonlibrary.gov/research/presidential-directives",
     note:
       "Special issue chapter on the Clinton administration's review of ballistic missile defenses, the future of the ABM Treaty, nuclear posture, START III, and U.S.-Russian missile-launch warning cooperation."
+  },
+  {
+    id: "tech-transfer",
+    number: 9,
+    year: "1993-2000",
+    dateLabel: "1993-2000",
+    title: "Technology Transfer, Export Controls, and Strategic Industry",
+    shortTitle: "Tech Transfer",
+    reportUrl: "https://www.clintonlibrary.gov/research/presidential-directives",
+    note:
+      "Special issue chapter on post-Cold War technology transfer: nonproliferation export controls, encryption, remote sensing, commercial satellites, jet-engine hot-section technology, conventional arms transfers, space policy, and allied defense-industrial reform."
   }
 ];
 
@@ -714,6 +725,282 @@ const BMD_ABM_RECORDS = [
   }
 ];
 
+const TECH_TRANSFER_RECORDS = [
+  {
+    id: "tech-transfer-prd8-nonproliferation-export-controls",
+    chapterId: "tech-transfer",
+    date: "1993-02-11",
+    dateLabel: "1993",
+    type: "Directive Source",
+    status: "Released PRD",
+    priority: "High",
+    themeId: "technology-control",
+    title: "PRD-8, U.S. Policy toward Nonproliferation and Export Controls",
+    summary:
+      "Early review directive anchoring the chapter's nonproliferation and export-control lane, where post-Cold War openness collided with the need to control dual-use technology.",
+    sourceName: "Clinton Library PRD-8",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/research/prd-8.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/research/prd-8.pdf",
+    sourceNote:
+      "Released PRD source listed by the Clinton Library as U.S. Policy toward Nonproliferation and Export Controls.",
+    directives: ["PRD-8"],
+    topics: ["Nonproliferation", "Export controls", "Dual-use technology", "Post-Cold War policy"]
+  },
+  {
+    id: "tech-transfer-pdd5-public-encryption",
+    chapterId: "tech-transfer",
+    date: "1993-04-15",
+    dateLabel: "April 15, 1993",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "technology-control",
+    title: "PDD-5, Public Encryption Management",
+    summary:
+      "Decision directive on public encryption management, a core early-Clinton technology-transfer issue where commercial communications, law-enforcement access, intelligence equities, and export controls overlapped.",
+    sourceName: "Clinton Library PDD-5",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-5.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-5.pdf",
+    sourceNote:
+      "Released PDD source listed by the Clinton Library as Public Encryption Management, dated April 15, 1993.",
+    directives: ["PDD-5"],
+    topics: ["Encryption", "Telecommunications", "Export controls", "Intelligence"]
+  },
+  {
+    id: "tech-transfer-prd27-advanced-telecom-encryption",
+    chapterId: "tech-transfer",
+    date: "1993-04-16",
+    dateLabel: "April 16, 1993",
+    type: "Directive Source",
+    status: "Released PRD",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "PRD-27, Advanced Telecommunications and Encryption",
+    summary:
+      "Review directive for advanced telecommunications and encryption, pairing the encryption debate with the broader commercial communications infrastructure that made export control harder after the Cold War.",
+    sourceName: "Clinton Library PRD-27",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/prd-27.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/prd-27.pdf",
+    sourceNote:
+      "Released PRD source listed by the Clinton Library as Advanced Telecommunications and Encryption, dated April 16, 1993.",
+    directives: ["PRD-27"],
+    topics: ["Advanced telecommunications", "Encryption", "Commercial technology", "Review process"]
+  },
+  {
+    id: "tech-transfer-pdd23-remote-sensing",
+    chapterId: "tech-transfer",
+    date: "1994-03-09",
+    dateLabel: "March 9, 1994",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "technology-control",
+    title: "PDD-23, Foreign Access to Remote Sensing Space Capabilities",
+    summary:
+      "Decision directive for commercial remote sensing, where U.S. industry access to foreign markets had to be balanced against national security, foreign policy, and imagery-control concerns.",
+    sourceName: "Clinton Library PDD-23",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-23.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-23.pdf",
+    sourceNote:
+      "Released PDD source listed by the Clinton Library as U.S. Policy on Foreign Access to Remote Sensing Space Capabilities, dated March 9, 1994.",
+    directives: ["PDD-23"],
+    topics: ["Remote sensing", "Space policy", "Commercial imagery", "Export licensing"]
+  },
+  {
+    id: "tech-transfer-prd45-arms-control-rd",
+    chapterId: "tech-transfer",
+    date: "1994-05-25",
+    dateLabel: "May 25, 1994",
+    type: "Directive Source",
+    status: "Released PRD",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "PRD-45, Coordination of Arms Control and Nonproliferation R&D",
+    summary:
+      "Review directive tying technology development to arms-control and nonproliferation goals, a bridge between research policy and strategic technology governance.",
+    sourceName: "Clinton Library PRD-45",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/research/prd-45.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/research/prd-45.pdf",
+    sourceNote:
+      "Released PRD source listed by the Clinton Library as Coordination of Arms Control and Nonproliferation Research and Development, dated May 25, 1994.",
+    directives: ["PRD-45"],
+    topics: ["Arms control", "Nonproliferation R&D", "Technology governance", "Interagency coordination"]
+  },
+  {
+    id: "tech-transfer-pdd34-conventional-arms-transfer",
+    chapterId: "tech-transfer",
+    date: "1995-02-10",
+    dateLabel: "February 10, 1995",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "technology-control",
+    title: "PDD-34, U.S. Policy on Conventional Arms Transfer",
+    summary:
+      "Decision directive on conventional arms transfer policy, balancing restraint, regional stability, interoperability, and the U.S. defense industrial base after the Cold War arms market changed.",
+    sourceName: "Clinton Library PDD-34",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-34.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-34.pdf",
+    sourceNote:
+      "Released PDD source. The directive text is dated February 10, 1995 and frames conventional arms transfer policy as both a national security and foreign policy tool.",
+    directives: ["PDD-34"],
+    topics: ["Conventional arms transfers", "Defense industrial base", "Regional security", "Export restraint"]
+  },
+  {
+    id: "tech-transfer-pdd50-satellites-jet-engine",
+    chapterId: "tech-transfer",
+    date: "1996-10-12",
+    dateLabel: "October 12, 1996",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "technology-control",
+    title: "PDD-50, Commercial Communications Satellites and Jet-Engine Hot-Section Technology",
+    summary:
+      "Decision directive on two signature dual-use export-control disputes: commercial communications satellites and jet-engine hot-section technology.",
+    sourceName: "Clinton Library PDD-50",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-50.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-50.pdf",
+    sourceNote:
+      "Released PDD source listed by the Clinton Library as Commercial Communications Satellites and Jet-Engine Hot-Section Technology, dated October 12, 1996.",
+    directives: ["PDD-50"],
+    topics: ["Commercial satellites", "Jet-engine technology", "Dual-use exports", "Technology transfer"]
+  },
+  {
+    id: "tech-transfer-drive-gc-st-working-group",
+    chapterId: "tech-transfer",
+    date: "1994-12-06",
+    dateLabel: "December 6, 1994",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "First Gore-Chernomyrdin S&T working group on sensitive cooperation",
+    summary:
+      "Unclassified Moscow cable on the first U.S.-Russia Working Group on General Problems of S&T Cooperation, showing technology transfer as a practical cooperation problem rather than a Cold War bloc-control problem.",
+    sourceName: "Google Drive cable, Moscow 035094",
+    sourceUrl: "https://drive.google.com/file/d/1MSB9yBgK13eqjF-sMlOEiV9tR-cPVzZZ",
+    sourceNote:
+      "Drive search result for technology transfer. The cable covers customs and taxes, intellectual property rights, sensitive facilities and regions, multiple-entry visas, operational contacts, and Russian insistence that dual-use project work be cleared for export-control requirements.",
+    directives: [],
+    topics: ["Gore-Chernomyrdin", "Russia", "Science and technology cooperation", "Dual-use technology", "Export controls"]
+  },
+  {
+    id: "tech-transfer-drive-pdd23-implementation-guidance",
+    chapterId: "tech-transfer",
+    date: "1998-03-18",
+    dateLabel: "March 18, 1998",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "White House implementation guidance for NSC/PDD-23 remote sensing exports",
+    summary:
+      "Berger and Gibbons guidance on implementing PDD-23 for advanced remote sensing exports, including the standing interagency working group and government-to-government agreement questions.",
+    sourceName: "Google Drive PDF W00303",
+    sourceUrl: "https://drive.google.com/file/d/1AXuExRKsUYjzTIBPHoutAAC6VK8-e0iG",
+    sourceNote:
+      "Drive search result for remote sensing. The memorandum says PDD-23 supports U.S. industrial competitiveness while protecting national security and foreign policy interests, and creates an interagency process for export requests.",
+    directives: ["PDD-23"],
+    topics: ["Remote sensing", "Export licensing", "NSC implementation", "Commercial space"]
+  },
+  {
+    id: "tech-transfer-drive-remote-sensing-mou",
+    chapterId: "tech-transfer",
+    date: "2000-01-10",
+    dateLabel: "January 2000",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Interagency MOU on licensing private remote sensing satellite systems",
+    summary:
+      "DoD information memo and attached MOU/fact sheet on private remote sensing satellite licensing, including consultation procedures and interruption of normal commercial operations under PDD-23.",
+    sourceName: "Google Drive PDF U01585",
+    sourceUrl: "https://drive.google.com/file/d/1uMueH6sfbuAAdKIG_pFNtNGIjgSwzUAU",
+    sourceNote:
+      "Drive search result for remote sensing. The packet includes DOD, State, Commerce, Interior, and Intelligence Community procedures for licensing actions and possible limits on commercial operations.",
+    directives: ["PDD-23"],
+    topics: ["Remote sensing", "Satellite licensing", "Shutter control", "Commercial imagery", "Interagency process"]
+  },
+  {
+    id: "tech-transfer-drive-satellite-export-licenses",
+    chapterId: "tech-transfer",
+    date: "1999-09-17",
+    dateLabel: "September 17, 1999",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Satellite export licenses for launches in China and Russia",
+    summary:
+      "DoD update on export licenses and congressional waiver/notification actions for satellite exports for launch in China and Russia, including post-1998 legal certification requirements.",
+    sourceName: "Google Drive PDF U14750",
+    sourceUrl: "https://drive.google.com/file/d/13ZUVg-aUWs9wXHfrFR10LvxdewH1sI0X",
+    sourceNote:
+      "Drive search result for satellite export. The memo tracks State and Commerce license actions, Tiananmen sanctions waivers, and missile-technology certification requirements for China-related satellite exports.",
+    directives: ["PDD-50"],
+    topics: ["Commercial satellites", "China", "Russia", "Export licensing", "Congressional notification"]
+  },
+  {
+    id: "tech-transfer-drive-commercial-satellite-congress",
+    chapterId: "tech-transfer",
+    date: "1998-08-21",
+    dateLabel: "1998-2000",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Commercial satellite export controls, China investigations, and reform pressure",
+    summary:
+      "DoD congressional-correspondence packets on commercial communications satellite exports, Chinese technology-transfer concerns, and later export-control reform proposals.",
+    sourceName: "Google Drive PDF U12605",
+    sourceUrl: "https://drive.google.com/file/d/1Qf2jw9xHceTZik_ikMWqxfFZQnuQaZxf",
+    sourceNote:
+      "Drive search result for satellite export. The packet includes 1998 correspondence over Chinasat 8, Loral/Hughes-related assessments, comsat jurisdiction disputes, and a 2000 Gejdenson reform letter using commercial satellite technology as an example of overbroad regulation.",
+    directives: ["PDD-50"],
+    topics: ["Commercial satellites", "China", "Congress", "Loral/Hughes", "Export-control reform"]
+  },
+  {
+    id: "tech-transfer-drive-dual-use-licensing-review",
+    chapterId: "tech-transfer",
+    date: "1999-06-18",
+    dateLabel: "June 18, 1999",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Inspector General review of dual-use and munitions export licensing",
+    summary:
+      "DoD Inspector General executive summary from an interagency review of dual-use commodity and munitions export licensing after congressional concern over China and technology transfer.",
+    sourceName: "Google Drive PDF U09846",
+    sourceUrl: "https://drive.google.com/file/d/1b73oUBDG5srInPjaPdRrOmjykQs9TtPT",
+    sourceNote:
+      "Drive search result for encryption export. The review examined whether export licensing practices were consistent with national security and foreign policy objectives, including cumulative effects of technology transfers and DOD review processes.",
+    directives: [],
+    topics: ["Dual-use exports", "Munitions licensing", "Inspector General", "Technology transfer", "China"]
+  },
+  {
+    id: "tech-transfer-drive-defense-trade-security-initiative",
+    chapterId: "tech-transfer",
+    date: "2000-06-01",
+    dateLabel: "2000",
+    type: "Drive Document",
+    status: "Declassified Drive Source",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "Defense Trade Security Initiative and allied ITAR exemptions",
+    summary:
+      "Secretary of Defense correspondence defending the Defense Trade Security Initiative as a post-Cold War adjustment to export controls for trusted allies while protecting advanced technology.",
+    sourceName: "Google Drive PDF U09303",
+    sourceUrl: "https://drive.google.com/file/d/1LYtIBzIDHfDY9U5lUrCQswf5dNajHo50",
+    sourceNote:
+      "Drive search result for Gejdenson export. The letters describe a proposed Canada-style ITAR exemption for the UK and Australia, reciprocal technology-security standards, re-transfer and end-use controls, and interoperability with close allies.",
+    directives: [],
+    topics: ["Defense Trade Security Initiative", "ITAR", "Allies", "Technology security", "Interoperability"]
+  }
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -803,6 +1090,31 @@ window.NSP_SOURCES = [
     note: "Public finding aid for PDD-49 and post-Cold War space policy records."
   },
   {
+    label: "PRD-8 nonproliferation and export controls",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/research/prd-8.pdf",
+    note: "Released directive source for the chapter's nonproliferation and dual-use export-control lane."
+  },
+  {
+    label: "PDD-5 public encryption management",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-5.pdf",
+    note: "Released decision directive source for encryption policy."
+  },
+  {
+    label: "PDD-23 remote sensing space capabilities",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-23.pdf",
+    note: "Released decision directive source for foreign access to remote sensing space capabilities."
+  },
+  {
+    label: "PDD-34 conventional arms transfer",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-34.pdf",
+    note: "Released decision directive source for post-Cold War conventional arms transfer policy."
+  },
+  {
+    label: "PDD-50 commercial satellites and jet-engine hot-section technology",
+    url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-50.pdf",
+    note: "Released decision directive source for commercial satellite and jet-engine hot-section technology-transfer questions."
+  },
+  {
     label: "PDD-56 white paper",
     url: "https://clintonwhitehouse4.archives.gov/WH/EOP/NSC/html/documents/NSCDoc2.html",
     note: "Archived White House statement on managing complex contingency operations."
@@ -862,6 +1174,41 @@ window.NSP_SOURCES = [
     label: "Google Drive JDEC implementation letter",
     url: "https://drive.google.com/file/d/1QhATAqpgYxjXWXEuNcnFSu7NiIMmZe_w",
     note: "Drive-held declassified Secretary of Defense letter on Joint Data Exchange Center implementation."
+  },
+  {
+    label: "Google Drive Gore-Chernomyrdin S&T working group cable",
+    url: "https://drive.google.com/file/d/1MSB9yBgK13eqjF-sMlOEiV9tR-cPVzZZ",
+    note: "Drive-held declassified cable on U.S.-Russian S&T cooperation, sensitive access, intellectual property, and dual-use export-control clearance."
+  },
+  {
+    label: "Google Drive PDD-23 remote sensing implementation guidance",
+    url: "https://drive.google.com/file/d/1AXuExRKsUYjzTIBPHoutAAC6VK8-e0iG",
+    note: "Drive-held White House guidance on implementing PDD-23 for advanced remote sensing exports."
+  },
+  {
+    label: "Google Drive private remote sensing licensing MOU",
+    url: "https://drive.google.com/file/d/1uMueH6sfbuAAdKIG_pFNtNGIjgSwzUAU",
+    note: "Drive-held interagency MOU packet on licensing private remote sensing satellite systems."
+  },
+  {
+    label: "Google Drive satellite export license update",
+    url: "https://drive.google.com/file/d/13ZUVg-aUWs9wXHfrFR10LvxdewH1sI0X",
+    note: "Drive-held DoD update on satellite export licenses for launches in China and Russia."
+  },
+  {
+    label: "Google Drive commercial satellite export-control packet",
+    url: "https://drive.google.com/file/d/1Qf2jw9xHceTZik_ikMWqxfFZQnuQaZxf",
+    note: "Drive-held congressional-correspondence packet on commercial communications satellite exports and export-control reform."
+  },
+  {
+    label: "Google Drive dual-use and munitions licensing review",
+    url: "https://drive.google.com/file/d/1b73oUBDG5srInPjaPdRrOmjykQs9TtPT",
+    note: "Drive-held DoD Inspector General review of export licensing for dual-use commodities and munitions."
+  },
+  {
+    label: "Google Drive Defense Trade Security Initiative packet",
+    url: "https://drive.google.com/file/d/1LYtIBzIDHfDY9U5lUrCQswf5dNajHo50",
+    note: "Drive-held Secretary of Defense correspondence on allied technology-security agreements and ITAR exemptions."
   }
 ];
 
@@ -1019,6 +1366,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "nonproliferation-export-controls",
+    chapterId: "tech-transfer",
     date: "1993-02-11",
     dateLabel: "1993-1994",
     type: "Directive Cluster",
@@ -1055,6 +1403,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "national-space-policy-pdd49",
+    chapterId: "tech-transfer",
     date: "1996-09-14",
     dateLabel: "September 14, 1996",
     type: "FOIA Collection",
@@ -1076,6 +1425,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "encryption-remote-sensing-technology-transfer",
+    chapterId: "tech-transfer",
     date: "1993-04-15",
     dateLabel: "1993-1996",
     type: "Directive Cluster",
@@ -1148,7 +1498,7 @@ window.NSP_RECORDS = [
   }
 ];
 
-window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS);
+window.NSP_RECORDS.push(...NSS_RECORDS, ...BMD_ABM_RECORDS, ...TECH_TRANSFER_RECORDS);
 
 for (const record of window.NSP_RECORDS) {
   if (record.chapterId) continue;

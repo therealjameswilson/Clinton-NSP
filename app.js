@@ -169,7 +169,7 @@ function renderAudit() {
     auditCard(
       "Chapter Plan",
       `${chapters.length} volume chapters`,
-      "The volume sequence now follows one chapter for each Clinton National Security Strategy report, plus a BMD/ABM Treaty special issue chapter.",
+      "The volume sequence now follows one chapter for each Clinton National Security Strategy report, plus BMD/ABM Treaty and Technology Transfer special issue chapters.",
       `${themes.length} NSP theme lanes remain available as cross-cutting filters.`
     ),
     auditCard(
