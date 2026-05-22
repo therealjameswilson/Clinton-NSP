@@ -33,6 +33,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 
 - Office of the Historian, FRUS 1993-2000, Volume VI status page
 - Office of the Historian, FRUS 1981-1988, Volume XLIV, Part 1 preface
+- GovInfo Public Papers of the Presidents, William J. Clinton collection
 - Clinton Library Presidential Directives
 - Clinton Library Declassified Records portal
 - Clinton Library `(2013-0185-M) Declassified Folder Title List for the National Security Council`
@@ -59,6 +60,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Google Drive search results for technology-transfer chapter sources, including the Gore-Chernomyrdin S&T working group cable, PDD-23 remote-sensing implementation records, commercial satellite export-control packets, the dual-use/munitions licensing Inspector General review, and Defense Trade Security Initiative correspondence
 - Google Drive search results for Y2K planning sources, including the DoD six-month readiness update, Personnel and Readiness and C3ISR briefings, the Naval War College international-security report, and Joint Y2K Center for Strategic Stability correspondence and situation reporting
 - Google Drive search results for William S. Cohen Secretary of Defense collection files, including standalone printable packets on NMD, ABM Treaty/START diplomacy, RAMOS, high-performance computer export controls, satellite export oversight, RD-180/EELV licensing, homeland defense, and Y2K/critical infrastructure
+- Clinton Public Papers public-statement pass for NSP-relevant entries on National Security Strategy transmittals, ABM/NMD and strategic stability, export controls and technology transfer, and Y2K/critical infrastructure readiness
 - Clinton Digital Library National Security Council collection overview
 - Clinton Digital Library Office of Records Management - Presidential Decision Directives collection overview
 - Clinton Digital Library Declassified Documents collection

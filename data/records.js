@@ -1676,6 +1676,647 @@ const COHEN_SECDEF_RECORDS = [
   }
 ];
 
+function clintonPublicStatementType(title) {
+  if (/^Remarks/.test(title)) return "Clinton Public Remarks";
+  if (/^Message/.test(title)) return "Clinton Public Message";
+  if (/^Letter/.test(title)) return "Clinton Public Letter";
+  if (/^Memorandum/.test(title)) return "Clinton Public Memorandum";
+  if (/^Joint Statement|^Russia-United States Joint Statement/.test(title)) {
+    return "Joint Public Statement";
+  }
+  if (/^Declaration/.test(title)) return "Public Declaration";
+  return "Clinton Public Statement";
+}
+
+function clintonPublicStatement(entry) {
+  const page = entry.govinfoId.replace(/^.*doc-pg/, "pg ");
+  return {
+    ...entry,
+    type: clintonPublicStatementType(entry.title),
+    status: "Official Public Statement",
+    priority: entry.priority || "Medium",
+    sourceName: `GovInfo ${entry.pkg}, ${page}`,
+    sourceUrl: `https://www.govinfo.gov/app/details/${entry.pkg}/${entry.govinfoId}`,
+    pdfUrl: `https://www.govinfo.gov/content/pkg/${entry.pkg}/pdf/${entry.govinfoId}.pdf`,
+    sourceNote:
+      "Official Public Papers of the Presidents entry selected from a title and exact-term pass over the Clinton Public Papers collection on GovInfo.",
+    publicStatement: true,
+    summary:
+      entry.summary ||
+      `Official Public Papers entry for Clinton's ${entry.title}. It anchors the public-facing chronology for this policy lane alongside the archival and declassified document leads.`
+  };
+}
+
+const CLINTON_PUBLIC_STATEMENT_RECORDS = [
+  clintonPublicStatement({
+    id: "clinton-ppp-1993-export-control-continuation",
+    chapterId: "tech-transfer",
+    date: "1993-04-27",
+    dateLabel: "April 27, 1993",
+    pkg: "PPP-1993-book1",
+    govinfoId: "PPP-1993-book1-doc-pg524",
+    title: "Message to the Congress Reporting on the Continuation of Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-export-control-continuation-june",
+    chapterId: "tech-transfer",
+    date: "1994-06-30",
+    dateLabel: "June 30, 1994",
+    pkg: "PPP-1994-book1",
+    govinfoId: "PPP-1994-book1-doc-pg1169",
+    title: "Message to the Congress on Continuation of Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-nss-statement",
+    chapterId: "national-security-strategy",
+    date: "1994-07-21",
+    dateLabel: "July 21, 1994",
+    pkg: "PPP-1994-book1",
+    govinfoId: "PPP-1994-book1-doc-pg1297",
+    title: "Statement on the National Security Strategy Report",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Engagement and enlargement", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "1994-07-21",
+    dateLabel: "July 21, 1994",
+    pkg: "PPP-1994-book1",
+    govinfoId: "PPP-1994-book1-doc-pg1298",
+    title: "Message to the Congress Transmitting the National Security Strategy Report",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-export-control-continuation-july",
+    chapterId: "tech-transfer",
+    date: "1994-07-29",
+    dateLabel: "July 29, 1994",
+    pkg: "PPP-1994-book1",
+    govinfoId: "PPP-1994-book1-doc-pg1339-2",
+    title: "Message to the Congress Reporting on the Continuation of Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-export-control-continuation-august",
+    chapterId: "tech-transfer",
+    date: "1994-08-19",
+    dateLabel: "August 19, 1994",
+    pkg: "PPP-1994-book2",
+    govinfoId: "PPP-1994-book2-doc-pg1484",
+    title: "Message to the Congress on Continuation of Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1994-strategic-stability-nuclear-security",
+    chapterId: "bmd-abm",
+    date: "1994-09-29",
+    dateLabel: "September 29, 1994",
+    pkg: "PPP-1994-book2",
+    govinfoId: "PPP-1994-book2-doc-pg1659",
+    title: "Joint Statement on Strategic Stability and Nuclear Security",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["Strategic stability", "Nuclear security", "Russia", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1995-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "1995-02-28",
+    dateLabel: "February 28, 1995",
+    pkg: "PPP-1995-book1",
+    govinfoId: "PPP-1995-book1-doc-pg281",
+    title: "Message to the Congress Transmitting the National Security Strategy Report",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1995-export-control-regulations",
+    chapterId: "tech-transfer",
+    date: "1995-03-21",
+    dateLabel: "March 21, 1995",
+    pkg: "PPP-1995-book1",
+    govinfoId: "PPP-1995-book1-doc-pg378",
+    title: "Message to the Congress Reporting on Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1995-export-control-continuation",
+    chapterId: "tech-transfer",
+    date: "1995-08-15",
+    dateLabel: "August 15, 1995",
+    pkg: "PPP-1995-book2",
+    govinfoId: "PPP-1995-book2-doc-pg1258-2",
+    title: "Letter to Congressional Leaders on Continuation of Export Control Regulations",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1995-computer-export-controls",
+    chapterId: "tech-transfer",
+    date: "1995-10-06",
+    dateLabel: "October 6, 1995",
+    pkg: "PPP-1995-book2",
+    govinfoId: "PPP-1995-book2-doc-pg1551",
+    title: "Statement on Reform of Computer Export Controls",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Computer export controls", "High-performance computing", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1995-export-controls-administration",
+    chapterId: "tech-transfer",
+    date: "1995-12-05",
+    dateLabel: "December 5, 1995",
+    pkg: "PPP-1995-book2",
+    govinfoId: "PPP-1995-book2-doc-pg1843",
+    title: "Message to the Congress on Administration of Export Controls",
+    themeId: "technology-control",
+    topics: ["Export controls", "Export Administration Act", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-start-ii-ratification",
+    chapterId: "bmd-abm",
+    date: "1996-01-26",
+    dateLabel: "January 26, 1996",
+    pkg: "PPP-1996-book1",
+    govinfoId: "PPP-1996-book1-doc-pg104",
+    title: "Statement on Senate Ratification of the START II Nuclear Arms Reduction Treaty With Russia",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["START II", "Russia", "Nuclear reductions", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-satellite-exports-china-1",
+    chapterId: "tech-transfer",
+    date: "1996-02-06",
+    dateLabel: "February 6, 1996",
+    pkg: "PPP-1996-book1",
+    govinfoId: "PPP-1996-book1-doc-pg177",
+    title: "Message to the Congress on Satellite Exports to China",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Satellite exports", "China", "Export licensing", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-satellite-exports-china-2",
+    chapterId: "tech-transfer",
+    date: "1996-02-06",
+    dateLabel: "February 6, 1996",
+    pkg: "PPP-1996-book1",
+    govinfoId: "PPP-1996-book1-doc-pg177-2",
+    title: "Message to the Congress on Satellite Exports to China",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Satellite exports", "China", "Export licensing", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-satellite-exports-china-3",
+    chapterId: "tech-transfer",
+    date: "1996-02-06",
+    dateLabel: "February 6, 1996",
+    pkg: "PPP-1996-book1",
+    govinfoId: "PPP-1996-book1-doc-pg178",
+    title: "Message to the Congress on Satellite Exports to China",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Satellite exports", "China", "Export licensing", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-encryption-export-controls-letter",
+    chapterId: "tech-transfer",
+    date: "1996-11-15",
+    dateLabel: "November 15, 1996",
+    pkg: "PPP-1996-book2",
+    govinfoId: "PPP-1996-book2-doc-pg2123",
+    title: "Letter to Congressional Leaders on Encryption Products Export Controls",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Encryption", "Export controls", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1996-encryption-export-policy",
+    chapterId: "tech-transfer",
+    date: "1996-11-15",
+    dateLabel: "November 15, 1996",
+    pkg: "PPP-1996-book2",
+    govinfoId: "PPP-1996-book2-doc-pg2124",
+    title: "Memorandum on Encryption Export Policy",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Encryption", "Export controls", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1997-abm-treaty-joint-statement",
+    chapterId: "bmd-abm",
+    date: "1997-03-21",
+    dateLabel: "March 21, 1997",
+    pkg: "PPP-1997-book1",
+    govinfoId: "PPP-1997-book1-doc-pg341",
+    title: "Russia-United States Joint Statement Concerning the Anti-Ballistic Missile Treaty",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["ABM Treaty", "Russia", "Strategic stability", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1997-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "1997-05-15",
+    dateLabel: "May 15, 1997",
+    pkg: "PPP-1997-book1",
+    govinfoId: "PPP-1997-book1-doc-pg604",
+    title: "Message to the Congress Transmitting a Report on the National Security Strategy",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-financial-y2k-readiness",
+    chapterId: "y2k-planning",
+    date: "1998-03-20",
+    dateLabel: "March 20, 1998",
+    pkg: "PPP-1998-book1",
+    govinfoId: "PPP-1998-book1-doc-pg414",
+    title: "Statement on Signing the Examination Parity and Year 2000 Readiness for Financial Institutions Act",
+    themeId: "preparedness",
+    topics: ["Y2K", "Financial institutions", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-y2k-conversion-remarks",
+    chapterId: "y2k-planning",
+    date: "1998-07-14",
+    dateLabel: "July 14, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1227",
+    title: "Remarks on the Year 2000 Conversion Computer Problem",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "Year 2000 conversion", "Preparedness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-y2k-senate-disclosure-action",
+    chapterId: "y2k-planning",
+    date: "1998-09-18",
+    dateLabel: "September 18, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1619-2",
+    title: "Statement on Senate Action on Year 2000 Information and Readiness Disclosure Legislation",
+    themeId: "preparedness",
+    topics: ["Y2K", "Information disclosure", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-y2k-senate-readiness-action",
+    chapterId: "y2k-planning",
+    date: "1998-09-29",
+    dateLabel: "September 29, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1705-2",
+    title: "Statement on Senate Action on Year 2000 Information and Readiness Legislation",
+    themeId: "preparedness",
+    topics: ["Y2K", "Information disclosure", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-y2k-house-readiness-action",
+    chapterId: "y2k-planning",
+    date: "1998-10-01",
+    dateLabel: "October 1, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1713-2",
+    title: "Statement on House Action on Year 2000 Information and Readiness Legislation",
+    themeId: "preparedness",
+    topics: ["Y2K", "Information disclosure", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-y2k-disclosure-act-signing",
+    chapterId: "y2k-planning",
+    date: "1998-10-19",
+    dateLabel: "October 19, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1821-2",
+    title: "Statement on Signing the Year 2000 Information and Readiness Disclosure Act",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "Information disclosure", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "1998-10-29",
+    dateLabel: "October 29, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg1911",
+    title: "Letter to Congressional Leaders Transmitting the National Security Strategy Report",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1998-social-security-y2k-compliance",
+    chapterId: "y2k-planning",
+    date: "1998-12-28",
+    dateLabel: "December 28, 1998",
+    pkg: "PPP-1998-book2",
+    govinfoId: "PPP-1998-book2-doc-pg2212-2",
+    title: "Remarks Announcing Social Security System Compliance With Year 2000 Computer Problem Safeguards",
+    themeId: "preparedness",
+    topics: ["Y2K", "Social Security", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-abm-mou-letter",
+    chapterId: "bmd-abm",
+    date: "1999-02-09",
+    dateLabel: "February 9, 1999",
+    pkg: "PPP-1999-book1",
+    govinfoId: "PPP-1999-book1-doc-pg184",
+    title: "Letter to Congressional Leaders on the Memorandum of Understanding Relating to the Soviet Union-United States Anti-Ballistic Missile Treaty",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["ABM Treaty", "Memorandum of Understanding", "Russia", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-nmd-legislation",
+    chapterId: "bmd-abm",
+    date: "1999-03-17",
+    dateLabel: "March 17, 1999",
+    pkg: "PPP-1999-book1",
+    govinfoId: "PPP-1999-book1-doc-pg397",
+    title: "Statement on National Missile Defense Legislation",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["National Missile Defense", "Legislation", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-small-business-y2k-readiness",
+    chapterId: "y2k-planning",
+    date: "1999-04-02",
+    dateLabel: "April 2, 1999",
+    pkg: "PPP-1999-book1",
+    govinfoId: "PPP-1999-book1-doc-pg493",
+    title: "Statement on Signing the Small Business Year 2000 Readiness Act",
+    themeId: "preparedness",
+    topics: ["Y2K", "Small business", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-hpc-semiconductor-export-controls",
+    chapterId: "tech-transfer",
+    date: "1999-07-01",
+    dateLabel: "July 1, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg1108",
+    title: "Statement on Export Controls on High-Performance Computers and Semiconductors",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["High-performance computers", "Semiconductors", "Export controls", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-y2k-act-signing",
+    chapterId: "y2k-planning",
+    date: "1999-07-20",
+    dateLabel: "July 20, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg1270",
+    title: "Statement on Signing the Y2K Act",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "Liability", "Readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-nmd-act-signing",
+    chapterId: "bmd-abm",
+    date: "1999-07-22",
+    dateLabel: "July 22, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg1304-3",
+    title: "Statement on Signing the National Missile Defense Act of 1999",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["National Missile Defense", "Legislation", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-year-2000-computer-memorandum",
+    chapterId: "y2k-planning",
+    date: "1999-08-04",
+    dateLabel: "August 4, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg1381-2",
+    title: "Memorandum on the Year 2000 Computer Problem",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "Federal readiness", "Preparedness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-australia-nuclear-technology-transfer",
+    chapterId: "tech-transfer",
+    date: "1999-11-03",
+    dateLabel: "November 3, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg1963-2",
+    title: "Message to the Congress Transmitting the Australia-United States Peaceful Nuclear Technology Transfer Agreement",
+    themeId: "technology-control",
+    topics: ["Technology transfer", "Australia", "Nuclear technology", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-y2k-readiness-remarks",
+    chapterId: "y2k-planning",
+    date: "1999-11-10",
+    dateLabel: "November 10, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg2039",
+    title: "Remarks on Y2K Readiness and an Exchange With Reporters",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "Readiness", "Preparedness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-1999-omb-y2k-readiness-report",
+    chapterId: "y2k-planning",
+    date: "1999-12-14",
+    dateLabel: "December 14, 1999",
+    pkg: "PPP-1999-book2",
+    govinfoId: "PPP-1999-book2-doc-pg2300",
+    title: "Statement on the Report of the Office of Management and Budget on the Federal Government's Readiness for the Year 2000",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Y2K", "OMB", "Federal readiness", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "2000-01-05",
+    dateLabel: "January 5, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg11",
+    title: "Letter to Congressional Leaders Transmitting a Report on the National Security Strategy",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-information-systems-protection",
+    chapterId: "y2k-planning",
+    date: "2000-01-07",
+    dateLabel: "January 7, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg13-2",
+    title: "Remarks on the National Plan for Information Systems Protection and an Exchange With Reporters",
+    priority: "High",
+    themeId: "preparedness",
+    topics: ["Critical infrastructure", "Information systems protection", "Cybersecurity", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-hpc-semiconductor-export-controls",
+    chapterId: "tech-transfer",
+    date: "2000-02-01",
+    dateLabel: "February 1, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg168",
+    title: "Statement on Export Controls on High-Performance Computers and Semiconductors",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["High-performance computers", "Semiconductors", "Export controls", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-abm-mou-letter",
+    chapterId: "bmd-abm",
+    date: "2000-03-17",
+    dateLabel: "March 17, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg487",
+    title: "Letter to Congressional Leaders on the Memorandum of Understanding Relating to the Anti-Ballistic Missile Treaty",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["ABM Treaty", "Memorandum of Understanding", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-start-ii-duma",
+    chapterId: "bmd-abm",
+    date: "2000-04-14",
+    dateLabel: "April 14, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg716-2",
+    title: "Statement on Russian State Duma Action on the START II Treaty",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["START II", "Russia", "Strategic stability", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-strategic-stability-principles",
+    chapterId: "bmd-abm",
+    date: "2000-06-04",
+    dateLabel: "June 4, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg1076",
+    title: "Russia-United States Joint Statement on Principles of Strategic Stability",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["Strategic stability", "ABM Treaty", "Russia", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-jdec-moa",
+    chapterId: "bmd-abm",
+    date: "2000-06-04",
+    dateLabel: "June 4, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg1077",
+    title: "Russia-United States Memorandum of Agreement on Establishment of a Joint Center for Early Warning Systems Data Exchange and Missile Launch Notifications",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["Joint Data Exchange Center", "Missile-launch notification", "Russia", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-jdec-funding-procedures",
+    chapterId: "bmd-abm",
+    date: "2000-06-04",
+    dateLabel: "June 4, 2000",
+    pkg: "PPP-2000-book1",
+    govinfoId: "PPP-2000-book1-doc-pg1080",
+    title: "Russia-United States Joint Statement on Funding Procedures",
+    themeId: "risk-reduction",
+    topics: ["Joint Data Exchange Center", "Funding procedures", "Russia", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-strategic-stability-cooperation",
+    chapterId: "bmd-abm",
+    date: "2000-07-21",
+    dateLabel: "July 21, 2000",
+    pkg: "PPP-2000-book2",
+    govinfoId: "PPP-2000-book2-doc-pg1443-2",
+    title: "Russia-United States Joint Statement on Cooperation on Strategic Stability",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["Strategic stability", "Russia", "NMD", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-strategic-stability-cooperation-initiative",
+    chapterId: "bmd-abm",
+    date: "2000-09-06",
+    dateLabel: "September 6, 2000",
+    pkg: "PPP-2000-book2",
+    govinfoId: "PPP-2000-book2-doc-pg1760-2",
+    title: "Joint Statement: Strategic Stability Cooperation Initiative Between the United States of America and Russian Federation",
+    priority: "High",
+    themeId: "risk-reduction",
+    topics: ["Strategic stability", "Russia", "NMD", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-technology-transfer-commercialization-act",
+    chapterId: "tech-transfer",
+    date: "2000-11-01",
+    dateLabel: "November 1, 2000",
+    pkg: "PPP-2000-book3",
+    govinfoId: "PPP-2000-book3-doc-pg2406-3",
+    title: "Statement on Signing the Technology Transfer Commercialization Act of 2000",
+    themeId: "technology-control",
+    topics: ["Technology transfer", "Commercialization", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-export-administration-reauthorization",
+    chapterId: "tech-transfer",
+    date: "2000-11-13",
+    dateLabel: "November 13, 2000",
+    pkg: "PPP-2000-book3",
+    govinfoId: "PPP-2000-book3-doc-pg2529",
+    title: "Statement on Signing the Reauthorization of the Export Administration Act of 1979",
+    priority: "High",
+    themeId: "technology-control",
+    topics: ["Export Administration Act", "Export controls", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2000-eu-arms-export-transparency",
+    chapterId: "tech-transfer",
+    date: "2000-12-18",
+    dateLabel: "December 18, 2000",
+    pkg: "PPP-2000-book3",
+    govinfoId: "PPP-2000-book3-doc-pg2721",
+    title: "Declaration by the United States and the European Union on the Responsibilities of States and on Transparency Regarding Arms Exports",
+    themeId: "technology-control",
+    topics: ["Arms exports", "Transparency", "European Union", "Public Papers"]
+  }),
+  clintonPublicStatement({
+    id: "clinton-ppp-2001-nss-transmittal",
+    chapterId: "national-security-strategy",
+    date: "2001-01-11",
+    dateLabel: "January 11, 2001",
+    pkg: "PPP-2000-book3",
+    govinfoId: "PPP-2000-book3-doc-pg2904",
+    title: "Letter to Congressional Leaders Transmitting a Report on the National Security Strategy of the United States",
+    priority: "High",
+    themeId: "defense-strategy",
+    topics: ["National Security Strategy", "Congressional transmittal", "Public Papers"]
+  })
+];
+
 window.NSP_THEMES = [
   {
     id: "defense-strategy",
@@ -1748,6 +2389,12 @@ window.NSP_SOURCES = [
     label: "Clinton Library Digital Records search",
     url: "https://www.clintonlibrary.gov/research/search-digitized-records",
     note: "Search entry point for digitized finding aids and released records."
+  },
+  {
+    label: "GovInfo Public Papers of the Presidents - William J. Clinton",
+    url: "https://www.govinfo.gov/app/collection/ppp/president-42_Clinton,%20William%20J.",
+    note:
+      "Official GovInfo collection used for Clinton public statements, messages, letters, memoranda, and joint statements."
   },
   {
     label: "Strobe Talbott FOIA Case F-2017-13804 manifest",
@@ -2331,7 +2978,8 @@ window.NSP_RECORDS.push(
   ...TECH_TRANSFER_RECORDS,
   ...Y2K_PLANNING_RECORDS,
   ...STROBE_FOIA_RECORDS,
-  ...COHEN_SECDEF_RECORDS
+  ...COHEN_SECDEF_RECORDS,
+  ...CLINTON_PUBLIC_STATEMENT_RECORDS
 );
 
 for (const record of window.NSP_RECORDS) {
