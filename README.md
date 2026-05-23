@@ -7,13 +7,15 @@ Working compiler page for the planned Office of the Historian volume:
 - Public workspace: https://therealjameswilson.github.io/Clinton-NSP/
 
 The page now arranges the volume with one chronological National Security Strategy chapter
-for the full Clinton period, plus special issue chapters on national missile defense/ABM
-Treaty, technology transfer, and Y2K planning:
+for the full Clinton period, a defense-strategy chapter for post-Cold War force planning,
+and special issue chapters on national missile defense/ABM Treaty, technology transfer,
+and Y2K planning:
 
 1. 1993-2000, `National Security Strategy`
-2. 1993-2000, `National Missile Defense and the ABM Treaty`
-3. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
-4. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
+2. 1993-2000, `Defense Strategy, Force Planning, and Nuclear Posture`
+3. 1993-2000, `National Missile Defense and the ABM Treaty`
+4. 1993-2000, `Technology Transfer, Export Controls, and Strategic Industry`
+5. 1998-2000, `Y2K Planning and Critical Infrastructure Readiness`
 
 The site also includes a `Collections and Ranked Folders` section generated from the
 research plan's 200 ranked folder targets from Clinton Library MDR case `2013-0185-M`.
@@ -56,12 +58,20 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Clinton Library PDD-30, `U.S. Nuclear Posture and Policy on Nuclear Arms Control Beyond the START I and START II Treaties`
 - Clinton Library PDD-66, `U.S. Nuclear Posture and Policy on Further Reductions in Nuclear Force in START III`
 - Clinton Library Joint Data Exchange Center and Shared Early Warnings finding aid
+- Defense Historical Office DoD Reforms page, including the Bottom-Up Review, Quadrennial Defense Review, Defense Reform Initiative, and National Defense Panel report trail
+- Defense Historical Office Secretary of Defense Annual Reports page
+- FDLP and Defense Historical Office public copies of the 1995 and 1997 National Military Strategy reports
+- GovInfo GAO reports on the Bottom-Up Review, QDR implementation, and National Missile Defense schedule risk
+- DTIC public copy of the National Defense Panel report, `Transforming Defense`
 - Google Drive search results for NMD/ABM chapter sources, including NSC NMD-ABM-START packets, ABM demarcation compliance records, sea-based NMD reporting, the Talbott-Primakov strategic-defense linkage letter, and JDEC implementation correspondence
+- Google Drive search results for defense-strategy chapter sources, including Cohen QDR implementation packets, Defense Reform Initiative transmittals, PCAST nuclear-material security records, and PDD-41 rollout material
 - Google Drive search results for technology-transfer chapter sources, including the Gore-Chernomyrdin S&T working group cable, PDD-23 remote-sensing implementation records, commercial satellite export-control packets, the dual-use/munitions licensing Inspector General review, and Defense Trade Security Initiative correspondence
 - Google Drive search results for Y2K planning sources, including the DoD six-month readiness update, Personnel and Readiness and C3ISR briefings, the Naval War College international-security report, and Joint Y2K Center for Strategic Stability correspondence and situation reporting
 - Google Drive search results for William S. Cohen Secretary of Defense collection files, including standalone printable packets on NMD, ABM Treaty/START diplomacy, RAMOS, high-performance computer export controls, satellite export oversight, RD-180/EELV licensing, homeland defense, and Y2K/critical infrastructure
 - Clinton Public Papers public-statement pass for NSP-relevant entries on National Security Strategy transmittals, ABM/NMD and strategic stability, export controls and technology transfer, and Y2K/critical infrastructure readiness
 - Public-statement companion pass across Google Drive, Strobe/State FOIA, Clinton Digital Library, and GovInfo-derived anchors, adding source packets behind NSS, NMD/ABM, technology transfer, and Y2K statements
+- Federal Register January 2000 encryption export-control rule and Congress.gov PROTECT Act encryption hearing
+- Archived OMB memoranda M-99-12 and M-99-16 on Y2K high-impact programs and continuity planning
 - Clinton Digital Library National Security Council collection overview
 - Clinton Digital Library Office of Records Management - Presidential Decision Directives collection overview
 - Clinton Digital Library Declassified Documents collection

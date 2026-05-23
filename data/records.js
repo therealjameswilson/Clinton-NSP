@@ -11,19 +11,30 @@ window.NSP_CHAPTERS = [
       "Chronological chapter for the Clinton administration's National Security Strategy record across 1993-2000, keeping the published NSS reports, drafting traces, directive-system leads, and strategy-review records in one eight-year sequence."
   },
   {
-    id: "bmd-abm",
+    id: "defense-strategy-force-planning",
     number: 2,
+    year: "1993-2000",
+    dateLabel: "1993-2000",
+    title: "Defense Strategy, Force Planning, and Nuclear Posture",
+    shortTitle: "Defense Strategy",
+    reportUrl: "https://history.defense.gov/Historical-Sources/DoD-Reforms/",
+    note:
+      "Structural chapter for post-Cold War force planning and strategic posture: the Bottom-Up Review, two-MRC/two-MTW force sizing, National Military Strategy, QDR, Defense Reform Initiative, readiness and modernization, peace operations, nuclear posture, stockpile stewardship, CTBT, PDD-60, and nuclear-material security."
+  },
+  {
+    id: "bmd-abm",
+    number: 3,
     year: "1993-2000",
     dateLabel: "1993-2000",
     title: "National Missile Defense and the ABM Treaty",
     shortTitle: "NMD/ABM",
     reportUrl: "https://www.clintonlibrary.gov/research/presidential-directives",
     note:
-      "Special issue chapter on the Clinton administration's review of national missile defense, the future of the ABM Treaty, nuclear posture, START III, and U.S.-Russian missile-launch warning cooperation."
+      "Special issue chapter on the Clinton administration's review of national missile defense deployment, the future of the ABM Treaty, TMD demarcation, START III and strategic stability as they intersected with missile defense, and U.S.-Russian missile-launch warning cooperation."
   },
   {
     id: "tech-transfer",
-    number: 3,
+    number: 4,
     year: "1993-2000",
     dateLabel: "1993-2000",
     title: "Technology Transfer, Export Controls, and Strategic Industry",
@@ -34,7 +45,7 @@ window.NSP_CHAPTERS = [
   },
   {
     id: "y2k-planning",
-    number: 4,
+    number: 5,
     year: "1998-2000",
     dateLabel: "1998-2000",
     title: "Y2K Planning and Critical Infrastructure Readiness",
@@ -409,6 +420,282 @@ const NSS_RECORDS = [
   }
 ];
 
+const DEFENSE_STRATEGY_RECORDS = [
+  {
+    id: "defense-strategy-1993-bottom-up-review",
+    chapterId: "defense-strategy-force-planning",
+    date: "1993-10-01",
+    dateLabel: "October 1993",
+    type: "Defense Strategy Report",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Report on the Bottom-Up Review",
+    summary:
+      "Secretary Aspin's Bottom-Up Review is the starting point for the Clinton defense-policy chapter: it defined post-Cold War dangers, recast defense strategy around engagement, prevention, and partnership, and built the force-sizing logic that replaced Cold War containment planning.",
+    sourceName: "DoD Historical Office DoD Reforms page",
+    sourceUrl: "https://history.defense.gov/Historical-Sources/DoD-Reforms/",
+    sourceNote:
+      "Official DoD historical source page for reform reports. Use with the DTIC/GovInfo copies and the Drive-held FAS section copy for page checks.",
+    collectionPages: 109,
+    topics: ["Bottom-Up Review", "Force planning", "Two MRCs", "Post-Cold War defense strategy", "Aspin"]
+  },
+  {
+    id: "defense-strategy-1995-gao-bottom-up-review",
+    chapterId: "defense-strategy-force-planning",
+    date: "1995-01-31",
+    dateLabel: "January 1995",
+    type: "Oversight Report",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "defense-strategy",
+    title: "GAO review of the Bottom-Up Review's force assumptions",
+    summary:
+      "GAO's first major public audit of the Bottom-Up Review tested the administration's regional-contingency assumptions, force-sizing claims, and risks in executing nearly simultaneous major regional conflicts.",
+    sourceName: "GovInfo GAO/NSIAD-95-56",
+    sourceUrl: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-95-56",
+    pdfUrl: "https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-95-56/pdf/GAOREPORTS-NSIAD-95-56.pdf",
+    sourceNote:
+      "Official GovInfo copy. Useful as a compiler counterweight to the published DoD strategy report because it identifies what needed further document testing.",
+    collectionPages: 79,
+    topics: ["Bottom-Up Review", "GAO", "Force sizing", "Major regional conflicts", "Readiness risk"]
+  },
+  {
+    id: "defense-strategy-1994-pdd30-nuclear-posture-review",
+    chapterId: "defense-strategy-force-planning",
+    date: "1994-09-21",
+    dateLabel: "September 21, 1994",
+    type: "Directive Source",
+    status: "Released PDD",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "PDD-30, Nuclear Posture and Arms Control Beyond START I and START II",
+    summary:
+      "Released decision guidance tying the 1994 Nuclear Posture Review to post-START II arms-control options, Nunn-Lugar threat reduction, force posture, and the July 1994 National Security Strategy.",
+    sourceName: "Clinton Library PDD-30",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-30.pdf",
+    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-30.pdf",
+    sourceNote:
+      "Moved from the missile-defense chapter into the structural defense-strategy chapter because the gap analysis identified nuclear posture as a missing spine, not merely a missile-defense subtopic.",
+    collectionPages: 4,
+    directives: ["PDD-30"],
+    topics: ["Nuclear Posture Review", "START", "Nunn-Lugar", "Force posture", "Arms control"]
+  },
+  {
+    id: "defense-strategy-1995-nms-flexible-selective-engagement",
+    chapterId: "defense-strategy-force-planning",
+    date: "1995-02-01",
+    dateLabel: "February 1995",
+    type: "National Military Strategy",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "A National Military Strategy of Flexible and Selective Engagement",
+    summary:
+      "Chairman Shalikashvili's 1995 National Military Strategy translated the administration's engagement-and-enlargement language into military tasks, forward presence, crisis response, and preparations for major regional contingencies.",
+    sourceName: "Federal Depository Library Program PURL",
+    sourceUrl: "https://purl.fdlp.gov/GPO/LPS24434",
+    sourceNote:
+      "Public government-distribution copy of the 1995 National Military Strategy. Use as the JCS-side counterpart to the published NSS and DoD Bottom-Up Review.",
+    topics: ["National Military Strategy", "Flexible and selective engagement", "JCS", "Regional contingencies", "Forward presence"]
+  },
+  {
+    id: "defense-strategy-1995-pcast-nuclear-materials",
+    chapterId: "defense-strategy-force-planning",
+    date: "1995-03-28",
+    dateLabel: "March 28, 1995",
+    type: "Declassified Report",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "PCAST panel report on securing weapons-usable nuclear materials in the former Soviet Union",
+    summary:
+      "Declassified PCAST report pressing for urgent presidential action to protect, control, and account for weapons-usable nuclear materials in the former Soviet Union; it provides the advisory-policy bridge to PDD-41 nuclear material security.",
+    sourceName: "Google Drive PDF 950328 PCAST report",
+    sourceUrl: "https://drive.google.com/file/d/1XIN68qLJNY-ZEmtQeV5oFopga7wXq6__",
+    sourceNote:
+      "Drive search hit for National Defense Panel/PDD-60 adjacent nuclear material security. The report is declassified and page-scanned, with extensive executive-summary recommendations.",
+    directives: ["PDD-41"],
+    topics: ["PCAST", "Nuclear materials security", "Former Soviet Union", "MPC&A", "Nunn-Lugar"]
+  },
+  {
+    id: "defense-strategy-1995-pdd41-nuclear-security-rollout",
+    chapterId: "defense-strategy-force-planning",
+    date: "1995-09-26",
+    dateLabel: "September 26, 1995",
+    type: "NSC Rollout Packet",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "NSC rollout materials for PDD-41 on nuclear material security",
+    summary:
+      "NSC action memo, Presidential statement drafts, fact sheet, Q&A, and op-ed material for PDD-41, showing how the administration publicly framed nuclear-material security after the PCAST warning.",
+    sourceName: "Google Drive PDF 950926 PDD on Nuclear Security",
+    sourceUrl: "https://drive.google.com/file/d/1Pg6ojeFQfybWgriQ0iXkwjrQjIGxFEG5",
+    sourceNote:
+      "Drive search hit for Nuclear Posture Review and PDD-60 adjacent nuclear security material. The packet identifies Lake, Poneman, Fairfax, Gibbons, and other rollout participants.",
+    directives: ["PDD-41"],
+    topics: ["PDD-41", "Nuclear material security", "Presidential statement", "NSC process", "Former Soviet Union"]
+  },
+  {
+    id: "defense-strategy-1997-qdr-report",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-05-01",
+    dateLabel: "May 1997",
+    type: "Defense Strategy Report",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Report of the Quadrennial Defense Review",
+    summary:
+      "Secretary Cohen's QDR report recast the force-planning baseline around shape, respond, prepare, retained the two-major-theater-war capability, and linked readiness, modernization, NMD, infrastructure, and personnel choices.",
+    sourceName: "Defense Historical Office QDR copy",
+    sourceUrl: "https://history.defense.gov/Portals/70/Documents/quadrennial/QDR1997.pdf?ver=2014-06-25-110930-527",
+    pdfUrl: "https://history.defense.gov/Portals/70/Documents/quadrennial/QDR1997.pdf?ver=2014-06-25-110930-527",
+    sourceNote:
+      "Official DoD historical PDF. The chapter should use this as the published anchor, then pair it with the Drive and collection-level records for pre-decisional and congressional-response material.",
+    collectionPages: 73,
+    topics: ["QDR", "Shape respond prepare", "Two MTWs", "Modernization", "Readiness", "Cohen"]
+  },
+  {
+    id: "defense-strategy-1997-qdr-congressional-action",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-05-28",
+    dateLabel: "May 1997",
+    type: "Cohen SecDef Correspondence",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Cohen letters on QDR implementation priorities after the budget agreement",
+    summary:
+      "Secretary Cohen's letters to appropriators and authorizers identify high-priority QDR follow-through: BRAC, depot competition, NMD funding, THAAD pacing, CBW defense, personnel reductions, and flying-hour costs.",
+    sourceName: "Google Drive PDF U09424",
+    sourceUrl: "https://drive.google.com/file/d/1BItKRw25JBtRYaGNSheSXohyKy7xnCdj",
+    sourceNote:
+      "Drive search hit for major theater war QDR. This is a strong standalone document because it turns the published QDR into a congressional action list.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["QDR implementation", "BRAC", "NMD", "Chemical and biological weapons", "Modernization", "Congress"]
+  },
+  {
+    id: "defense-strategy-1997-nms-shape-respond-prepare",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-09-01",
+    dateLabel: "1997",
+    type: "National Military Strategy",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "National Military Strategy: Shape, Respond, Prepare Now",
+    summary:
+      "The 1997 National Military Strategy translated the QDR into the Chairman's military-strategy framework and supplies the JCS-side public anchor for the shape, respond, prepare construct.",
+    sourceName: "Defense Historical Office NMS copy",
+    sourceUrl: "https://history.defense.gov/Portals/70/Documents/nms/nms1997.pdf?ver=2014-06-25-123438-080",
+    pdfUrl: "https://history.defense.gov/Portals/70/Documents/nms/nms1997.pdf?ver=2014-06-25-123438-080",
+    sourceNote:
+      "Official DoD historical PDF. Use with the Cohen SecDef speech and the 2000 NSS military reform context record for continuity.",
+    topics: ["National Military Strategy", "Shape respond prepare", "JCS", "QDR implementation", "Joint Vision 2010"]
+  },
+  {
+    id: "defense-strategy-1997-defense-reform-initiative",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-11-07",
+    dateLabel: "November 7, 1997",
+    type: "Cohen SecDef Report",
+    status: "Declassified Drive Source",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Defense Reform Initiative transmittal packet",
+    summary:
+      "Secretary Cohen's congressional transmittal for the Defense Reform Initiative, based on the Hamre task force and framed as the organizational and infrastructure counterpart to QDR force planning.",
+    sourceName: "Google Drive PDF U18787",
+    sourceUrl: "https://drive.google.com/file/d/1AGuSSRWMatXLTkqazaMlzJo52RRSx89N",
+    sourceNote:
+      "Drive search hit for Quadrennial Defense Review and Defense Reform Initiative. The packet contains multiple congressional transmittal letters and the report text.",
+    standaloneDocument: true,
+    cohenSecDef: true,
+    topics: ["Defense Reform Initiative", "Infrastructure", "Management reform", "Hamre", "QDR follow-through"]
+  },
+  {
+    id: "defense-strategy-1997-national-defense-panel",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-12-01",
+    dateLabel: "December 1997",
+    type: "Independent Panel Report",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "defense-strategy",
+    title: "Transforming Defense: National Security in the 21st Century",
+    summary:
+      "The National Defense Panel's report is the statutory outside critique of the 1997 QDR, pressing transformation and long-range risk analysis beyond the administration's near-term two-war force construct.",
+    sourceName: "DTIC public technical report ADA332664",
+    sourceUrl: "https://apps.dtic.mil/sti/tr/pdf/ADA332664.pdf",
+    pdfUrl: "https://apps.dtic.mil/sti/tr/pdf/ADA332664.pdf",
+    sourceNote:
+      "Public DTIC copy of the National Defense Panel report. Include as a documented alternative view rather than as an administration decision record.",
+    collectionPages: 100,
+    topics: ["National Defense Panel", "Transformation", "QDR critique", "Long-range planning", "Force structure"]
+  },
+  {
+    id: "defense-strategy-1998-gao-qdr-next-review",
+    chapterId: "defense-strategy-force-planning",
+    date: "1998-09-14",
+    dateLabel: "September 1998",
+    type: "Oversight Report",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "defense-strategy",
+    title: "GAO recommendations for improving the next Quadrennial Defense Review",
+    summary:
+      "GAO's post-QDR assessment identifies analytic, cost, modernization, and implementation questions for the next review, making explicit where the published QDR left compiler risks.",
+    sourceName: "GovInfo GAO/NSIAD-98-155",
+    sourceUrl: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-98-155",
+    pdfUrl: "https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-98-155/pdf/GAOREPORTS-NSIAD-98-155.pdf",
+    sourceNote:
+      "Official GovInfo copy. Good risk-control source for comparing DoD's public strategy with outside audit findings.",
+    collectionPages: 85,
+    topics: ["QDR", "GAO", "Modernization", "Cost analysis", "Compiler risk"]
+  },
+  {
+    id: "defense-strategy-1997-1999-pdd60-collection-leads",
+    chapterId: "defense-strategy-force-planning",
+    date: "1997-11-01",
+    dateLabel: "1997-1999",
+    type: "Collection Lead",
+    status: "Public Finding Aid",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "PDD-60 nuclear employment policy collection leads",
+    summary:
+      "No posted declassified PDD-60 directive file was confirmed in the public pass, but the NSC folder-title list identifies high-value Andreasen and Bell folders for nuclear targeting, PDD-60 implementation, and no-first-use debate.",
+    sourceName: "2013-0185-M NSC folder-title list",
+    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/finding_aids_a_z/2026-04/2013-0185-M.pdf",
+    sourceNote:
+      "Relevant workspace collection rows include Andreasen Chron Files 1997, Andreasen Chron Files Jan.-Feb. 1998, Nuclear Targeting Apr.-June 1997, and No First Use Jan.-Mar. 1999. Keep this as an explicit open-source control point until posted records are found.",
+    collectionFolders: 4,
+    directives: ["PDD-60"],
+    topics: ["PDD-60", "Nuclear targeting", "Nuclear employment policy", "No first use", "Collection gap"]
+  },
+  {
+    id: "defense-strategy-2000-annual-defense-report",
+    chapterId: "defense-strategy-force-planning",
+    date: "2000-03-01",
+    dateLabel: "2000",
+    type: "Defense Annual Report",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "defense-strategy",
+    title: "Secretary Cohen annual defense report for the final Clinton defense program",
+    summary:
+      "The final Clinton-era Secretary of Defense annual report is the late-period public anchor for readiness, modernization, force posture, missile defense, transformation, and defense reform after the QDR.",
+    sourceName: "Defense Historical Office Secretary of Defense Annual Reports",
+    sourceUrl: "https://history.defense.gov/Historical-Sources/Secretary-of-Defense-Annual-Reports/",
+    sourceNote:
+      "Official DoD annual-report index. Use the 2000 Cohen report as a capstone source against late-1999 and 2000 Drive records.",
+    topics: ["Annual defense report", "Readiness", "Modernization", "Transformation", "Cohen"]
+  }
+];
+
 const BMD_ABM_RECORDS = [
   {
     id: "bmd-abm-prd31-review",
@@ -453,25 +740,24 @@ const BMD_ABM_RECORDS = [
     topics: ["Ballistic missile defense", "ABM Treaty", "Presidential decision", "Russia"]
   },
   {
-    id: "bmd-abm-pdd30-nuclear-posture",
+    id: "bmd-abm-1997-gao-nmd-schedule-risk",
     chapterId: "bmd-abm",
-    date: "1994-09-21",
-    dateLabel: "September 21, 1994",
-    type: "Directive Source",
-    status: "Released PDD",
+    date: "1997-12-12",
+    dateLabel: "December 12, 1997",
+    type: "Oversight Report",
+    status: "Public Source Copy",
     priority: "Medium",
-    themeId: "risk-reduction",
-    title: "PDD-30, Nuclear Posture and Arms Control Beyond START I and START II",
+    themeId: "defense-strategy",
+    title: "GAO assessment of NMD schedule and technical risk",
     summary:
-      "Places missile defense and ABM Treaty choices alongside the Nuclear Posture Review, START implementation, Nunn-Lugar threat reduction, and possible further strategic reductions.",
-    sourceName: "Clinton Library PDD-30",
-    sourceUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-30.pdf",
-    pdfUrl: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-30.pdf",
+      "GAO's December 1997 report evaluates the technical and schedule risk in the 3-plus-3 National Missile Defense program after QDR funding increases, adding an outside audit track before the 1999-2000 deployment decision record.",
+    sourceName: "GovInfo GAO/NSIAD-98-28",
+    sourceUrl: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-98-28",
+    pdfUrl: "https://www.govinfo.gov/content/pkg/GAOREPORTS-NSIAD-98-28/pdf/GAOREPORTS-NSIAD-98-28.pdf",
     sourceNote:
-      "Released PDD source. The directive establishes U.S. nuclear posture and arms-control policy beyond START I and START II and explicitly ties the posture review to the July 1994 NSS.",
-    collectionPages: 4,
-    directives: ["PDD-30"],
-    topics: ["Nuclear posture", "START", "Arms control", "Nunn-Lugar"]
+      "Official GovInfo copy. Added to tighten the pre-1999 NMD acquisition and risk-assessment coverage identified in the compiler gap pass.",
+    collectionPages: 42,
+    topics: ["NMD", "3-plus-3", "BMDO", "Schedule risk", "Technical risk", "QDR"]
   },
   {
     id: "bmd-abm-pdd66-start-iii",
@@ -943,6 +1229,43 @@ const TECH_TRANSFER_RECORDS = [
       "Drive search result for Gejdenson export. The letters describe a proposed Canada-style ITAR exemption for the UK and Australia, reciprocal technology-security standards, re-transfer and end-use controls, and interoperability with close allies.",
     directives: [],
     topics: ["Defense Trade Security Initiative", "ITAR", "Allies", "Technology security", "Interoperability"]
+  },
+  {
+    id: "tech-transfer-2000-encryption-items-rule",
+    chapterId: "tech-transfer",
+    date: "2000-01-14",
+    dateLabel: "January 14, 2000",
+    type: "Federal Register Rule",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Commerce rule revising encryption export controls",
+    summary:
+      "Bureau of Export Administration interim final rule implementing the late-Clinton encryption export-control liberalization and Wassenaar cryptography-note changes, including treatment of mass-market encryption and source code.",
+    sourceName: "GovInfo Federal Register 65 FR 2492",
+    sourceUrl: "https://www.govinfo.gov/content/pkg/FR-2000-01-14/pdf/00-983.pdf",
+    pdfUrl: "https://www.govinfo.gov/content/pkg/FR-2000-01-14/pdf/00-983.pdf",
+    sourceNote:
+      "Official Federal Register PDF. Added to give the encryption lane a regulatory implementation endpoint rather than only public statements and directive leads.",
+    topics: ["Encryption", "BXA", "Export Administration Regulations", "Wassenaar", "Cryptography Note"]
+  },
+  {
+    id: "tech-transfer-1999-safe-act-hearing",
+    chapterId: "tech-transfer",
+    date: "1999-07-20",
+    dateLabel: "July 20, 1999",
+    type: "Congressional Hearing",
+    status: "Public Source Copy",
+    priority: "Medium",
+    themeId: "technology-control",
+    title: "Senate hearing on PROTECT Act and encryption export controls",
+    summary:
+      "Congressional hearing record with administration testimony on encryption, Wassenaar, mass-market controls, law-enforcement equities, and the proposed PROTECT Act, useful for reconstructing interbranch pressure before the 2000 rule.",
+    sourceName: "Congress.gov Senate event LC19324",
+    sourceUrl: "https://www.congress.gov/event/106th-congress/senate-event/LC19324/text",
+    sourceNote:
+      "Official Congress.gov hearing text. Added to capture policy objections and competing legislative proposals behind the final encryption-control shift.",
+    topics: ["Encryption", "PROTECT Act", "SAFE Act", "Wassenaar", "Law enforcement", "Congress"]
   }
 ];
 
@@ -988,6 +1311,42 @@ const Y2K_PLANNING_RECORDS = [
       "Released PDD source. The Clinton Library administrative marker lists PDD-63 as May 20, 1998; the directive memorandum itself is dated May 22, 1998.",
     directives: ["PDD-63"],
     topics: ["Critical infrastructure", "Continuity", "Public-private coordination", "Information systems", "Preparedness"]
+  },
+  {
+    id: "y2k-omb-m99-12-high-impact-programs",
+    chapterId: "y2k-planning",
+    date: "1999-03-26",
+    dateLabel: "March 26, 1999",
+    type: "OMB Memorandum",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "preparedness",
+    title: "OMB M-99-12 on high-impact federal programs",
+    summary:
+      "OMB memorandum assigning lead agencies for high-impact programs and requiring milestones, monthly progress reporting, partner coordination, and public readiness demonstrations across Federal, state, local, tribal, contractor, banking, and other delivery partners.",
+    sourceName: "Archived OMB Memorandum M-99-12",
+    sourceUrl: "https://georgewbush-whitehouse.archives.gov/omb/memoranda/m99-12.html",
+    sourceNote:
+      "Archived White House OMB copy. Added to close the gap between operational DoD Y2K records and White House/OMB political management of public-facing program continuity.",
+    topics: ["Y2K", "OMB", "High-impact programs", "State and local partners", "Public readiness", "Continuity"]
+  },
+  {
+    id: "y2k-omb-m99-16-contingency-planning",
+    chapterId: "y2k-planning",
+    date: "1999-05-13",
+    dateLabel: "May 13, 1999",
+    type: "OMB Memorandum",
+    status: "Public Source Copy",
+    priority: "High",
+    themeId: "preparedness",
+    title: "OMB M-99-16 on Year 2000 business continuity and contingency planning",
+    summary:
+      "OMB follow-up memorandum requiring selected agencies to submit high-level business continuity and contingency plans for high-impact programs as the rollover approached.",
+    sourceName: "Archived OMB Memorandum M-99-16",
+    sourceUrl: "https://georgewbush-whitehouse.archives.gov/omb/memoranda/m99-16.html",
+    sourceNote:
+      "Archived White House OMB copy. Complements EO 13073, EO 13127, and the Drive-held DoD readiness packets by documenting government-wide contingency governance.",
+    topics: ["Y2K", "Business continuity", "Contingency planning", "High-impact programs", "OMB"]
   },
   {
     id: "y2k-eo13127-information-coordination-center",
@@ -1416,7 +1775,7 @@ const STROBE_FOIA_RECORDS = [
 const COHEN_SECDEF_RECORDS = [
   {
     id: "cohen-secdef-1998-shape-respond-prepare",
-    chapterId: "national-security-strategy",
+    chapterId: "defense-strategy-force-planning",
     date: "1998-03-20",
     dateLabel: "March 20, 1998",
     type: "Cohen SecDef Speech",
@@ -2759,6 +3118,66 @@ window.NSP_SOURCES = [
     note: "Archived White House statement on managing complex contingency operations."
   },
   {
+    label: "Defense Historical Office DoD Reforms page",
+    url: "https://history.defense.gov/Historical-Sources/DoD-Reforms/",
+    note: "Official DoD historical source page for the Bottom-Up Review, Quadrennial Defense Review, Defense Reform Initiative, and related reform reports."
+  },
+  {
+    label: "GovInfo GAO/NSIAD-95-56 Bottom-Up Review",
+    url: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-95-56",
+    note: "Public GAO assessment of the Bottom-Up Review force-sizing assumptions and implementation risks."
+  },
+  {
+    label: "1995 National Military Strategy PURL",
+    url: "https://purl.fdlp.gov/GPO/LPS24434",
+    note: "FDLP public access point for the 1995 National Military Strategy, Joint Vision 2010, and Joint Warfare of the U.S. Armed Forces."
+  },
+  {
+    label: "Google Drive PCAST nuclear material security report",
+    url: "https://drive.google.com/file/d/1XIN68qLJNY-ZEmtQeV5oFopga7wXq6__",
+    note: "Drive-held PCAST report on securing weapons-usable nuclear materials in Russia and the former Soviet Union."
+  },
+  {
+    label: "Google Drive PDD-41 nuclear security rollout packet",
+    url: "https://drive.google.com/file/d/1Pg6ojeFQfybWgriQ0iXkwjrQjIGxFEG5",
+    note: "Drive-held NSC rollout packet for PDD-41 and the administration's nuclear-material security policy."
+  },
+  {
+    label: "1997 Quadrennial Defense Review",
+    url: "https://history.defense.gov/Portals/70/Documents/quadrennial/QDR1997.pdf?ver=2014-06-25-110930-527",
+    note: "Official public PDF for the May 1997 Quadrennial Defense Review report."
+  },
+  {
+    label: "Google Drive Cohen QDR congressional priorities packet",
+    url: "https://drive.google.com/file/d/1BItKRw25JBtRYaGNSheSXohyKy7xnCdj",
+    note: "Drive-held Cohen correspondence package on post-budget-agreement congressional priorities for QDR implementation."
+  },
+  {
+    label: "1997 National Military Strategy",
+    url: "https://history.defense.gov/Portals/70/Documents/nms/nms1997.pdf?ver=2014-06-25-123438-080",
+    note: "Official public PDF for the 1997 National Military Strategy, Shape, Respond, Prepare Now."
+  },
+  {
+    label: "Google Drive Defense Reform Initiative transmittal packet",
+    url: "https://drive.google.com/file/d/1AGuSSRWMatXLTkqazaMlzJo52RRSx89N",
+    note: "Drive-held Cohen packet transmitting the Defense Reform Initiative and related QDR reform context."
+  },
+  {
+    label: "DTIC National Defense Panel report",
+    url: "https://apps.dtic.mil/sti/tr/pdf/ADA332664.pdf",
+    note: "Public DTIC copy of the December 1997 National Defense Panel report, Transforming Defense."
+  },
+  {
+    label: "GovInfo GAO/NSIAD-98-155 QDR next review",
+    url: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-98-155",
+    note: "Public GAO review of QDR implementation and issues for the next defense review."
+  },
+  {
+    label: "Defense Historical Office Secretary of Defense Annual Reports",
+    url: "https://history.defense.gov/Historical-Sources/Secretary-of-Defense-Annual-Reports/",
+    note: "Official DoD historical source page for annual Secretary of Defense reports, including the 2000 report."
+  },
+  {
     label: "Defense Historical Office NSS index",
     url: "https://history.defense.gov/Historical-Sources/National-Security-Strategy/lang/en/",
     note: "Official index for published National Security Strategy reports."
@@ -2782,6 +3201,11 @@ window.NSP_SOURCES = [
     label: "PDD-17 ballistic missile defenses and ABM Treaty",
     url: "https://www.clintonlibrary.gov/sites/default/files/documents/pdd-17.pdf",
     note: "Released decision directive source for U.S. BMD policy and the future of the ABM Treaty."
+  },
+  {
+    label: "GovInfo GAO/NSIAD-98-28 NMD schedule risk",
+    url: "https://www.govinfo.gov/app/details/GAOREPORTS-NSIAD-98-28",
+    note: "Public GAO assessment of National Missile Defense schedule and technical risk."
   },
   {
     label: "PDD-30 nuclear posture and post-START II arms control",
@@ -2895,6 +3319,16 @@ window.NSP_SOURCES = [
     note: "Drive-held Cohen letters and staff package on the final Clinton high-performance computer export-control revision."
   },
   {
+    label: "GovInfo Federal Register encryption rule",
+    url: "https://www.govinfo.gov/content/pkg/FR-2000-01-14/pdf/00-983.pdf",
+    note: "Public Federal Register rule revising export controls for encryption items in January 2000."
+  },
+  {
+    label: "Congress.gov PROTECT Act encryption hearing",
+    url: "https://www.congress.gov/event/106th-congress/senate-event/LC19324/text",
+    note: "Public hearing text on the PROTECT Act and late-Clinton encryption export-control policy."
+  },
+  {
     label: "Google Drive Cohen RD-180/EELV manufacturing-license packet",
     url: "https://drive.google.com/file/d/169MEDwE__jvkXzC2Ta9-6kodJ3ALbefo",
     note: "Drive-held Cohen correspondence supporting an RD-180 manufacturing license for the Air Force EELV program."
@@ -2908,6 +3342,16 @@ window.NSP_SOURCES = [
     label: "Google Drive Cohen NSTAC Y2K and critical-infrastructure packet",
     url: "https://drive.google.com/file/d/1L8H-WTZTihoo1d388JK8zM4m_tw8jNm-",
     note: "Drive-held Cohen-Berger packet connecting NSTAC, PDD-63 critical infrastructure protection, NCS, and Y2K planning."
+  },
+  {
+    label: "Archived OMB M-99-12",
+    url: "https://georgewbush-whitehouse.archives.gov/omb/memoranda/m99-12.html",
+    note: "Archived OMB memorandum on Year 2000 high-impact Federal programs."
+  },
+  {
+    label: "Archived OMB M-99-16",
+    url: "https://georgewbush-whitehouse.archives.gov/omb/memoranda/m99-16.html",
+    note: "Archived OMB memorandum on Year 2000 business continuity and contingency planning."
   },
   {
     label: "Google Drive Gore-Chernomyrdin S&T working group cable",
@@ -3046,6 +3490,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "pdd-25-peace-operations",
+    chapterId: "defense-strategy-force-planning",
     date: "1994-05-03",
     dateLabel: "May 3, 1994",
     type: "FOIA Collection",
@@ -3085,6 +3530,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "russia-ukraine-arms-control-cluster",
+    chapterId: "defense-strategy-force-planning",
     date: "1993-02-04",
     dateLabel: "February 1993 onward",
     type: "Directive Cluster",
@@ -3103,6 +3549,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "nuclear-testing-ctbt",
+    chapterId: "defense-strategy-force-planning",
     date: "1993-03-03",
     dateLabel: "March-July 1993",
     type: "FOIA Collection",
@@ -3180,6 +3627,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "stockpile-stewardship",
+    chapterId: "defense-strategy-force-planning",
     date: "1993-11-03",
     dateLabel: "November 3, 1993",
     type: "Directive Lead",
@@ -3239,6 +3687,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "counterterrorism-infrastructure-protection",
+    chapterId: "y2k-planning",
     date: "1998-05-20",
     dateLabel: "1995-1998",
     type: "Directive Cluster",
@@ -3257,6 +3706,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "complex-contingency-operations",
+    chapterId: "defense-strategy-force-planning",
     date: "1997-05-20",
     dateLabel: "May 1997",
     type: "Policy White Paper",
@@ -3275,6 +3725,7 @@ window.NSP_RECORDS = [
   },
   {
     id: "peace-operations-criminal-justice",
+    chapterId: "defense-strategy-force-planning",
     date: "1999-12-17",
     dateLabel: "1999",
     type: "Directive Lead",
@@ -3295,6 +3746,7 @@ window.NSP_RECORDS = [
 
 window.NSP_RECORDS.push(
   ...NSS_RECORDS,
+  ...DEFENSE_STRATEGY_RECORDS,
   ...BMD_ABM_RECORDS,
   ...TECH_TRANSFER_RECORDS,
   ...Y2K_PLANNING_RECORDS,
