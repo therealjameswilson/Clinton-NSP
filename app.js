@@ -4,6 +4,9 @@ const records = window.NSP_RECORDS || [];
 const sources = window.NSP_SOURCES || [];
 const collectionMeta = window.NSP_COLLECTION_META || {};
 const relatedCollections = window.NSP_RELATED_COLLECTIONS || [];
+const findingAidParts = window.NSP_FINDING_AID_PARTS || [];
+const readingRoomBatches = window.NSP_READING_ROOM_BATCHES || [];
+const visitItinerary = window.NSP_VISIT_ITINERARY || [];
 const collections = window.NSP_COLLECTIONS || [];
 
 const byId = (id) => document.getElementById(id);
@@ -31,6 +34,9 @@ const nodes = {
   openTaskCount: byId("open-task-count"),
   prioritySummary: byId("priority-summary"),
   priorityList: byId("priority-list"),
+  findingAidPartsRoot: byId("finding-aid-parts-root"),
+  readingRoomBatchesRoot: byId("reading-room-batches-root"),
+  visitItineraryRoot: byId("visit-itinerary-root"),
   searchInput: byId("record-search"),
   chapterFilter: byId("chapter-filter"),
   themeFilter: byId("theme-filter"),
@@ -385,6 +391,138 @@ function renderSources() {
       return link;
     })
   );
+}
+
+function listFrom(items, className = "visit-card-list") {
+  const list = document.createElement("ul");
+  list.className = className;
+  for (const text of items || []) {
+    const item = document.createElement("li");
+    item.textContent = text;
+    list.append(item);
+  }
+  return list;
+}
+
+function chapterBadges(ids) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "record-meta";
+  for (const id of ids || []) {
+    const chapter = chapterById.get(id);
+    if (chapter) wrapper.append(badge(chapter.shortTitle, "source-badge"));
+  }
+  return wrapper;
+}
+
+function renderFindingAidParts() {
+  if (!nodes.findingAidPartsRoot) return;
+  nodes.findingAidPartsRoot.replaceChildren(
+    ...findingAidParts.map((part) => {
+      const card = document.createElement("article");
+      card.className = "finding-aid-card";
+
+      const top = document.createElement("div");
+      top.className = "method-card-top";
+      const heading = document.createElement("h3");
+      heading.textContent = `Part ${part.part}`;
+      const badgeNode = document.createElement("span");
+      badgeNode.className = "readiness-status set";
+      badgeNode.textContent = `${number(part.pages)} pp.`;
+      top.append(heading, badgeNode);
+
+      const file = document.createElement("p");
+      file.className = "collection-eyebrow";
+      file.textContent = part.fileName;
+      const use = document.createElement("p");
+      use.textContent = part.researchUse;
+      const priority = document.createElement("p");
+      priority.className = "visit-priority-note";
+      priority.textContent = part.priorityUse;
+
+      const signals = listFrom(part.ocrSignals, "visit-signal-list");
+      const targets = listFrom(part.sampleTargets);
+
+      const meta = document.createElement("p");
+      meta.className = "audit-meta";
+      meta.textContent = `${number(part.ocrLines)} OCR lines extracted from the local split finding aid.`;
+
+      card.append(top, file, use, priority, signals, targets, meta);
+      return card;
+    })
+  );
+}
+
+function renderReadingRoomBatches() {
+  if (!nodes.readingRoomBatchesRoot) return;
+  nodes.readingRoomBatchesRoot.replaceChildren(
+    ...readingRoomBatches.map((batch) => {
+      const card = document.createElement("article");
+      card.className = "reading-room-card";
+
+      const eyebrow = document.createElement("p");
+      eyebrow.className = "collection-eyebrow";
+      eyebrow.textContent = `${batch.timeBlock} / Pull ${number(batch.rank)} / ${batch.findingAidLocator}`;
+      const title = document.createElement("h3");
+      title.textContent = batch.title;
+      const why = document.createElement("p");
+      why.textContent = batch.why;
+
+      const boxes = document.createElement("p");
+      boxes.className = "visit-boxes";
+      boxes.textContent = `OA boxes: ${(batch.boxes || []).join(", ")}`;
+      const office = document.createElement("p");
+      office.className = "audit-meta";
+      office.textContent = batch.officeStaff;
+
+      const ask = document.createElement("p");
+      ask.className = "visit-priority-note";
+      ask.textContent = batch.readingRoomAsk;
+
+      const questionsHeading = document.createElement("p");
+      questionsHeading.className = "brief-label";
+      questionsHeading.textContent = "First questions";
+      const questions = listFrom(batch.firstQuestions);
+
+      const action = document.createElement("button");
+      action.type = "button";
+      action.className = "visit-action";
+      action.textContent = "Filter Collection Rows";
+      action.addEventListener("click", () => {
+        if (nodes.collectionSearch) nodes.collectionSearch.value = batch.searchSeed || "";
+        if (nodes.collectionTierFilter) nodes.collectionTierFilter.value = "all";
+        if (nodes.collectionOfficeFilter) nodes.collectionOfficeFilter.value = "all";
+        if (nodes.collectionOnlineFilter) nodes.collectionOnlineFilter.value = "all";
+        renderCollections();
+        byId("collections")?.scrollIntoView({ block: "start" });
+      });
+
+      card.append(eyebrow, title, chapterBadges(batch.chapterIds), why, boxes, office, ask, questionsHeading, questions, action);
+      return card;
+    })
+  );
+}
+
+function renderVisitItinerary() {
+  if (!nodes.visitItineraryRoot) return;
+  nodes.visitItineraryRoot.replaceChildren(
+    ...visitItinerary.map((day) => {
+      const card = document.createElement("article");
+      card.className = "itinerary-card";
+      const label = document.createElement("p");
+      label.className = "collection-eyebrow";
+      label.textContent = day.day;
+      const heading = document.createElement("h3");
+      heading.textContent = day.focus;
+      card.append(label, heading, listFrom(day.tasks));
+      return card;
+    })
+  );
+}
+
+function renderLibraryPlanner() {
+  renderFindingAidParts();
+  renderReadingRoomBatches();
+  renderVisitItinerary();
 }
 
 function renderCollectionMetadata() {
@@ -867,6 +1005,7 @@ function init() {
   renderChapters();
   renderPriorityQueue();
   renderSources();
+  renderLibraryPlanner();
   renderFilters();
   renderCollectionMetadata();
   renderRelatedCollections();

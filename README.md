@@ -22,6 +22,11 @@ research plan's 200 ranked folder targets from Clinton Library MDR case `2013-01
 Each row includes OA box, NSC office/staff, tier, rationale, exact-title Digital Library
 search link, and a public-online status note.
 
+The `Clinton Library Visit Planner` section now incorporates the four local split
+finding-aid PDFs for `2013-0185-M` as a reading-room strategy layer. It lists the
+parts, OCR signal counts, high-yield OA box batches, part/page locators, and a
+day-by-day pull sequence designed to maximize on-site Clinton Library time.
+
 Inside those chapters, the page uses the National Security Policy framework described in the preface to `Foreign Relations, 1981-1988, Volume XLIV, Part 1` as a model, then adapts it to the Clinton administration after the Cold War:
 
 1. Defense Policy and Strategic Planning
@@ -40,6 +45,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Clinton Library Declassified Records portal
 - Clinton Library `(2013-0185-M) Declassified Folder Title List for the National Security Council`
 - Clinton Library `2013-0185-M.pdf` declassified NSC folder-title list
+- Local split copies of `2013-0185-M`: `Part1` through `Part4`, 1,290 total PDF pages, used for Clinton Library visit planning and OA box batching
 - Strobe Talbott FOIA Case `F-2017-13804` manifest and enriched manifest CSV
 - Selected State Department FOIA PDFs from the Strobe Talbott release on Russia strategy, NMD/ABM/START, and Russia-Iran missile/nuclear technology transfer
 - Clinton Library PDD-25 finding aid

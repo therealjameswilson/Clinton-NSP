@@ -21,6 +21,7 @@
         <a href="#method">Method</a>
         <a href="#chapters">Chapters</a>
         <a href="#workbench">Workbench</a>
+        <a href="#library">Library Plan</a>
         <a href="#collections">Collections</a>
         <a href="#records">Records</a>
         <a href="#sources">Sources</a>
@@ -150,10 +151,11 @@
           </div>
           <p class="section-note">
             The volume now opens with one chronological National Security Strategy
-            chapter covering the full Clinton period, followed by special issue chapters
-            on National Missile Defense and the ABM Treaty, Technology Transfer, and
-            Y2K Planning. Each chapter keeps the four NSP framework themes visible as
-            cross-cutting tags rather than as the chapter sequence.
+            chapter covering the full Clinton period, followed by a defense-strategy
+            chapter and special issue chapters on National Missile Defense and the ABM
+            Treaty, Technology Transfer, and Y2K Planning. Each chapter keeps the four
+            NSP framework themes visible as cross-cutting tags rather than as the
+            chapter sequence.
           </p>
         </div>
         <div id="chapters-root" class="chapter-grid" aria-live="polite"></div>
@@ -239,6 +241,46 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="section library-section" id="library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Reading Room Strategy</p>
+            <h2 id="library-title">Clinton Library Visit Planner</h2>
+          </div>
+          <p class="section-note">
+            A practical pull strategy built from the four local split copies of
+            <code>2013-0185-M</code>. It translates the folder-title universe into part/page
+            locators, OA box batches, and day-by-day work so on-site time goes to
+            decision records instead of catalog archaeology.
+          </p>
+        </div>
+        <div class="library-intro">
+          <article>
+            <h3>Operating Rule</h3>
+            <p>
+              Start with contiguous OA-box batches that map to chapter gaps, then use
+              adviser and Records Management files as control layers. Oversight packets,
+              final speeches, and public copies are useful only after the decision path is
+              identified.
+            </p>
+          </article>
+          <article>
+            <h3>On-Site Capture</h3>
+            <p>
+              For each pulled folder, capture the folder front, withdrawal sheet, exact
+              title, date span, routing marks, and any document-control cues before reading
+              deeply. That keeps later FRUS selection review reproducible.
+            </p>
+          </article>
+        </div>
+        <h3 class="subsection-title">Finding Aid Parts</h3>
+        <div id="finding-aid-parts-root" class="finding-aid-grid" aria-live="polite"></div>
+        <h3 class="subsection-title">Pull Batches</h3>
+        <div id="reading-room-batches-root" class="reading-room-grid" aria-live="polite"></div>
+        <h3 class="subsection-title">Visit Sequence</h3>
+        <div id="visit-itinerary-root" class="itinerary-grid" aria-live="polite"></div>
       </section>
 
       <section class="section collections-section" id="collections" aria-labelledby="collections-title">
@@ -403,7 +445,7 @@
       <a href="https://github.com/therealjameswilson/Clinton-NSP">Repository</a>
     </footer>
     <script src="data/records.js?v=20260523-gap-closure"></script>
-    <script src="data/collections.js?v=20260522-collections"></script>
-    <script src="app.js?v=20260523-gap-closure"></script>
+    <script src="data/collections.js?v=20260524-library-plan"></script>
+    <script src="app.js?v=20260524-library-plan"></script>
   </body>
 </html>

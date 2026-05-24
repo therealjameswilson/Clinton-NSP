@@ -1,9 +1,9 @@
 window.NSP_COLLECTION_META = {
   "sourcePlan": "FRUS Research Plan 1993-2000, Volume VI - National Security Policy.md",
-  "checkedOn": "May 22, 2026",
+  "checkedOn": "May 24, 2026",
   "masterFindingAidUrl": "https://www.clintonlibrary.gov/research/archives/finding-aids/declassified-folder-title-list-national-security-council",
   "masterPdfUrl": "https://www.clintonlibrary.gov/sites/default/files/finding_aids_a_z/2026-04/2013-0185-M.pdf",
-  "method": "Parsed 200 ranked folder targets from the user research plan, verified the current 2013-0185-M Clinton Library page and PDF, and ran exact-title Clinton Digital Library searches for each folder title. No direct public scan of the 200 folder contents was confirmed; related posted directives, finding aids, and workspace records are annotated separately."
+  "method": "Parsed 200 ranked folder targets from the user research plan, verified the current 2013-0185-M Clinton Library page and PDF, ran exact-title Clinton Digital Library searches for each folder title, and added a four-part local finding-aid visit planner for on-site Clinton Library work. No direct public scan of the 200 folder contents was confirmed; related posted directives, finding aids, and workspace records are annotated separately."
 };
 
 window.NSP_RELATED_COLLECTIONS = [
@@ -48,6 +48,274 @@ window.NSP_RELATED_COLLECTIONS = [
     "url": "https://www.clintonlibrary.gov/research/declassified-records",
     "note": "Current Clinton Library portal for searching MDR releases by keyword, collection number, and topic.",
     "status": "Search portal"
+  }
+];
+
+window.NSP_FINDING_AID_PARTS = [
+  {
+    "part": 1,
+    "fileName": "2013-0185-M_Part1.pdf",
+    "pages": 375,
+    "ocrLines": 50769,
+    "researchUse": "Main national-security-policy hit list for Access Management technology-transfer case files and Defense Policy staff files.",
+    "priorityUse": "Start here for technology transfer to China, Andreasen nuclear-policy files, Bell/Binnendijk defense-policy files, ABM/NMD, START, CTB, CFE, QDR, and defense reform.",
+    "sampleTargets": [
+      "OA 1789-1822: Access Management-Leary technology transfer to China case documents",
+      "OA 2905: Andreasen PRD-31 ballistic missile defense and ABM Treaty files",
+      "OA 3204-3208: Andreasen PRD-34, CTB, stockpile stewardship, SCC, and ABM/TMD demarcation files",
+      "OA 3559-3560 and 3650-3657: Andreasen START, CTB, NMD/ABM/START, PDD-60-adjacent, and chron files",
+      "OA 3662-3665: Bell files on ABM Treaty review, CTB, Ukraine START ratification, NSSR, and CWC"
+    ],
+    "ocrSignals": [
+      "Technology Transfers to China: 196 OCR hits",
+      "CTB: 239 OCR hits",
+      "START: 151 OCR hits",
+      "ABM: 97 OCR hits",
+      "NMD: 62 OCR hits"
+    ]
+  },
+  {
+    "part": 2,
+    "fileName": "2013-0185-M_Part2.pdf",
+    "pages": 376,
+    "ocrLines": 49544,
+    "researchUse": "Cross-cutting office file sweep for European Affairs, Global Affairs, Intelligence Programs, International Economic Affairs, Legal Advisor, and related policy files.",
+    "priorityUse": "Use after the core defense-policy boxes to catch encryption, high-performance computing, NATO/European defense, international economic, and legal-control files that can explain interagency decisions.",
+    "sampleTargets": [
+      "Intelligence Programs-Knepper encryption papers for deputies, COS, and high-performance computer study materials",
+      "European Affairs files on defense capabilities, defense industry, NATO, and Balkan operations",
+      "International Economic Affairs files for China, APEC, trade, sanctions, and strategic-industry context",
+      "Legal Advisor files for North Korea, sanctions, export-control, and treaty support questions"
+    ],
+    "ocrSignals": [
+      "Encryption: 92 OCR hits",
+      "Critical Infrastructure: 11 OCR hits",
+      "ABM: 20 OCR hits",
+      "START: 10 OCR hits",
+      "CTB: 10 OCR hits"
+    ]
+  },
+  {
+    "part": 3,
+    "fileName": "2013-0185-M_Part3.pdf",
+    "pages": 356,
+    "ocrLines": 46414,
+    "researchUse": "NSC adviser, Records Management, Nonproliferation and Export Controls, Press, and Russia/Ukraine/Eurasian Affairs control layer.",
+    "priorityUse": "Use this part to move from staff-file evidence into principal-level, Deputies/Principals Committee, speech, and Records Management file controls.",
+    "sampleTargets": [
+      "OA 1466-1468: Lake NSC meetings, long-term planning, defense reporting, and policy-material files",
+      "OA 2964 and 3455: Berger defense issues/NMD and nonproliferation issue files",
+      "OA 3832 and 4151: Berger NMD and strategic planning papers",
+      "OA 4007: Records Management PC meeting on ABM/TMD demarcation instructions for SCC-47",
+      "Nonproliferation and Export Controls-Harris files on Russia, chemical weapons, export controls, and summit preparation"
+    ],
+    "ocrSignals": [
+      "CTB: 50 OCR hits",
+      "START: 31 OCR hits",
+      "NMD: 15 OCR hits",
+      "ABM: 14 OCR hits",
+      "Encryption: 15 OCR hits"
+    ]
+  },
+  {
+    "part": 4,
+    "fileName": "2013-0185-M_Part4.pdf",
+    "pages": 183,
+    "ocrLines": 26508,
+    "researchUse": "Public statement, Strategic Planning, Transnational Threats, Staff Director, and Situation Room layer.",
+    "priorityUse": "Use this part for Y2K, critical infrastructure, National Security Strategy speechwriting, NMD public messaging, and late-period preparedness files.",
+    "sampleTargets": [
+      "Speechwriting files on National Security Strategy, NSSR 2000, National Missile Defense, Helsinki/ABM, and China",
+      "Strategic Planning-Bobbitt OA 1750-1753 and 3527-3528 critical infrastructure, PDD-63, NIPC, Y2K, and Defense Production Act files",
+      "Transnational Threats-Hunker OA 3362-3366 Y2K, CIO/CIAO, CIP, encryption/PKI, and reconstitution files",
+      "Transnational Threats-Montgomery OA 2422 Y2K document sets",
+      "White House Situation Room summaries for late-stage chronology control"
+    ],
+    "ocrSignals": [
+      "Critical Infrastructure: 54 OCR hits",
+      "Y2K: 23 OCR hits",
+      "CTB: 7 OCR hits",
+      "Encryption: 4 OCR hits",
+      "National Security Strategy: 3 OCR hits"
+    ]
+  }
+];
+
+window.NSP_READING_ROOM_BATCHES = [
+  {
+    "rank": 1,
+    "timeBlock": "Day 1 AM",
+    "title": "Andreasen nuclear-policy spine",
+    "findingAidLocator": "Part 1, pp. 230-265",
+    "boxes": ["2905", "3204", "3205", "3206", "3207", "3208", "3559", "3560", "3650", "3655", "3656", "3657"],
+    "officeStaff": "Defense Policy-Andreasen",
+    "chapterIds": ["defense-strategy-force-planning", "bmd-abm"],
+    "searchSeed": "Andreasen NMD ABM START CTB",
+    "why": "This is the core documentary spine for nuclear posture, START, CTB, ABM/TMD demarcation, NMD/ABM/START, and PDD-60-adjacent files.",
+    "readingRoomAsk": "Pre-pull the contiguous Andreasen boxes where possible; work folder-by-folder in rank order and photograph folder fronts, withdrawal sheets, and any document-control markings before document review.",
+    "firstQuestions": [
+      "Which folders contain decision memos rather than background reporting?",
+      "Can ABM/NMD records be linked to the published PDD-17, PDD-30, and PDD-66 anchors?",
+      "Do chron files surface missing 1997-1999 PDD-60 and no-first-use material?"
+    ]
+  },
+  {
+    "rank": 2,
+    "timeBlock": "Day 1 PM",
+    "title": "Bell and Binnendijk defense-policy follow-through",
+    "findingAidLocator": "Part 1, pp. 250-271",
+    "boxes": ["3482", "3483", "3484", "3485", "3487", "3488", "3561", "3584", "3660", "3662", "3663", "3664", "3665"],
+    "officeStaff": "Defense Policy-Bell; Defense Policy-Binnendijk",
+    "chapterIds": ["national-security-strategy", "defense-strategy-force-planning", "bmd-abm"],
+    "searchSeed": "Bell Binnendijk NSSR NMD START",
+    "why": "These files test continuity from the early Andreasen files into Bell/Binnendijk records on ABM Treaty review, NSSR, CWC, START, Ukraine, shared early warning, NMD, and late defense policy.",
+    "readingRoomAsk": "Request Bell boxes by contiguous OA number after the Andreasen pass; flag NSSR and NMD files for same-day duplication decisions.",
+    "firstQuestions": [
+      "Do Bell files show NSSR drafting or strategy-implementation debates?",
+      "Which late NMD folders duplicate versus sharpen the Andreasen/Berger record?",
+      "Are shared early warning and START files better treated in NMD/ABM or Y2K chronology?"
+    ]
+  },
+  {
+    "rank": 3,
+    "timeBlock": "Day 2 AM",
+    "title": "Principal-level NSC adviser cross-check",
+    "findingAidLocator": "Part 3, pp. 56-64",
+    "boxes": ["1466", "1464", "1465", "2964", "3455", "3832", "4151", "4162"],
+    "officeStaff": "Office of the National Security Advisor-Lake/Berger",
+    "chapterIds": ["national-security-strategy", "bmd-abm", "tech-transfer"],
+    "searchSeed": "Berger National Missile Defense Nonproliferation",
+    "why": "This is the high-level policy-control layer: Lake long-term planning and defense reporting, Berger defense/NMD, nonproliferation, Russia, strategic planning, and second-term foreign policy objectives.",
+    "readingRoomAsk": "Use this batch to confirm which staff-file issues reached Lake or Berger and to capture any decision-routing, call, briefing, or meeting-material trails.",
+    "firstQuestions": [
+      "Which staff-level issues were briefed to Berger or Lake?",
+      "Are there clean principal-level documents suitable for standalone printing?",
+      "Do adviser files resolve why NMD/ABM, tech transfer, or NSS documents moved at particular moments?"
+    ]
+  },
+  {
+    "rank": 4,
+    "timeBlock": "Day 2 PM",
+    "title": "Technology transfer, China, encryption, and remote sensing",
+    "findingAidLocator": "Part 1, pp. 1-2 and 230-250; Part 2, p. 120; Part 4, pp. 115-135",
+    "boxes": ["1789", "1797", "1798", "1799", "1800", "1801", "1802", "1803", "1808", "1810", "1811", "1812", "1818", "1822", "2904", "3481", "3483", "2649", "3365", "3368"],
+    "officeStaff": "Access Management-Leary/Poneman; Defense Policy-Pimentel/Bolton; Intelligence Programs-Knepper; Transnational Threats-Hunker",
+    "chapterIds": ["tech-transfer"],
+    "searchSeed": "Technology Transfers to China encryption remote sensing",
+    "why": "The split finding aids expose a much larger on-site technology-transfer universe than the initial ranked list: China case documents, Commerce/DoD/State/CIA tranches, encryption papers, remote sensing, satellite issues, and PKI.",
+    "readingRoomAsk": "Do not try to read the whole China case-document run first. Pull representative tranche/control folders plus the policy staff files that explain decision routing.",
+    "firstQuestions": [
+      "Which files are evidence packets generated for oversight rather than policy-development records?",
+      "Where do Commerce, DoD, State, CIA, and NSC records intersect on satellite/export-control decisions?",
+      "Can encryption and remote-sensing records be paired with PDD-5, PDD-23, and PDD-50?"
+    ]
+  },
+  {
+    "rank": 5,
+    "timeBlock": "Day 3 AM",
+    "title": "Y2K, critical infrastructure, and continuity",
+    "findingAidLocator": "Part 4, pp. 104-136",
+    "boxes": ["1750", "1751", "1752", "1753", "2422", "3362", "3363", "3365", "3366", "3527", "3528", "3610", "4040"],
+    "officeStaff": "Strategic Planning-Bobbitt; Transnational Threats-Hunker/Montgomery/Kurtz",
+    "chapterIds": ["y2k-planning"],
+    "searchSeed": "Y2K Critical Infrastructure PDD-63",
+    "why": "This is the best on-site path for turning the Y2K chapter from public statements and OMB memoranda into NSC preparedness records: PDD-63, NIPC, CIAO, CICG, sector planning, Y2K cables, crisis management, and reconstitution.",
+    "readingRoomAsk": "Pull Bobbitt and Hunker files together if the reading room can stage them; the value is in comparing planning, budget, intelligence, and response/reconstitution tracks.",
+    "firstQuestions": [
+      "Which folders document presidential or Berger-level decisions rather than routine coordination?",
+      "Can Russia/Y2K warning material be linked to JDEC/shared early warning records?",
+      "Do continuity and reconstitution files show a national security policy decision point?"
+    ]
+  },
+  {
+    "rank": 6,
+    "timeBlock": "Day 3 PM",
+    "title": "Records Management and committee-meeting control layer",
+    "findingAidLocator": "Part 3, pp. 235-245",
+    "boxes": ["4007"],
+    "officeStaff": "Records Management",
+    "chapterIds": ["bmd-abm", "tech-transfer", "defense-strategy-force-planning"],
+    "searchSeed": "PC meeting ABM TMD demarcation",
+    "why": "Records Management rows can identify Principals Committee and Deputies Committee meetings that anchor staff-file fragments to formal interagency process.",
+    "readingRoomAsk": "Use this as a control sample: request meeting folders only when they map directly onto a chapter decision point.",
+    "firstQuestions": [
+      "Does the ABM/TMD demarcation PC file confirm formal instructions for SCC-47?",
+      "Which records belong in the published chronology versus background files?",
+      "Are there missing meeting dates that should drive additional requests?"
+    ]
+  },
+  {
+    "rank": 7,
+    "timeBlock": "Reserve pull",
+    "title": "CFE, ACDA, landmines, and conventional arms-control support",
+    "findingAidLocator": "Part 1, pp. 195-199 and 251-256",
+    "boxes": ["934", "935", "1051", "1052", "1053", "1054", "1055", "1159", "1271", "3000", "3486", "3562", "3563"],
+    "officeStaff": "Defense Policy-Witkowsky; Defense Policy-Bell",
+    "chapterIds": ["defense-strategy-force-planning", "tech-transfer"],
+    "searchSeed": "CFE ACDA conventional arms control",
+    "why": "These are second-wave files for CFE, Open Skies, ACDA, landmines, arms control legislation, and conventional force questions that support but probably do not lead the volume.",
+    "readingRoomAsk": "Hold this batch until core nuclear/NMD/Y2K/tech-transfer gaps are exhausted or a citation trail points directly into CFE/ACDA files.",
+    "firstQuestions": [
+      "Do CFE or ACDA files change the defense-strategy chapter, or only supply context?",
+      "Are there clean documents on implementation problems after the Cold War?",
+      "Which files duplicate public treaty or congressional records?"
+    ]
+  },
+  {
+    "rank": 8,
+    "timeBlock": "Fast scan",
+    "title": "Speechwriting and public-message file linkups",
+    "findingAidLocator": "Part 4, pp. 1-35 and 80-90",
+    "boxes": ["1850", "1858", "3062", "3383", "1406"],
+    "officeStaff": "Speechwriting; Staff Director-Soderberg",
+    "chapterIds": ["national-security-strategy", "bmd-abm", "tech-transfer"],
+    "searchSeed": "National Security Strategy National Missile Defense speechwriting",
+    "why": "These folders can explain the public-language layer behind NSS reports, NMD statements, Helsinki/ABM messaging, China speeches, and foreign-policy rollout work.",
+    "readingRoomAsk": "Scan for drafts, clearance notes, and talking-points deltas only; avoid spending primary reading-room time on final public text already available through GovInfo.",
+    "firstQuestions": [
+      "Do drafts show substantive policy edits?",
+      "Can speech files tie public statements to NSC decision documents?",
+      "Which folders are merely final remarks already captured elsewhere?"
+    ]
+  }
+];
+
+window.NSP_VISIT_ITINERARY = [
+  {
+    "day": "Before travel",
+    "focus": "Pre-clear the pull list",
+    "tasks": [
+      "Send the library a short request list organized by OA box, folder title, staff office, and finding-aid part/page locator.",
+      "Ask which boxes can be staged together, which folders require advance review, and whether any high-priority folders are closed or partially withdrawn.",
+      "Export the site collection table and mark each folder as pull, skip, duplicate, or public-copy-only before arrival."
+    ]
+  },
+  {
+    "day": "Day 1",
+    "focus": "Core defense-policy spine",
+    "tasks": [
+      "Start with Andreasen boxes for PRD-31, PRD-34, CTB, ABM/TMD demarcation, START, NMD/ABM/START, and PDD-60-adjacent material.",
+      "Move to Bell/Binnendijk only after capturing folder-level controls and promising standalone documents from Andreasen.",
+      "End the day by updating the site records with exact folder/page notes while memory is still fresh."
+    ]
+  },
+  {
+    "day": "Day 2",
+    "focus": "Principal-level and technology-transfer evidence",
+    "tasks": [
+      "Use Berger/Lake adviser files to test which staff-file issues reached the principal level.",
+      "Sample technology-transfer case-document tranches only after identifying policy-control folders; the case-document run is too large to read cold.",
+      "Prioritize documents with routing, decision, or clearance evidence over duplicate oversight packets."
+    ]
+  },
+  {
+    "day": "Day 3",
+    "focus": "Y2K/CIP and formal process controls",
+    "tasks": [
+      "Pull Bobbitt and Hunker Y2K/CIP boxes together so PDD-63, NIPC, CIAO, CICG, crisis-management, and reconstitution files can be compared.",
+      "Use Records Management meeting files as a process-control sample for ABM/TMD demarcation and other chapter decision points.",
+      "Use reserve CFE/ACDA/speechwriting batches only where the first two days expose a clear gap."
+    ]
   }
 ];
 

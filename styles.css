@@ -245,7 +245,7 @@ dd {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
   padding: 0 0 42px;
 }
@@ -622,6 +622,143 @@ dd {
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.library-intro,
+.finding-aid-grid,
+.reading-room-grid,
+.itinerary-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.library-intro {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.library-intro article,
+.finding-aid-card,
+.reading-room-card,
+.itinerary-card {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(22, 31, 43, 0.08);
+}
+
+.library-intro article,
+.finding-aid-card,
+.reading-room-card,
+.itinerary-card {
+  padding: 20px;
+}
+
+.library-intro p,
+.finding-aid-card p,
+.reading-room-card p,
+.itinerary-card p,
+.visit-card-list,
+.visit-signal-list {
+  color: var(--muted);
+  line-height: 1.52;
+}
+
+.subsection-title {
+  margin: 28px 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+}
+
+.finding-aid-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.finding-aid-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finding-aid-card .visit-card-list {
+  margin-top: auto;
+}
+
+.visit-priority-note {
+  padding: 12px;
+  color: #334047 !important;
+  font-weight: 800;
+  background: rgba(46, 103, 91, 0.08);
+  border: 1px solid rgba(46, 103, 91, 0.18);
+  border-radius: 6px;
+}
+
+.visit-signal-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visit-signal-list li {
+  padding: 7px 9px;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 900;
+  background: rgba(37, 54, 79, 0.07);
+  border: 1px solid rgba(37, 54, 79, 0.14);
+  border-radius: 6px;
+}
+
+.visit-card-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.reading-room-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reading-room-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.visit-boxes {
+  margin-bottom: 0;
+  color: var(--navy) !important;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.visit-action {
+  width: fit-content;
+  min-height: 38px;
+  margin-top: auto;
+  padding: 0 12px;
+  color: white;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 900;
+  background: var(--navy);
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.visit-action:hover,
+.visit-action:focus-visible {
+  background: var(--red);
+  border-color: var(--red);
+  outline: none;
+}
+
+.itinerary-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .collection-metadata,
@@ -1179,8 +1316,15 @@ footer a {
   .chapter-grid,
   .source-list,
   .collection-metadata,
-  .related-collections-grid {
+  .related-collections-grid,
+  .finding-aid-grid,
+  .itinerary-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .library-intro,
+  .reading-room-grid {
+    grid-template-columns: 1fr;
   }
 
   .workbench-card,
@@ -1220,6 +1364,9 @@ footer a {
   .source-list,
   .collection-metadata,
   .related-collections-grid,
+  .finding-aid-grid,
+  .reading-room-grid,
+  .itinerary-grid,
   .metric-list,
   .compiler-filters,
   .collection-tools {
