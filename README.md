@@ -27,6 +27,11 @@ finding-aid PDFs for `2013-0185-M` as a reading-room strategy layer. It lists th
 parts, OCR signal counts, high-yield OA box batches, part/page locators, and a
 day-by-day pull sequence designed to maximize on-site Clinton Library time.
 
+Displayed chapter-record notes now follow a FRUS-style source-note pattern: each
+record begins with `Source: [repository/source name].` and then preserves the
+compiler context needed to locate or test the lead. Source URLs remain separate
+site links rather than being embedded in the note.
+
 Inside those chapters, the page uses the National Security Policy framework described in the preface to `Foreign Relations, 1981-1988, Volume XLIV, Part 1` as a model, then adapts it to the Clinton administration after the Cold War:
 
 1. Defense Policy and Strategic Planning

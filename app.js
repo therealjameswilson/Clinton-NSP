@@ -86,6 +86,13 @@ function chapterLabel(id) {
   return chapterById.get(id)?.title || "Unmapped chapter";
 }
 
+function frusSourceNote(record) {
+  const note = String(record.sourceNote || "").trim();
+  if (/^Source:/.test(note)) return note;
+  const sourceName = String(record.sourceName || "Source unidentified").trim().replace(/\.$/, "");
+  return `Source: ${sourceName}. ${note}`;
+}
+
 function chapterFilterLabel(id) {
   const chapter = chapterById.get(id);
   return chapter ? `${chapter.dateLabel} - ${chapter.title}` : "Unmapped chapter";
@@ -197,6 +204,7 @@ function renderAudit() {
   const directiveClusters = records.filter((record) => (record.directives || []).length > 1);
   const crafting = records.filter((record) => record.nssCrafting);
   const pages = collectionPageTotal(records);
+  const styledSourceNotes = records.filter((record) => /^Source:/.test(frusSourceNote(record)));
 
   nodes.auditRoot?.replaceChildren(
     auditCard(
@@ -228,6 +236,12 @@ function renderAudit() {
       `${number(uniqueDirectives(records).size)} handles`,
       `${number(directiveClusters.length)} rows group multiple PRD/PDD handles for harvest rather than treating every directive title as a selected document.`,
       `${number(highPriority.length)} high-priority leads are flagged for first pass.`
+    ),
+    auditCard(
+      "Source Note Style",
+      `${number(styledSourceNotes.length)} FRUS-form notes`,
+      "Record notes now render with a leading source citation, then the compiler context needed to locate or test the document lead.",
+      "URLs remain separate action links rather than being folded into the note text."
     )
   );
 }
@@ -772,7 +786,7 @@ function recordRow(record) {
 
   const sourceNote = document.createElement("p");
   sourceNote.className = "record-source-note";
-  sourceNote.textContent = record.sourceNote;
+  sourceNote.textContent = frusSourceNote(record);
 
   const directives = document.createElement("div");
   directives.className = "record-directives";
