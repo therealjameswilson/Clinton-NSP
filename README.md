@@ -6,10 +6,11 @@ Working compiler page for the planned Office of the Historian volume:
 - Planned destination: https://history.state.gov/historicaldocuments/frus1993-00v06
 - Public workspace: https://therealjameswilson.github.io/Clinton-NSP/
 
-The page now arranges the volume with one chronological National Security Strategy chapter
-for the full Clinton period, a defense-strategy chapter for post-Cold War force planning,
-and special issue chapters on national missile defense/ABM Treaty, technology transfer,
-and Y2K planning:
+The page now opens with a declassified/public document chronology across the whole
+volume, then arranges the underlying volume plan with one chronological National Security
+Strategy chapter for the full Clinton period, a defense-strategy chapter for post-Cold War
+force planning, and special issue chapters on national missile defense/ABM Treaty,
+technology transfer, and Y2K planning:
 
 1. 1993-2000, `National Security Strategy`
 2. 1993-2000, `Defense Strategy, Force Planning, and Nuclear Posture`

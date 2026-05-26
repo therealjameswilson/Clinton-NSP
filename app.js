@@ -13,8 +13,18 @@ const byId = (id) => document.getElementById(id);
 const chapterById = new Map(chapters.map((chapter) => [chapter.id, chapter]));
 const themeById = new Map(themes.map((theme) => [theme.id, theme]));
 const formatter = new Intl.NumberFormat("en-US");
+const declassifiedStatuses = new Set([
+  "Declassified Drive Source",
+  "Digitized Source",
+  "Official Public Statement",
+  "Public FOIA Source",
+  "Public Source Copy",
+  "Published NSS",
+  "Released PDD",
+  "Released PRD"
+]);
 
-let activeQuickFilter = "all";
+let activeQuickFilter = "declassified";
 
 const nodes = {
   totalRecords: byId("total-records"),
@@ -111,6 +121,19 @@ function sortRecords(a, b) {
   );
 }
 
+function sortRecordsChronologically(a, b) {
+  const chapterA = chapterById.get(a.chapterId)?.number || 99;
+  const chapterB = chapterById.get(b.chapterId)?.number || 99;
+  const themeA = themeById.get(a.themeId)?.number || 99;
+  const themeB = themeById.get(b.themeId)?.number || 99;
+  return (
+    a.date.localeCompare(b.date) ||
+    chapterA - chapterB ||
+    themeA - themeB ||
+    a.title.localeCompare(b.title)
+  );
+}
+
 function groupCount(items, labelFor) {
   const groups = new Map();
   for (const item of items) {
@@ -155,6 +178,10 @@ function isPublicRecord(record) {
   return /Finding Aid|Public Anchor|Foundation Lead|Published NSS|Public Source Copy|Released PRD|Released PDD|Declassified Drive Source|Public FOIA Source|Official Public Statement/.test(
     record.status
   );
+}
+
+function isDeclassifiedDocument(record) {
+  return declassifiedStatuses.has(record.status);
 }
 
 function populateSelect(select, values, fallback) {
@@ -709,6 +736,7 @@ function renderFilters() {
 
 function hasQuickMatch(record, filter) {
   if (filter === "all") return true;
+  if (filter === "declassified") return isDeclassifiedDocument(record);
   if (filter === "high") return record.priority === "High";
   if (filter === "public") return isPublicRecord(record);
   if (filter === "crafting") return Boolean(record.nssCrafting);
@@ -821,12 +849,14 @@ function recordRow(record) {
 }
 
 function renderRecords(items = currentRecords()) {
-  const sorted = [...items].sort(sortRecords);
+  const sorted = [...items].sort(sortRecordsChronologically);
   if (nodes.recordsSummary) {
     const pages = collectionPageTotal(sorted);
     const crafting = sorted.filter((record) => record.nssCrafting).length;
+    const declassified = sorted.filter(isDeclassifiedDocument).length;
     const summaryParts = [
-      `Showing ${number(sorted.length)} of ${number(records.length)} leads`,
+      `Showing ${number(sorted.length)} of ${number(records.length)} leads in chronological order`,
+      activeQuickFilter === "declassified" ? `${number(declassified)} public/declassified document records` : "",
       crafting ? `${number(crafting)} NSS crafting leads` : "",
       `${number(uniqueDirectives(sorted).size)} directive handles`,
       `${number(pages)} cataloged source pages`
@@ -844,31 +874,35 @@ function renderRecords(items = currentRecords()) {
     return;
   }
 
-  for (const chapter of chapters) {
-    const chapterRecords = sorted.filter((record) => record.chapterId === chapter.id);
-    if (!chapterRecords.length) continue;
+  const recordsByYear = new Map();
+  for (const record of sorted) {
+    const year = String(record.date || "Undated").slice(0, 4) || "Undated";
+    if (!recordsByYear.has(year)) recordsByYear.set(year, []);
+    recordsByYear.get(year).push(record);
+  }
 
+  for (const [year, yearRecords] of recordsByYear) {
     const section = document.createElement("section");
     section.className = "record-chapter";
-    section.id = `chapter-${chapter.id}`;
+    section.id = `chronology-${year}`;
 
     const header = document.createElement("div");
     header.className = "record-chapter-header";
     const heading = document.createElement("h3");
-    heading.textContent = `Chapter ${chapter.number}: ${chapter.title}`;
+    heading.textContent = year;
     const count = document.createElement("p");
     count.className = "record-count";
-    const craftingCount = chapterRecords.filter((record) => record.nssCrafting).length;
+    const craftingCount = yearRecords.filter((record) => record.nssCrafting).length;
     count.textContent = craftingCount
-      ? `${number(chapterRecords.length)} leads / ${number(craftingCount)} NSS crafting / ${number(
-          uniqueDirectives(chapterRecords).size
+      ? `${number(yearRecords.length)} leads / ${number(craftingCount)} NSS crafting / ${number(
+          uniqueDirectives(yearRecords).size
         )} directive handles`
-      : `${number(chapterRecords.length)} leads / ${number(uniqueDirectives(chapterRecords).size)} directive handles`;
+      : `${number(yearRecords.length)} leads / ${number(uniqueDirectives(yearRecords).size)} directive handles`;
     header.append(heading, count);
 
     const list = document.createElement("div");
     list.className = "record-list";
-    for (const record of chapterRecords) list.append(recordRow(record));
+    for (const record of yearRecords) list.append(recordRow(record));
 
     section.append(header, list);
     nodes.recordsRoot.append(section);
@@ -926,7 +960,7 @@ function exportCsv() {
     "topics"
   ];
   const rows = currentRecords()
-    .sort(sortRecords)
+    .sort(sortRecordsChronologically)
     .map((record) =>
       [
         chapterLabel(record.chapterId),
@@ -1025,6 +1059,7 @@ function init() {
   renderRelatedCollections();
   renderCollectionFilters();
   renderCollections();
+  setQuickButtons();
   renderRecords();
   bindEvents();
 }

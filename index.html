@@ -17,13 +17,13 @@
         <span>Clinton NSP</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#records">Chronology</a>
         <a href="#audit">Audit</a>
         <a href="#method">Method</a>
         <a href="#chapters">Chapters</a>
         <a href="#workbench">Workbench</a>
         <a href="#library">Library Plan</a>
         <a href="#collections">Collections</a>
-        <a href="#records">Records</a>
         <a href="#sources">Sources</a>
         <a href="#ingest">Ingest</a>
       </nav>
@@ -41,7 +41,7 @@
             setting: strategy, risk reduction, strategic technology, and preparedness.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#workbench">Open Workbench</a>
+            <a class="button primary" href="#records">Open Chronology</a>
             <a class="button secondary" href="#records" data-quick-filter="high">High Priority Leads</a>
           </div>
         </div>
@@ -94,6 +94,69 @@
         <div>
           <span id="collection-count">0</span>
           <p>ranked folders</p>
+        </div>
+      </section>
+
+      <section class="section records-section primary-chronology" id="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Declassified Timeline</p>
+            <h2 id="records-title">Declassified Document Chronology</h2>
+          </div>
+          <p class="section-note">
+            The page opens with dated public and declassified document records across all
+            chapters. Clear the default filter to expose collection leads, harvest tasks,
+            and other compiler scaffolding.
+          </p>
+        </div>
+        <div class="record-tools" aria-label="Record filters">
+          <div class="record-search">
+            <label for="record-search">
+              Search chronology
+              <input id="record-search" type="search" placeholder="CTBT, Jiang, NMD, PDD-63, Y2K" />
+            </label>
+          </div>
+          <div class="compiler-filters" aria-label="Compiler filters">
+            <label for="chapter-filter">
+              Chapter
+              <select id="chapter-filter">
+                <option value="all">All chapters</option>
+              </select>
+            </label>
+            <label for="theme-filter">
+              Theme
+              <select id="theme-filter">
+                <option value="all">All themes</option>
+              </select>
+            </label>
+            <label for="status-filter">
+              Status
+              <select id="status-filter">
+                <option value="all">All statuses</option>
+              </select>
+            </label>
+            <label for="type-filter">
+              Type
+              <select id="type-filter">
+                <option value="all">All types</option>
+              </select>
+            </label>
+            <button id="clear-filters" type="button">Clear</button>
+            <button id="export-records" type="button">Export CSV</button>
+          </div>
+          <div class="filter-buttons" aria-label="Quick filters">
+            <button type="button" data-record-filter="declassified" aria-pressed="true">Declassified/Public</button>
+            <button type="button" data-record-filter="all" aria-pressed="false">All</button>
+            <button type="button" data-record-filter="high" aria-pressed="false">High Priority</button>
+            <button type="button" data-record-filter="public" aria-pressed="false">Public Anchors</button>
+            <button type="button" data-record-filter="crafting" aria-pressed="false">NSS Crafting</button>
+            <button type="button" data-record-filter="directive" aria-pressed="false">Directives</button>
+            <button type="button" data-record-filter="harvest" aria-pressed="false">Harvest</button>
+          </div>
+        </div>
+        <p id="records-summary" class="records-summary" aria-live="polite"></p>
+        <div id="records-root" class="records-root" aria-live="polite">
+          <p class="loading">Loading declassified document chronology...</p>
         </div>
       </section>
 
@@ -329,67 +392,6 @@
         </div>
       </section>
 
-      <section class="section records-section" id="records" aria-labelledby="records-title">
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Compiler Files</p>
-            <h2 id="records-title">Chapter Records</h2>
-          </div>
-          <p class="section-note">
-            Search every field, including directive numbers, source notes, topics, finding
-            aid names, NSS chapter titles, and adapted framework labels.
-          </p>
-        </div>
-        <div class="record-tools" aria-label="Record filters">
-          <div class="record-search">
-            <label for="record-search">
-              Search records
-              <input id="record-search" type="search" placeholder="PDD-25, CTBT, space, infrastructure" />
-            </label>
-          </div>
-          <div class="compiler-filters" aria-label="Compiler filters">
-            <label for="chapter-filter">
-              Chapter
-              <select id="chapter-filter">
-                <option value="all">All chapters</option>
-              </select>
-            </label>
-            <label for="theme-filter">
-              Theme
-              <select id="theme-filter">
-                <option value="all">All themes</option>
-              </select>
-            </label>
-            <label for="status-filter">
-              Status
-              <select id="status-filter">
-                <option value="all">All statuses</option>
-              </select>
-            </label>
-            <label for="type-filter">
-              Type
-              <select id="type-filter">
-                <option value="all">All types</option>
-              </select>
-            </label>
-            <button id="clear-filters" type="button">Clear</button>
-            <button id="export-records" type="button">Export CSV</button>
-          </div>
-          <div class="filter-buttons" aria-label="Quick filters">
-            <button type="button" data-record-filter="all" aria-pressed="true">All</button>
-            <button type="button" data-record-filter="high" aria-pressed="false">High Priority</button>
-            <button type="button" data-record-filter="public" aria-pressed="false">Public Anchors</button>
-            <button type="button" data-record-filter="crafting" aria-pressed="false">NSS Crafting</button>
-            <button type="button" data-record-filter="directive" aria-pressed="false">Directives</button>
-            <button type="button" data-record-filter="harvest" aria-pressed="false">Harvest</button>
-          </div>
-        </div>
-        <p id="records-summary" class="records-summary" aria-live="polite"></p>
-        <div id="records-root" class="records-root" aria-live="polite">
-          <p class="loading">Loading theme records...</p>
-        </div>
-      </section>
-
       <section class="section source-section" id="sources" aria-labelledby="sources-title">
         <div class="section-heading">
           <div>
@@ -446,6 +448,6 @@
     </footer>
     <script src="data/records.js?v=20260526-daily-diary"></script>
     <script src="data/collections.js?v=20260524-library-plan"></script>
-    <script src="app.js?v=20260525-frus-source-notes"></script>
+    <script src="app.js?v=20260526-chronology-first"></script>
   </body>
 </html>
