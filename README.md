@@ -46,6 +46,7 @@ This is an intake workspace, not a proposed FRUS document selection. Collection 
 - Office of the Historian, FRUS 1993-2000, Volume VI status page
 - Office of the Historian, FRUS 1981-1988, Volume XLIV, Part 1 preface
 - GovInfo Public Papers of the Presidents, William J. Clinton collection
+- NARA Catalog and Clinton Digital Library Presidential Daily Diary FOIA case `2010-0083-F`, plus public NARA media PDFs for selected Clinton calls, meetings, briefings, and signing-ceremony references
 - Clinton Library Presidential Directives
 - Clinton Library Declassified Records portal
 - Clinton Library `(2013-0185-M) Declassified Folder Title List for the National Security Council`

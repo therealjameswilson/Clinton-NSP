@@ -2676,6 +2676,236 @@ const CLINTON_PUBLIC_STATEMENT_RECORDS = [
   })
 ];
 
+const DAILY_DIARY_PDF_BASE =
+  "https://nara-media.s3.amazonaws.com/presidential-libraries/clinton/foia/2010-0083-F/2010-0083-F-PDF";
+const DAILY_DIARY_SOURCE_NAME = "Clinton Presidential Library, Presidential Daily Diary, FOIA 2010-0083-F";
+
+function dailyDiaryPdf(path) {
+  return `${DAILY_DIARY_PDF_BASE}/${path}`;
+}
+
+function dailyDiaryRecord(entry) {
+  return {
+    ...entry,
+    type: "Presidential Daily Diary Reference",
+    status: "Public Source Copy",
+    priority: entry.priority || "Medium",
+    sourceName: DAILY_DIARY_SOURCE_NAME,
+    sourceUrl: `https://clinton.presidentiallibraries.us/items/show/${entry.itemId}`,
+    pdfUrl: dailyDiaryPdf(entry.pdfPath),
+    sourceNote:
+      entry.sourceNote ||
+      "Presidential Daily Diary hardcopy release. Use as schedule and participant evidence, not as a substantive decision record.",
+    directives: entry.directives || []
+  };
+}
+
+const PRESIDENTIAL_DAILY_DIARY_RECORDS = [
+  dailyDiaryRecord({
+    id: "pddiary-1993-jan28-intel-national-security-briefings",
+    chapterId: "national-security-strategy",
+    date: "1993-01-28",
+    dateLabel: "January 28, 1993",
+    itemId: "36462",
+    pdfPath: "Box_001/42-t-7262157-20100083F-001-001-2015.pdf",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Daily Diary: early intelligence and national security briefings with Lake and Berger",
+    summary:
+      "The diary records an 8:40-8:55 a.m. intelligence briefing and an 8:55-9:10 a.m. national security briefing with Gore, Lake, Berger, and Fuerth, giving the NSS chapter an early process anchor for the new administration.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 1, item 001-001; entry for January 28, 1993, 8:40-9:10 a.m.; schedule and participant evidence for early NSC process.",
+    topics: ["Presidential Daily Diary", "NSC process", "National security briefing", "Tony Lake", "Sandy Berger"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1993-jan28-aspin-nunn-lake-meeting",
+    chapterId: "defense-strategy-force-planning",
+    date: "1993-01-28",
+    dateLabel: "January 28, 1993",
+    itemId: "36462",
+    pdfPath: "Box_001/42-t-7262157-20100083F-001-001-2015.pdf",
+    themeId: "defense-strategy",
+    title: "Daily Diary: evening meeting with Aspin, Nunn, Mitchell, Gore, and Lake",
+    summary:
+      "The diary places Secretary of Defense Les Aspin, Vice President Gore, Senators Sam Nunn and George Mitchell, Tony Lake, and senior White House advisers in an evening meeting during the administration's opening defense-policy week.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 1, item 001-001; entry for January 28, 1993, 7:50-9:17 p.m.; schedule evidence for defense-policy and congressional consultation context.",
+    topics: ["Presidential Daily Diary", "Defense policy", "Les Aspin", "Sam Nunn", "Tony Lake"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1993-mar8-russia-consultations",
+    chapterId: "national-security-strategy",
+    date: "1993-03-08",
+    dateLabel: "March 8, 1993",
+    itemId: "36463",
+    pdfPath: "Box_001/42-t-7262157-20100083F-001-002-2015.pdf",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Daily Diary: Russia consultations with Bush, Nunn, Soderberg, and Nixon",
+    summary:
+      "The diary records a Bush call about the current situation in Russia, a completed call with Senator Nunn, a meeting with NSC Staff Director Nancy Soderberg, and a 6:49-7:45 p.m. meeting with former President Nixon on Russia.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 1, item 001-002; entries for March 8, 1993, including 11:38-11:43 a.m., 2:33-2:57 p.m., 6:33-6:43 p.m., and 6:49-7:45 p.m.; schedule evidence for early post-Soviet risk-reduction context.",
+    topics: ["Presidential Daily Diary", "Russia", "Post-Soviet policy", "Nancy Soderberg", "Sam Nunn"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1994-apr13-china-policy-meeting",
+    chapterId: "tech-transfer",
+    date: "1994-04-13",
+    dateLabel: "April 13, 1994",
+    itemId: "36469",
+    pdfPath: "Box_001/42-t-7262157-20100083F-001-008-2015.pdf",
+    themeId: "technology-control",
+    title: "Daily Diary: Cabinet Room meeting to discuss China",
+    summary:
+      "The diary records a 5:54-7:07 p.m. China policy meeting with Gore, Christopher, Bentsen, Brown, Tyson, Lake, Berger, Rubin, Cutter, Gergen, Fuerth, and Stanley Roth.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 1, item 001-008; entry and Appendix A for April 13, 1994, 5:54-7:07 p.m.; schedule evidence for China policy coordination relevant to technology-transfer and strategic-industry context.",
+    topics: ["Presidential Daily Diary", "China", "Strategic industry", "Export controls", "Technology transfer"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1998-apr8-china-policy-meeting",
+    chapterId: "tech-transfer",
+    date: "1998-04-08",
+    dateLabel: "April 8, 1998",
+    itemId: "36479",
+    pdfPath: "Box_002/42-t-7262157-20100083F-002-005-2015.pdf",
+    themeId: "technology-control",
+    title: "Daily Diary: Oval Office meeting to discuss China",
+    summary:
+      "The diary records a 4:56-5:15 p.m. Oval Office meeting to discuss China, with attendees listed in the appendix including the President, Hillary Rodham Clinton, Bowles, Berger, Steinberg, Podesta, and NSC Executive Secretary Glyn Davies.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 2, item 002-005; entry and appendix for April 8, 1998, 4:56-5:15 p.m.; schedule evidence for China policy coordination during the satellite-export and strategic-technology controversy period.",
+    topics: ["Presidential Daily Diary", "China", "Satellite exports", "Strategic technology", "Sandy Berger"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1998-oct19-y2k-disclosure-signing",
+    chapterId: "y2k-planning",
+    date: "1998-10-19",
+    dateLabel: "October 19, 1998",
+    itemId: "36482",
+    pdfPath: "Box_002/42-t-7262157-20100083F-002-008-2015.pdf",
+    themeId: "preparedness",
+    title: "Daily Diary: signing ceremony for the Year 2000 Information and Readiness Disclosure Act",
+    summary:
+      "The diary records the 11:47-11:52 a.m. signing ceremony for S. 2392 with Sally Katzen of OIRA and Janet Abrams of the President's Council on the Year 2000 Conversion.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 2, item 002-008; entry for October 19, 1998, 11:47-11:52 a.m.; schedule evidence behind the Y2K disclosure-act public statement.",
+    topics: ["Presidential Daily Diary", "Y2K", "Readiness disclosure", "OIRA", "President's Council on the Year 2000 Conversion"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1999-oct6-ctbt-meeting",
+    chapterId: "defense-strategy-force-planning",
+    date: "1999-10-06",
+    dateLabel: "October 6, 1999",
+    itemId: "36486",
+    pdfPath: "Box_002/42-t-7262157-20100083F-002-012-2015.pdf",
+    priority: "High",
+    themeId: "defense-strategy",
+    title: "Daily Diary: meeting on the Comprehensive Test Ban Treaty",
+    summary:
+      "The diary records a 3:07-4:06 p.m. CTBT meeting, with appendix attendees including the President, Senator John Glenn, General John Shalikashvili, Ambassador William Crowe, and former JCS Chairman David Jones.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 2, item 002-012; entry and Appendix A for October 6, 1999, 3:07-4:06 p.m.; schedule evidence for the CTBT ratification effort in the defense-strategy and nuclear-posture chapter.",
+    topics: ["Presidential Daily Diary", "CTBT", "Nuclear testing", "Senate ratification", "Defense strategy"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1999-nov6-jiang-secure-call",
+    chapterId: "tech-transfer",
+    date: "1999-11-06",
+    dateLabel: "November 6, 1999",
+    itemId: "36486",
+    pdfPath: "Box_002/42-t-7262157-20100083F-002-012-2015.pdf",
+    priority: "High",
+    themeId: "technology-control",
+    title: "Daily Diary: secure voice conference call with Jiang Zemin",
+    summary:
+      "The diary records an attempted call to PRC President Jiang Zemin at 7:30 p.m. and a completed 7:56-8:39 p.m. secure voice conference call with Jiang, Barshefsky, Berger, Podesta, Steinberg, Sperling, and Situation Room personnel.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 2, item 002-012; entries for November 6, 1999, 7:30 p.m. and 7:56-8:39 p.m.; schedule evidence for high-level China trade and strategic-economic policy context.",
+    topics: ["Presidential Daily Diary", "China", "Jiang Zemin", "Trade policy", "Strategic industry"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-1999-nov18-yeltsin-bilateral",
+    chapterId: "bmd-abm",
+    date: "1999-11-18",
+    dateLabel: "November 18, 1999",
+    itemId: "36486",
+    pdfPath: "Box_002/42-t-7262157-20100083F-002-012-2015.pdf",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Daily Diary: Istanbul bilateral meeting with Boris Yeltsin",
+    summary:
+      "The diary records an 11:17-11:28 a.m. briefing with Berger, Albright, Sestanovich, Pascual, Steinberg, and Blinken, followed by an 11:31 a.m.-12:17 p.m. meeting with Russian officials; Appendix B identifies the bilateral meeting with Boris Yeltsin.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 2, item 002-012; entry and Appendix B for November 18, 1999, 11:17 a.m.-12:17 p.m.; schedule evidence for the Yeltsin strategic-stability/NMD/ABM Treaty track at the OSCE Istanbul summit.",
+    topics: ["Presidential Daily Diary", "Boris Yeltsin", "NMD", "ABM Treaty", "Strategic stability"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-2000-feb15-cyber-security-meeting",
+    chapterId: "y2k-planning",
+    date: "2000-02-15",
+    dateLabel: "February 15, 2000",
+    itemId: "36488",
+    pdfPath: "Box_003/42-t-7262157-20100083F-003-002-2015.pdf",
+    priority: "High",
+    themeId: "preparedness",
+    title: "Daily Diary: cyber security meeting with technology industry leaders",
+    summary:
+      "The diary records an 11:36-11:54 a.m. briefing with Berger, Podesta, Kalil, and Richard Clarke, followed by an 11:57 a.m.-1:20 p.m. Cabinet Room cyber security meeting with technology industry leaders and computer security experts.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 3, item 003-002; entry and Appendix B for February 15, 2000, 11:36 a.m.-1:20 p.m.; schedule evidence for the transition from Y2K readiness to critical-infrastructure and cyber preparedness.",
+    topics: ["Presidential Daily Diary", "Cybersecurity", "Critical infrastructure", "Richard Clarke", "Y2K aftermath"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-2000-feb15-china-trade-meeting",
+    chapterId: "tech-transfer",
+    date: "2000-02-15",
+    dateLabel: "February 15, 2000",
+    itemId: "36488",
+    pdfPath: "Box_003/42-t-7262157-20100083F-003-002-2015.pdf",
+    themeId: "technology-control",
+    title: "Daily Diary: bipartisan Congressional meeting on trade with China",
+    summary:
+      "The diary records a 5:56-6:05 p.m. briefing with Daley, Podesta, Sperling, and legislative-affairs staff, followed by a 6:07-7:44 p.m. bipartisan Congressional meeting on trade with China.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 3, item 003-002; entry and Appendix C for February 15, 2000, 5:56-7:44 p.m.; schedule evidence for China trade/PNTR policy surrounding the strategic-industry chapter.",
+    topics: ["Presidential Daily Diary", "China", "PNTR", "Trade policy", "Strategic industry"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-2000-jul16-putin-g8-meeting",
+    chapterId: "bmd-abm",
+    date: "2000-07-16",
+    dateLabel: "July 16, 2000",
+    itemId: "36490",
+    pdfPath: "Box_003/42-t-7262157-20100083F-003-003-2015.pdf",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Daily Diary: G-8 meeting with Vladimir Putin",
+    summary:
+      "The diary records a 6:04-6:14 p.m. briefing with administration officials, a 6:16-6:22 p.m. greeting with Russian President Vladimir Putin, and a 6:24 p.m. meeting with Putin during the Okinawa G-8 sequence.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 3, item 003-003; entry for July 16, 2000, 6:04-6:24 p.m.; schedule evidence for the Clinton-Putin strategic-stability dialogue following the June 2000 Moscow summit.",
+    topics: ["Presidential Daily Diary", "Vladimir Putin", "G-8", "Strategic stability", "NMD"]
+  }),
+  dailyDiaryRecord({
+    id: "pddiary-2000-sep6-putin-strategic-stability",
+    chapterId: "bmd-abm",
+    date: "2000-09-06",
+    dateLabel: "September 6, 2000",
+    itemId: "36490",
+    pdfPath: "Box_003/42-t-7262157-20100083F-003-003-2015.pdf",
+    priority: "High",
+    themeId: "risk-reduction",
+    title: "Daily Diary: Putin meeting and Strategic Stability Cooperation Initiative signing",
+    summary:
+      "The diary records a 10:55-11:22 a.m. briefing with Albright, Berger, Holbrooke, Sestanovich, Bradtke, and Medish, an 11:29 a.m.-12:26 p.m. meeting with Putin and Strobe Talbott, and the 12:28-12:34 p.m. signing ceremony for the Strategic Stability Cooperation Initiative.",
+    sourceNote:
+      "Hardcopy daily diary release, Box 3, item 003-003; entries for September 6, 2000, 10:55 a.m.-12:34 p.m.; schedule evidence tying the public strategic-stability statement to Clinton-Putin meeting chronology.",
+    topics: ["Presidential Daily Diary", "Vladimir Putin", "Strobe Talbott", "Strategic stability", "NMD"]
+  })
+];
+
 const PUBLIC_STATEMENT_COMPANION_RECORDS = [
   {
     id: "nss-clinton-library-1998-northern-ireland-nss-drafts",
@@ -3020,6 +3250,24 @@ window.NSP_SOURCES = [
     url: "https://www.govinfo.gov/app/collection/ppp/president-42_Clinton,%20William%20J.",
     note:
       "Official GovInfo collection used for Clinton public statements, messages, letters, memoranda, and joint statements."
+  },
+  {
+    label: "NARA Catalog search - Presidential Daily Diary FOIA 2010-0083-F",
+    url: "https://catalog.archives.gov/search?q=%222010-0083-F%22&collectionIdentifier=WJC*",
+    note:
+      "National Archives catalog search used to locate the Clinton Presidential Daily Diary hardcopy release and confirm the 2010-0083-F source trail."
+  },
+  {
+    label: "Clinton Digital Library Presidential Daily Diary collection",
+    url: "https://clinton.presidentiallibraries.us/collections/show/84",
+    note:
+      "Collection page listing the released Presidential Daily Diary items used for calls, meetings, briefings, and signing-ceremony schedule references."
+  },
+  {
+    label: "NARA media 2010-0083-F PDF release directory",
+    url:
+      "https://nara-media.s3.amazonaws.com/?list-type=2&prefix=presidential-libraries/clinton/foia/2010-0083-F/2010-0083-F-PDF/",
+    note: "Public PDF directory used for direct links to the Daily Diary source copies."
   },
   {
     label: "Strobe Talbott FOIA Case F-2017-13804 manifest",
@@ -3753,6 +4001,7 @@ window.NSP_RECORDS.push(
   ...STROBE_FOIA_RECORDS,
   ...COHEN_SECDEF_RECORDS,
   ...CLINTON_PUBLIC_STATEMENT_RECORDS,
+  ...PRESIDENTIAL_DAILY_DIARY_RECORDS,
   ...PUBLIC_STATEMENT_COMPANION_RECORDS
 );
 
