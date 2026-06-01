@@ -99,7 +99,7 @@
 
       .toolbar {
         display: grid;
-        grid-template-columns: minmax(220px, 2fr) repeat(2, minmax(160px, 1fr)) repeat(3, auto);
+        grid-template-columns: minmax(220px, 2fr) repeat(2, minmax(160px, 1fr)) repeat(4, auto);
         gap: 10px;
         align-items: end;
         padding: 14px;
@@ -321,6 +321,7 @@
         <button id="high" type="button">High Priority</button>
         <button id="export-csv" class="primary-action" type="button">Export CSV</button>
         <button id="export-notes" class="primary-action" type="button">Export Notes</button>
+        <button id="copy-notes" class="primary-action" type="button">Copy Notes</button>
       </section>
       <p class="meta-line" id="result-summary" aria-live="polite"></p>
       <section id="chronology" aria-live="polite"></section>
@@ -630,6 +631,21 @@
         );
       }
 
+      async function copyNotes() {
+        const button = byId("copy-notes");
+        const original = button.textContent;
+        const text = currentRecords().map(compilerNote).join("\n\n");
+        try {
+          await navigator.clipboard.writeText(text);
+          button.textContent = "Copied Notes";
+        } catch {
+          button.textContent = "Copy Failed";
+        }
+        window.setTimeout(() => {
+          button.textContent = original;
+        }, 1400);
+      }
+
       function bindEvents() {
         for (const id of ["search", "chapter", "status"]) byId(id).addEventListener("input", renderChronology);
         byId("high").addEventListener("click", () => {
@@ -639,6 +655,7 @@
         });
         byId("export-csv").addEventListener("click", exportFullCsv);
         byId("export-notes").addEventListener("click", exportNotesCsv);
+        byId("copy-notes").addEventListener("click", copyNotes);
       }
 
       renderSummary();
