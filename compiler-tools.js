@@ -186,19 +186,46 @@
     downloadCsv("clinton-nsp-frus-source-notes.csv", header, rows);
   }
 
+  async function copySourceNotes() {
+    const button = byId("copy-source-notes");
+    const original = button?.textContent || "Copy Notes";
+    const text = currentRecords().map(compilerNoteText).join("\n\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      if (button) button.textContent = "Copied Notes";
+    } catch {
+      if (button) button.textContent = "Copy Failed";
+    }
+    if (button) {
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1800);
+    }
+  }
+
   function ensureExportNotesButton() {
     const tools = document.querySelector(".compiler-filters");
-    if (!tools || byId("export-source-notes")) return;
-    const button = document.createElement("button");
-    button.id = "export-source-notes";
-    button.type = "button";
-    button.textContent = "Export Notes";
-    tools.append(button);
+    if (!tools) return;
+    if (!byId("export-source-notes")) {
+      const exportButton = document.createElement("button");
+      exportButton.id = "export-source-notes";
+      exportButton.type = "button";
+      exportButton.textContent = "Export Notes";
+      tools.append(exportButton);
+    }
+    if (!byId("copy-source-notes")) {
+      const copyButton = document.createElement("button");
+      copyButton.id = "copy-source-notes";
+      copyButton.type = "button";
+      copyButton.textContent = "Copy Notes";
+      tools.append(copyButton);
+    }
   }
 
   function bindExportButtons() {
     const exportRecords = byId("export-records");
     const exportSourceNotesButton = byId("export-source-notes");
+    const copySourceNotesButton = byId("copy-source-notes");
     exportRecords?.addEventListener(
       "click",
       (event) => {
@@ -209,6 +236,7 @@
       true
     );
     exportSourceNotesButton?.addEventListener("click", exportSourceNotes);
+    copySourceNotesButton?.addEventListener("click", copySourceNotes);
   }
 
   function recordForRow(row) {
@@ -248,8 +276,9 @@
     const style = document.createElement("style");
     style.id = "compiler-tools-style";
     style.textContent = `
-      .compiler-filters { grid-template-columns: repeat(4, minmax(140px, 1fr)) repeat(3, auto); }
-      #export-source-notes { border-color: #2f6f63; background: #2f6f63; color: #fff; }
+      .compiler-filters { grid-template-columns: repeat(4, minmax(140px, 1fr)) repeat(4, auto); }
+      #export-source-notes,
+      #copy-source-notes { border-color: #2f6f63; background: #2f6f63; color: #fff; }
       .record-links { flex-wrap: wrap; }
       .record-links button {
         display: inline-flex;
