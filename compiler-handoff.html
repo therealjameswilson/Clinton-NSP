@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRUS Compiler Handoff - Clinton NSP</title>
+    <meta
+      name="description"
+      content="Compiler handoff guide for the Clinton National Security Policy FRUS workspace."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2730;
+        --muted: #61707d;
+        --line: #d8e0e5;
+        --wash: #f5f7f8;
+        --accent: #2f6f63;
+        --accent-dark: #224d45;
+        --paper: #ffffff;
+        --warn: #8a5a12;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--wash);
+        line-height: 1.5;
+      }
+
+      header,
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 28px 0 16px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      nav a,
+      .action-link,
+      button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 0 11px;
+        background: #fff;
+        color: var(--accent-dark);
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .primary-action {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .kicker {
+        margin: 0 0 8px;
+        color: var(--accent-dark);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 850px;
+        margin: 0 0 10px;
+        font-size: clamp(2.1rem, 6vw, 4.9rem);
+        line-height: 0.96;
+      }
+
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      .lede {
+        max-width: 860px;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin: 22px 0;
+      }
+
+      .route-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .two-column {
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        align-items: start;
+      }
+
+      .card,
+      .metric,
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+      }
+
+      .metric {
+        padding: 14px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 1;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .card,
+      .panel {
+        padding: 18px;
+      }
+
+      .card h3 {
+        margin-bottom: 8px;
+      }
+
+      .card p,
+      .panel p,
+      li {
+        color: #34424d;
+      }
+
+      .action-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 12px;
+      }
+
+      .sequence {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .sequence li {
+        margin: 0 0 10px;
+      }
+
+      .warning {
+        border-left: 4px solid var(--warn);
+      }
+
+      .table-panel {
+        overflow: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+
+      th,
+      td {
+        padding: 10px 9px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--muted);
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      td a {
+        color: var(--accent-dark);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      td a:hover {
+        text-decoration: underline;
+      }
+
+      .small-note {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer {
+        width: min(1180px, calc(100% - 32px));
+        margin: 28px auto;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .two-column {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Compiler handoff navigation">
+        <a href="index.html#records">Main Chronology</a>
+        <a href="compiler-packet.html">Compiler Packet</a>
+        <a href="index.html#library">Library Plan</a>
+        <a href="index.html#collections">Collections</a>
+        <a href="index.html#sources">Sources</a>
+      </nav>
+      <p class="kicker">FRUS Volume VI Working Handoff</p>
+      <h1>Compiler Start Page</h1>
+      <p class="lede">
+        This is the one-page orientation for using the Clinton National Security Policy
+        workspace as a practical FRUS compiler aid. It separates public/declassified
+        chronology work, source-note capture, open verification gaps, and Clinton Library
+        pull planning.
+      </p>
+      <div class="grid metric-grid" id="metrics" aria-live="polite"></div>
+    </header>
+
+    <main>
+      <section class="grid route-grid" aria-label="Start routes">
+        <article class="card">
+          <h3>Start With Chronology</h3>
+          <p>
+            Use the main page when you want the full workspace context: chronology,
+            audit board, chapter plan, library pull strategy, ranked folders, and source
+            ledger.
+          </p>
+          <div class="action-row">
+            <a class="action-link primary-action" href="index.html?copy=20260601#records">Open chronology</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Use Packet For Fast Triage</h3>
+          <p>
+            Use the packet when you only need the dated public/declassified record list,
+            source links, PDF links, CSV export, and copyable FRUS-style source notes.
+          </p>
+          <div class="action-row">
+            <a class="action-link primary-action" href="compiler-packet.html?copy=20260601">Open packet</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Copy A Working Memo</h3>
+          <p>
+            Copy the current gap memo or library pull memo directly to the clipboard for a
+            research notebook, email, or on-site request draft.
+          </p>
+          <div class="action-row">
+            <button id="copy-gap-memo" class="primary-action" type="button">Copy Gap Memo</button>
+            <button id="copy-library-memo" type="button">Copy Library Memo</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid two-column" style="margin-top: 18px;">
+        <article class="panel">
+          <h2>Recommended Work Sequence</h2>
+          <ol class="sequence">
+            <li>
+              Open the chronology with the default public/declassified filter and read it
+              straight through by year before selecting any chapter subset.
+            </li>
+            <li>
+              Use <strong>Copy Notes</strong> or <strong>Export Notes</strong> before a
+              selection meeting so every visible record has date, title, source note,
+              source URL, PDF URL when available, chapter, and topics.
+            </li>
+            <li>
+              Filter by chapter only after the eight-year chronology is in view. This
+              protects the National Security Strategy chapter from being split into
+              disconnected annual fragments.
+            </li>
+            <li>
+              Treat PDD/PRD rows as directive handles until an underlying document,
+              meeting record, draft, or decision memorandum is located.
+            </li>
+            <li>
+              Use the Clinton Library Visit Planner to pull folders that answer known
+              decision-path questions first, then use public statements to frame rather
+              than substitute for internal records.
+            </li>
+          </ol>
+        </article>
+
+        <article class="panel warning">
+          <h2>Compiler Risk Controls</h2>
+          <ul class="sequence">
+            <li>The official FRUS volume status remains planned, not published.</li>
+            <li>This workspace is a source-control and triage aid, not a proposed final document selection.</li>
+            <li>Collection page counts are source coverage, not document page counts.</li>
+            <li>For Clinton Library folders, capture folder front, withdrawal sheet, exact title, date span, and routing marks before deep reading.</li>
+            <li>Separate public speech material from documents that disclose internal debate, decision, or implementation.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel table-panel" style="margin-top: 18px;" aria-labelledby="gap-title">
+        <div class="action-row" style="justify-content: space-between;">
+          <div>
+            <p class="kicker">Open Verification Queue</p>
+            <h2 id="gap-title">High-Value Gaps To Check First</h2>
+          </div>
+          <a class="action-link" href="index.html?copy=20260601#library">Go to library plan</a>
+        </div>
+        <p class="small-note">
+          This table is generated from high-priority harvest rows, directive clusters,
+          finding-aid leads, and records explicitly tagged as gaps.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Chapter</th>
+              <th>Lead</th>
+              <th>Status</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="gap-table"></tbody>
+        </table>
+      </section>
+
+      <section class="panel table-panel" style="margin-top: 18px;" aria-labelledby="pull-title">
+        <div class="action-row" style="justify-content: space-between;">
+          <div>
+            <p class="kicker">Reading Room</p>
+            <h2 id="pull-title">First Pull Batches</h2>
+          </div>
+          <a class="action-link" href="index.html?copy=20260601#collections">Go to collections</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Time Block</th>
+              <th>Batch</th>
+              <th>OA Boxes</th>
+              <th>Ask</th>
+            </tr>
+          </thead>
+          <tbody id="pull-table"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Built as a working companion archive for FRUS 1993-2000, Volume VI,
+        National Security Policy.
+      </p>
+    </footer>
+
+    <script src="data/records.js?v=20260526-daily-diary"></script>
+    <script src="data/collections.js?v=20260524-library-plan"></script>
+    <script>
+      const chapters = window.NSP_CHAPTERS || [];
+      const records = window.NSP_RECORDS || [];
+      const collections = window.NSP_COLLECTIONS || [];
+      const readingRoomBatches = window.NSP_READING_ROOM_BATCHES || [];
+      const chapterById = new Map(chapters.map((chapter) => [chapter.id, chapter]));
+      const formatter = new Intl.NumberFormat("en-US");
+      const declassifiedStatuses = new Set([
+        "Declassified Drive Source",
+        "Digitized Source",
+        "Official Public Statement",
+        "Public FOIA Source",
+        "Public Source Copy",
+        "Published NSS",
+        "Released PDD",
+        "Released PRD"
+      ]);
+
+      function chapterLabel(id) {
+        return chapterById.get(id)?.title || "Unmapped chapter";
+      }
+
+      function isDeclassified(record) {
+        return declassifiedStatuses.has(record.status);
+      }
+
+      function sortChronologically(a, b) {
+        return a.date.localeCompare(b.date) || chapterLabel(a.chapterId).localeCompare(chapterLabel(b.chapterId));
+      }
+
+      function isGapLead(record) {
+        const text = JSON.stringify(record).toLowerCase();
+        return (
+          record.priority === "High" &&
+          (/harvest|directive cluster|finding aid|gap|draft|collection/.test(text) || !isDeclassified(record))
+        );
+      }
+
+      function sourceNote(record) {
+        const note = String(record.sourceNote || "").trim();
+        if (/^Source:/.test(note)) return note;
+        return `Source: ${String(record.sourceName || "Source unidentified").replace(/\.$/, "")}. ${note}`;
+      }
+
+      function renderMetrics() {
+        const publicRecords = records.filter(isDeclassified);
+        const high = records.filter((record) => record.priority === "High");
+        const gaps = records.filter(isGapLead);
+        const directPdfs = publicRecords.filter((record) => record.pdfUrl);
+        const cards = [
+          ["Public/declassified records", publicRecords.length],
+          ["Total workspace leads", records.length],
+          ["High-priority leads", high.length],
+          ["Open verification leads", gaps.length],
+          ["Direct PDF links", directPdfs.length],
+          ["Ranked folder targets", collections.length]
+        ];
+        document.getElementById("metrics").replaceChildren(
+          ...cards.map(([label, value]) => {
+            const card = document.createElement("article");
+            card.className = "metric";
+            const stat = document.createElement("strong");
+            stat.textContent = formatter.format(value);
+            const text = document.createElement("span");
+            text.textContent = label;
+            card.append(stat, text);
+            return card;
+          })
+        );
+      }
+
+      function renderGapTable() {
+        const rows = records.filter(isGapLead).sort(sortChronologically).slice(0, 18);
+        document.getElementById("gap-table").replaceChildren(
+          ...rows.map((record) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${record.dateLabel || record.date}</td>
+              <td>${chapterLabel(record.chapterId)}</td>
+              <td><a href="${record.sourceUrl}" rel="noreferrer">${record.title}</a></td>
+              <td>${record.status || ""}</td>
+              <td>${record.sourceName || ""}</td>
+            `;
+            return row;
+          })
+        );
+      }
+
+      function renderPullTable() {
+        document.getElementById("pull-table").replaceChildren(
+          ...readingRoomBatches.slice(0, 8).map((batch) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${batch.rank}</td>
+              <td>${batch.timeBlock}</td>
+              <td>${batch.title}</td>
+              <td>${(batch.boxes || []).join(", ")}</td>
+              <td>${batch.readingRoomAsk}</td>
+            `;
+            return row;
+          })
+        );
+      }
+
+      function gapMemo() {
+        const rows = records.filter(isGapLead).sort(sortChronologically).slice(0, 18);
+        return [
+          "FRUS 1993-2000, Volume VI - Compiler Gap Memo",
+          "",
+          `Public/declassified records: ${records.filter(isDeclassified).length}`,
+          `Total workspace leads: ${records.length}`,
+          `High-priority leads: ${records.filter((record) => record.priority === "High").length}`,
+          `Open verification leads: ${records.filter(isGapLead).length}`,
+          "",
+          "First checks:",
+          ...rows.map(
+            (record, index) =>
+              `${index + 1}. ${record.dateLabel || record.date} - ${record.title}\n   Chapter: ${chapterLabel(
+                record.chapterId
+              )}\n   Status: ${record.status}\n   ${sourceNote(record)}\n   Source URL: ${record.sourceUrl}`
+          )
+        ].join("\n");
+      }
+
+      function libraryMemo() {
+        return [
+          "FRUS 1993-2000, Volume VI - Clinton Library Pull Memo",
+          "",
+          "Operating rule: pull contiguous OA-box batches that map to chapter gaps, then use adviser and Records Management files as control layers.",
+          "",
+          ...readingRoomBatches.slice(0, 8).map(
+            (batch) =>
+              `Pull ${batch.rank}: ${batch.title}\n   Time block: ${batch.timeBlock}\n   Finding aid locator: ${batch.findingAidLocator}\n   OA boxes: ${(batch.boxes || []).join(", ")}\n   Office/staff: ${batch.officeStaff}\n   Ask: ${batch.readingRoomAsk}\n   First questions: ${(batch.firstQuestions || []).join(" | ")}`
+          )
+        ].join("\n\n");
+      }
+
+      async function copyMemo(button, text) {
+        const original = button.textContent;
+        try {
+          await navigator.clipboard.writeText(text);
+          button.textContent = "Copied";
+        } catch {
+          button.textContent = "Copy Failed";
+        }
+        window.setTimeout(() => {
+          button.textContent = original;
+        }, 1500);
+      }
+
+      document.getElementById("copy-gap-memo").addEventListener("click", (event) => {
+        copyMemo(event.currentTarget, gapMemo());
+      });
+      document.getElementById("copy-library-memo").addEventListener("click", (event) => {
+        copyMemo(event.currentTarget, libraryMemo());
+      });
+
+      renderMetrics();
+      renderGapTable();
+      renderPullTable();
+    </script>
+  </body>
+</html>
