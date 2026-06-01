@@ -302,8 +302,23 @@
     document.head.append(style);
   }
 
+  function ensureHandoffLink() {
+    const nav = document.querySelector(".site-header nav");
+    if (!nav || nav.querySelector("a[href='compiler-handoff.html']")) return;
+    const link = document.createElement("a");
+    link.href = "compiler-handoff.html";
+    link.textContent = "Handoff";
+    const chronology = nav.querySelector("a[href='#records']");
+    if (chronology?.nextSibling) {
+      nav.insertBefore(link, chronology.nextSibling);
+    } else {
+      nav.prepend(link);
+    }
+  }
+
   function initCompilerTools() {
     injectStyles();
+    ensureHandoffLink();
     ensureExportNotesButton();
     bindExportButtons();
     enhanceRows();
