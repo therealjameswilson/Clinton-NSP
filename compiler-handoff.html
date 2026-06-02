@@ -289,6 +289,7 @@
           <div class="action-row">
             <button id="copy-gap-memo" class="primary-action" type="button">Copy Gap Memo</button>
             <button id="copy-library-memo" type="button">Copy Library Memo</button>
+            <button id="copy-qa-memo" type="button">Copy QA Memo</button>
           </div>
         </article>
       </section>
@@ -333,6 +334,30 @@
             <li>Separate public speech material from documents that disclose internal debate, decision, or implementation.</li>
           </ul>
         </article>
+      </section>
+
+      <section class="panel table-panel" style="margin-top: 18px;" aria-labelledby="qa-title">
+        <div class="action-row" style="justify-content: space-between;">
+          <div>
+            <p class="kicker">Source Control</p>
+            <h2 id="qa-title">Source-Note QA Board</h2>
+          </div>
+          <a class="action-link" href="compiler-packet.html?copy=20260601">Go to packet</a>
+        </div>
+        <p class="small-note">
+          These checks identify records that need extra compiler attention before any
+          candidate document list is treated as stable.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Check</th>
+              <th>Count</th>
+              <th>Compiler Action</th>
+            </tr>
+          </thead>
+          <tbody id="qa-table"></tbody>
+        </table>
       </section>
 
       <section class="panel table-panel" style="margin-top: 18px;" aria-labelledby="gap-title">
@@ -497,6 +522,64 @@
         );
       }
 
+      function qaRows() {
+        const publicRecords = records.filter(isDeclassified);
+        const noSourceUrl = records.filter((record) => !record.sourceUrl);
+        const noSourceNote = records.filter((record) => !record.sourceNote);
+        const publicNoPdf = publicRecords.filter((record) => !record.pdfUrl);
+        const highPublicNoPdf = publicNoPdf.filter((record) => record.priority === "High");
+        const directiveHarvest = records.filter(
+          (record) => (record.directives || []).length && /Directive Cluster|Harvest|Finding Aid/.test(record.status || "")
+        );
+        const googleDrive = records.filter((record) => /Google Drive/.test(record.sourceName || ""));
+        return [
+          {
+            label: "Missing source URL",
+            count: noSourceUrl.length,
+            action: "Should remain zero before export or handoff."
+          },
+          {
+            label: "Missing source-note field",
+            count: noSourceNote.length,
+            action: "Should remain zero so every record can produce a FRUS-style note."
+          },
+          {
+            label: "Public/declassified records without separate PDF URL",
+            count: publicNoPdf.length,
+            action: "Verify whether the source link itself is a PDF or whether a downloadable copy still needs to be found."
+          },
+          {
+            label: "High-priority public records without separate PDF URL",
+            count: highPublicNoPdf.length,
+            action: "Check first when preparing print packets for review."
+          },
+          {
+            label: "Directive, harvest, or finding-aid clusters",
+            count: directiveHarvest.length,
+            action: "Treat as handles until the underlying memoranda, drafts, meeting records, or decision documents are located."
+          },
+          {
+            label: "Google Drive sourced records",
+            count: googleDrive.length,
+            action: "Good working copies, but preserve original provenance and confirm printability before formal selection."
+          }
+        ];
+      }
+
+      function renderQaTable() {
+        document.getElementById("qa-table").replaceChildren(
+          ...qaRows().map((item) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${item.label}</td>
+              <td>${item.count}</td>
+              <td>${item.action}</td>
+            `;
+            return row;
+          })
+        );
+      }
+
       function gapMemo() {
         const rows = records.filter(isGapLead).sort(sortChronologically).slice(0, 18);
         return [
@@ -530,6 +613,14 @@
         ].join("\n\n");
       }
 
+      function qaMemo() {
+        return [
+          "FRUS 1993-2000, Volume VI - Source-Note QA Memo",
+          "",
+          ...qaRows().map((item) => `${item.label}: ${item.count}\n   Action: ${item.action}`)
+        ].join("\n\n");
+      }
+
       async function copyMemo(button, text) {
         const original = button.textContent;
         try {
@@ -549,8 +640,12 @@
       document.getElementById("copy-library-memo").addEventListener("click", (event) => {
         copyMemo(event.currentTarget, libraryMemo());
       });
+      document.getElementById("copy-qa-memo").addEventListener("click", (event) => {
+        copyMemo(event.currentTarget, qaMemo());
+      });
 
       renderMetrics();
+      renderQaTable();
       renderGapTable();
       renderPullTable();
     </script>
