@@ -524,10 +524,10 @@
         copy.textContent = "Copy note";
         copy.addEventListener("click", async () => {
           const original = copy.textContent;
-          try {
-            await navigator.clipboard.writeText(compilerNote(record));
+          copy.textContent = "Copying";
+          if (await copyText(compilerNote(record))) {
             copy.textContent = "Copied";
-          } catch {
+          } else {
             copy.textContent = "Copy failed";
           }
           window.setTimeout(() => {
@@ -542,9 +542,13 @@
 
       function renderChronology() {
         const items = currentRecords();
+        const activeFilters = [
+          standaloneOnly ? "standalone print queue" : "",
+          highOnly ? "high priority" : ""
+        ].filter(Boolean);
         byId("result-summary").textContent = `Showing ${formatter.format(items.length)} of ${formatter.format(
           records.length
-        )} records in chronological order.`;
+        )} records in chronological order${activeFilters.length ? ` (${activeFilters.join("; ")})` : ""}.`;
         const root = byId("chronology");
         if (!items.length) {
           const empty = document.createElement("p");
@@ -641,14 +645,81 @@
         );
       }
 
+      function updateShareableUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const query = byId("search").value.trim();
+        const chapter = byId("chapter").value;
+        const status = byId("status").value;
+        if (query) params.set("q", query);
+        else params.delete("q");
+        if (chapter !== "all") params.set("chapter", chapter);
+        else params.delete("chapter");
+        if (status !== "declassified") params.set("status", status);
+        else params.delete("status");
+        if (highOnly) params.set("high", "1");
+        else params.delete("high");
+        if (standaloneOnly) params.set("standalone", "1");
+        else params.delete("standalone");
+        const next = params.toString();
+        window.history.replaceState(null, "", `${window.location.pathname}${next ? `?${next}` : ""}${window.location.hash}`);
+      }
+
+      function renderAndSyncUrl() {
+        updateShareableUrl();
+        renderChronology();
+      }
+
+      function applyInitialQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q") || params.get("search");
+        const chapter = params.get("chapter");
+        const status = params.get("status");
+        highOnly = params.get("high") === "1";
+        standaloneOnly = params.get("standalone") === "1" || params.get("print") === "standalone";
+        if (query) byId("search").value = query;
+        if (chapter && chapterMap.has(chapter)) byId("chapter").value = chapter;
+        if (status && ["all", "declassified"].includes(status)) byId("status").value = status;
+        byId("high").classList.toggle("primary-action", highOnly);
+        byId("standalone").classList.toggle("primary-action", standaloneOnly);
+      }
+
+      async function copyText(text) {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await Promise.race([
+              navigator.clipboard.writeText(text),
+              new Promise((_, reject) => window.setTimeout(() => reject(new Error("Clipboard timeout")), 800))
+            ]);
+            return true;
+          } catch {
+            // Fall through to the textarea copy path.
+          }
+        }
+        const area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.top = "-1000px";
+        document.body.append(area);
+        area.select();
+        let copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch {
+          copied = false;
+        }
+        area.remove();
+        return copied;
+      }
+
       async function copyNotes() {
         const button = byId("copy-notes");
         const original = button.textContent;
         const text = currentRecords().map(compilerNote).join("\n\n");
-        try {
-          await navigator.clipboard.writeText(text);
+        button.textContent = "Copying";
+        if (await copyText(text)) {
           button.textContent = "Copied Notes";
-        } catch {
+        } else {
           button.textContent = "Copy Failed";
         }
         window.setTimeout(() => {
@@ -657,16 +728,16 @@
       }
 
       function bindEvents() {
-        for (const id of ["search", "chapter", "status"]) byId(id).addEventListener("input", renderChronology);
+        for (const id of ["search", "chapter", "status"]) byId(id).addEventListener("input", renderAndSyncUrl);
         byId("high").addEventListener("click", () => {
           highOnly = !highOnly;
           byId("high").classList.toggle("primary-action", highOnly);
-          renderChronology();
+          renderAndSyncUrl();
         });
         byId("standalone").addEventListener("click", () => {
           standaloneOnly = !standaloneOnly;
           byId("standalone").classList.toggle("primary-action", standaloneOnly);
-          renderChronology();
+          renderAndSyncUrl();
         });
         byId("export-csv").addEventListener("click", exportFullCsv);
         byId("export-notes").addEventListener("click", exportNotesCsv);
@@ -675,6 +746,7 @@
 
       renderSummary();
       renderFilters();
+      applyInitialQuery();
       bindEvents();
       renderChronology();
     </script>
