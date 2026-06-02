@@ -273,7 +273,8 @@
           <h3>Use Packet For Fast Triage</h3>
           <p>
             Use the packet when you only need the dated public/declassified record list,
-            source links, PDF links, CSV export, and copyable FRUS-style source notes.
+            source links, PDF links, standalone document triage, CSV export, and
+            copyable FRUS-style source notes.
           </p>
           <div class="action-row">
             <a class="action-link primary-action" href="compiler-packet.html?copy=20260601">Open packet</a>
@@ -416,7 +417,8 @@
       </p>
     </footer>
 
-    <script src="data/records.js?v=20260526-daily-diary"></script>
+    <script src="data/records.js?v=20260602-print-queue"></script>
+    <script src="data/print-queue-overrides.js?v=20260602-print-queue"></script>
     <script src="data/collections.js?v=20260524-library-plan"></script>
     <script>
       const chapters = window.NSP_CHAPTERS || [];
@@ -467,12 +469,14 @@
         const high = records.filter((record) => record.priority === "High");
         const gaps = records.filter(isGapLead);
         const directPdfs = publicRecords.filter((record) => record.pdfUrl);
+        const standaloneDocs = records.filter((record) => record.standaloneDocument);
         const cards = [
           ["Public/declassified records", publicRecords.length],
           ["Total workspace leads", records.length],
           ["High-priority leads", high.length],
           ["Open verification leads", gaps.length],
           ["Direct PDF links", directPdfs.length],
+          ["Standalone print docs", standaloneDocs.length],
           ["Ranked folder targets", collections.length]
         ];
         document.getElementById("metrics").replaceChildren(
