@@ -100,7 +100,7 @@
 
       .toolbar {
         display: grid;
-        grid-template-columns: minmax(220px, 2fr) repeat(2, minmax(160px, 1fr)) repeat(4, auto);
+        grid-template-columns: minmax(220px, 2fr) repeat(2, minmax(160px, 1fr)) repeat(5, auto);
         gap: 10px;
         align-items: end;
         padding: 14px;
@@ -321,6 +321,7 @@
           </select>
         </label>
         <button id="high" type="button">High Priority</button>
+        <button id="standalone" type="button">Standalone Docs</button>
         <button id="export-csv" class="primary-action" type="button">Export CSV</button>
         <button id="export-notes" class="primary-action" type="button">Export Notes</button>
         <button id="copy-notes" class="primary-action" type="button">Copy Notes</button>
@@ -329,7 +330,8 @@
       <section id="chronology" aria-live="polite"></section>
     </main>
 
-    <script src="data/records.js?v=20260526-daily-diary"></script>
+    <script src="data/records.js?v=20260602-print-queue"></script>
+    <script src="data/print-queue-overrides.js?v=20260602-print-queue"></script>
     <script>
       const chapters = window.NSP_CHAPTERS || [];
       const themes = window.NSP_THEMES || [];
@@ -350,6 +352,7 @@
       const byId = (id) => document.getElementById(id);
 
       let highOnly = false;
+      let standaloneOnly = false;
 
       function chapterLabel(id) {
         return chapterMap.get(id)?.title || "Unmapped chapter";
@@ -420,7 +423,8 @@
               (!query || haystack.includes(query)) &&
               (chapter === "all" || record.chapterId === chapter) &&
               (status === "all" || isDeclassified(record)) &&
-              (!highOnly || record.priority === "High")
+              (!highOnly || record.priority === "High") &&
+              (!standaloneOnly || record.standaloneDocument)
             );
           })
           .sort(sortChronologically);
@@ -430,11 +434,13 @@
         const publicRecords = records.filter(isDeclassified);
         const directPdfs = publicRecords.filter((record) => record.pdfUrl);
         const highPriority = publicRecords.filter((record) => record.priority === "High");
+        const standaloneDocs = records.filter((record) => record.standaloneDocument);
         const crafting = publicRecords.filter((record) => record.nssCrafting);
         const cards = [
           ["Public/declassified", publicRecords.length],
           ["High priority", highPriority.length],
           ["Direct PDF links", directPdfs.length],
+          ["Standalone docs", standaloneDocs.length],
           ["NSS crafting leads", crafting.length]
         ];
         byId("summary-grid").replaceChildren(
@@ -492,6 +498,8 @@
           badge(record.status || "Status unknown"),
           badge(record.priority === "High" ? "High priority" : `${record.priority || "Unranked"} priority`)
         );
+        if (record.pdfUrl) badges.append(badge("PDF available"));
+        if (record.standaloneDocument) badges.append(badge("Standalone doc"));
         const topics = document.createElement("p");
         topics.className = "record-topics";
         topics.textContent = `Topics: ${(record.topics || []).join(", ")}`;
@@ -502,7 +510,7 @@
         const source = document.createElement("a");
         source.href = record.sourceUrl;
         source.rel = "noreferrer";
-        source.textContent = "Source";
+        source.textContent = record.pdfUrl === record.sourceUrl ? "Source PDF" : "Source";
         links.append(source);
         if (record.pdfUrl && record.pdfUrl !== record.sourceUrl) {
           const pdf = document.createElement("a");
@@ -653,6 +661,11 @@
         byId("high").addEventListener("click", () => {
           highOnly = !highOnly;
           byId("high").classList.toggle("primary-action", highOnly);
+          renderChronology();
+        });
+        byId("standalone").addEventListener("click", () => {
+          standaloneOnly = !standaloneOnly;
+          byId("standalone").classList.toggle("primary-action", standaloneOnly);
           renderChronology();
         });
         byId("export-csv").addEventListener("click", exportFullCsv);
