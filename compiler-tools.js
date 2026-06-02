@@ -64,6 +64,7 @@
     if (filter === "declassified") return isDeclassifiedDocument(record);
     if (filter === "high") return record.priority === "High";
     if (filter === "public") return isPublicRecord(record);
+    if (filter === "standalone") return Boolean(record.standaloneDocument);
     if (filter === "crafting") return Boolean(record.nssCrafting);
     if (filter === "directive") return (record.directives || []).length > 0;
     if (filter === "harvest") return /Harvest|Directive Cluster/.test(record.status || "");
