@@ -278,6 +278,7 @@
           </p>
           <div class="action-row">
             <a class="action-link primary-action" href="compiler-packet.html?copy=20260601">Open packet</a>
+            <a class="action-link" href="compiler-packet.html?standalone=1&copy=20260602">Standalone queue</a>
           </div>
         </article>
 
@@ -290,6 +291,7 @@
           <div class="action-row">
             <button id="copy-gap-memo" class="primary-action" type="button">Copy Gap Memo</button>
             <button id="copy-library-memo" type="button">Copy Library Memo</button>
+            <button id="copy-print-memo" type="button">Copy Print Queue</button>
             <button id="copy-qa-memo" type="button">Copy QA Memo</button>
           </div>
         </article>
@@ -617,6 +619,25 @@
         ].join("\n\n");
       }
 
+      function printQueueMemo() {
+        const rows = records.filter((record) => record.standaloneDocument).sort(sortChronologically);
+        return [
+          "FRUS 1993-2000, Volume VI - Standalone Print Queue",
+          "",
+          `Standalone print candidates: ${rows.length}`,
+          "Use: source copies that can be reviewed as individual documents before deeper folder pulling.",
+          "",
+          ...rows.map(
+            (record, index) =>
+              `${index + 1}. ${record.dateLabel || record.date} - ${record.title}\n   Chapter: ${chapterLabel(
+                record.chapterId
+              )}\n   Priority: ${record.priority}\n   Status: ${record.status}\n   ${sourceNote(record)}\n   Source URL: ${
+                record.sourceUrl
+              }${record.pdfUrl ? `\n   PDF URL: ${record.pdfUrl}` : ""}`
+          )
+        ].join("\n\n");
+      }
+
       function qaMemo() {
         return [
           "FRUS 1993-2000, Volume VI - Source-Note QA Memo",
@@ -625,12 +646,41 @@
         ].join("\n\n");
       }
 
+      async function copyText(text) {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await Promise.race([
+              navigator.clipboard.writeText(text),
+              new Promise((_, reject) => window.setTimeout(() => reject(new Error("Clipboard timeout")), 800))
+            ]);
+            return true;
+          } catch {
+            // Fall through to the textarea copy path.
+          }
+        }
+        const area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.top = "-1000px";
+        document.body.append(area);
+        area.select();
+        let copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch {
+          copied = false;
+        }
+        area.remove();
+        return copied;
+      }
+
       async function copyMemo(button, text) {
         const original = button.textContent;
-        try {
-          await navigator.clipboard.writeText(text);
+        button.textContent = "Copying";
+        if (await copyText(text)) {
           button.textContent = "Copied";
-        } catch {
+        } else {
           button.textContent = "Copy Failed";
         }
         window.setTimeout(() => {
@@ -643,6 +693,9 @@
       });
       document.getElementById("copy-library-memo").addEventListener("click", (event) => {
         copyMemo(event.currentTarget, libraryMemo());
+      });
+      document.getElementById("copy-print-memo").addEventListener("click", (event) => {
+        copyMemo(event.currentTarget, printQueueMemo());
       });
       document.getElementById("copy-qa-memo").addEventListener("click", (event) => {
         copyMemo(event.currentTarget, qaMemo());
