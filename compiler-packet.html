@@ -436,8 +436,12 @@
           return "William J. Clinton Presidential Library, Presidential Directives";
         }
         if (clintonDirective) return `William J. Clinton Presidential Library, Presidential Directives, ${clintonDirective[1]}`;
-        if (clintonFindingAid) return `William J. Clinton Presidential Library, ${clintonFindingAid[1]} finding aid`;
-        if (clintonDigitalItem) return `William J. Clinton Presidential Library, Clinton Digital Library, item ${clintonDigitalItem[1]}`;
+        if (clintonFindingAid) {
+          return `William J. Clinton Presidential Library, ${clintonFindingAid[1]} finding aid; underlying folder or document citation to be verified`;
+        }
+        if (clintonDigitalItem) {
+          return `William J. Clinton Presidential Library, Clinton Digital Library, item ${clintonDigitalItem[1]}; collection, box, and folder citation to be verified`;
+        }
         if (sourceName === "2013-0185-M NSC folder-title list") {
           return "William J. Clinton Presidential Library, National Security Council Records, 2013-0185-M folder-title list";
         }

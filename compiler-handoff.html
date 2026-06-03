@@ -535,8 +535,12 @@
           return "William J. Clinton Presidential Library, Presidential Directives";
         }
         if (clintonDirective) return `William J. Clinton Presidential Library, Presidential Directives, ${clintonDirective[1]}`;
-        if (clintonFindingAid) return `William J. Clinton Presidential Library, ${clintonFindingAid[1]} finding aid`;
-        if (clintonDigitalItem) return `William J. Clinton Presidential Library, Clinton Digital Library, item ${clintonDigitalItem[1]}`;
+        if (clintonFindingAid) {
+          return `William J. Clinton Presidential Library, ${clintonFindingAid[1]} finding aid; underlying folder or document citation to be verified`;
+        }
+        if (clintonDigitalItem) {
+          return `William J. Clinton Presidential Library, Clinton Digital Library, item ${clintonDigitalItem[1]}; collection, box, and folder citation to be verified`;
+        }
         if (sourceName === "2013-0185-M NSC folder-title list") {
           return "William J. Clinton Presidential Library, National Security Council Records, 2013-0185-M folder-title list";
         }
@@ -640,6 +644,13 @@
         const publicRecords = records.filter(isDeclassified);
         const noSourceUrl = records.filter((record) => !record.sourceUrl);
         const noSourceNote = records.filter((record) => !record.sourceNote);
+        const renderedSourceNotes = records.map(sourceNote);
+        const provisionalSourceNotes = renderedSourceNotes.filter((note) => /citation to be verified/.test(note));
+        const digitalLibraryItems = records.filter((record) => /^Clinton Digital Library item/.test(record.sourceName || ""));
+        const stateFoiaCopies = records.filter((record) => /^State FOIA /.test(record.sourceName || ""));
+        const findingAidLeads = records.filter(
+          (record) => /finding aid/i.test(record.sourceName || "") || /Finding Aid/.test(record.status || "")
+        );
         const publicNoPdf = publicRecords.filter((record) => !record.pdfUrl);
         const highPublicNoPdf = publicNoPdf.filter((record) => record.priority === "High");
         const directiveHarvest = records.filter(
@@ -656,6 +667,31 @@
             label: "Missing source-note field",
             count: noSourceNote.length,
             action: "Should remain zero so every record can produce a FRUS-style note."
+          },
+          {
+            label: "Rendered notes without provenance warning",
+            count: renderedSourceNotes.length - provisionalSourceNotes.length,
+            action: "Closest to published FRUS source-note form; still sample against the document before final selection."
+          },
+          {
+            label: "Provisional notes needing original file citation",
+            count: provisionalSourceNotes.length,
+            action: "Do not treat these as final FRUS source notes until repository, collection, box, folder, or State file data is confirmed."
+          },
+          {
+            label: "Clinton Digital Library item leads",
+            count: digitalLibraryItems.length,
+            action: "Replace item-only access handles with collection, box, and folder citations before publication-style selection."
+          },
+          {
+            label: "State FOIA access copies",
+            count: stateFoiaCopies.length,
+            action: "Use the FOIA number for retrieval, but verify the underlying Department of State file citation for FRUS style."
+          },
+          {
+            label: "Finding-aid-only leads",
+            count: findingAidLeads.length,
+            action: "Useful for pulling records; not final source notes until the specific folder or document is chosen."
           },
           {
             label: "Public/declassified records without separate PDF URL",
