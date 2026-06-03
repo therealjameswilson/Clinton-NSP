@@ -480,10 +480,30 @@
         );
       }
 
+      function sourceCitation(record) {
+        const sourceName = String(record.sourceName || "Source unidentified").trim().replace(/\.$/, "");
+        return sourceName
+          .replace(/^Clinton Presidential Library, /, "William J. Clinton Presidential Library, ")
+          .replace(/^Clinton Library Presidential Directives$/, "William J. Clinton Presidential Library, Presidential Directives")
+          .replace(/^Clinton Library (.+) finding aid$/, "William J. Clinton Presidential Library, $1 finding aid")
+          .replace(/^Clinton Library ((?:PDD|PRD)-\d+)$/, "William J. Clinton Presidential Library, $1")
+          .replace(
+            /^Clinton Digital Library item ([\w-]+)$/,
+            "William J. Clinton Presidential Library, Clinton Digital Library, item $1"
+          )
+          .replace(/^Defense Historical Office (.+)$/, "Office of the Secretary of Defense Historical Office, $1")
+          .replace(/^State FOIA (.+)$/, "Department of State FOIA Virtual Reading Room, $1")
+          .replace(/^Google Drive PDF (.+)$/, "Working copy, Google Drive PDF $1")
+          .replace(/^Google Drive (.+)$/, "Working copy, Google Drive, $1")
+          .replace(/^GovInfo PPP-(\d{4})-book(\d), pg (.+)$/, "Public Papers: Clinton, $1, Book $2, p. $3")
+          .replace(/^GovInfo (.+)$/, "GovInfo, $1");
+      }
+
       function sourceNote(record) {
         const note = String(record.sourceNote || "").trim();
         if (/^Source:/.test(note)) return note;
-        return `Source: ${String(record.sourceName || "Source unidentified").replace(/\.$/, "")}. ${note}`;
+        const citation = sourceCitation(record);
+        return note ? `Source: ${citation}. ${note}` : `Source: ${citation}.`;
       }
 
       function renderMetrics() {
