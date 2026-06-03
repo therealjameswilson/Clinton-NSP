@@ -105,6 +105,20 @@
         font-size: 1.05rem;
       }
 
+      .trust-note {
+        max-width: 860px;
+        margin: 14px 0 0;
+        padding: 12px 14px;
+        color: #34424d;
+        font-size: 0.94rem;
+        font-weight: 700;
+        line-height: 1.52;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(47, 111, 99, 0.18);
+        border-left: 4px solid var(--accent);
+        border-radius: 8px;
+      }
+
       .grid {
         display: grid;
         gap: 14px;
@@ -252,6 +266,11 @@
         chronology work, source-note capture, open verification gaps, and Clinton Library
         pull planning.
       </p>
+      <p class="trust-note">
+        Review posture: this page can organize the work, but it does not decide it.
+        Source notes, document text, folder context, and compiler judgment remain the
+        controlling evidence.
+      </p>
       <div class="grid metric-grid" id="metrics" aria-live="polite"></div>
     </header>
 
@@ -335,6 +354,7 @@
             <li>Collection page counts are source coverage, not document page counts.</li>
             <li>For Clinton Library folders, capture folder front, withdrawal sheet, exact title, date span, and routing marks before deep reading.</li>
             <li>Separate public speech material from documents that disclose internal debate, decision, or implementation.</li>
+            <li>Treat AI-assisted ordering or summary as a checklist only; verify against the cited record before selection.</li>
           </ul>
         </article>
       </section>
