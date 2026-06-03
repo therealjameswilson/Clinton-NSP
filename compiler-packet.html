@@ -67,6 +67,20 @@
         font-size: 1.05rem;
       }
 
+      .trust-note {
+        max-width: 820px;
+        margin: 14px 0 0;
+        padding: 12px 14px;
+        color: #34424d;
+        font-size: 0.94rem;
+        font-weight: 700;
+        line-height: 1.52;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(47, 111, 99, 0.18);
+        border-left: 4px solid var(--accent);
+        border-radius: 8px;
+      }
+
       .summary-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -297,6 +311,11 @@
         A stripped-down FRUS compiler packet for dated public and declassified records in
         the Clinton National Security Policy workspace. It is designed for source-note
         copying, CSV export, and quick chapter-level triage.
+      </p>
+      <p class="trust-note">
+        Skeptical-reader rule: summaries are finding aids. The date, source note,
+        status label, source URL, and PDF link are kept beside each record so the
+        documents, not the interface, carry the evidentiary weight.
       </p>
       <div class="summary-grid" id="summary-grid" aria-live="polite"></div>
     </header>
